@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region { header } -->
+    <dimen name="dimen_header_icone_space_padding">30dp</dimen>
+    <!-- endregion -->
+
+    <!-- block-tag -->
+    <dimen name="block_memo_tag_spacing">4dp</dimen>
+
+    <!-- lock -->
+    <dimen name="lock_memo_item_spacing">12dp</dimen>
+    <dimen name="lock_memo_item_width">94dp</dimen>
+    <dimen name="lock_memo_item_height">110dp</dimen>
+    <dimen name="lock_memo_empty_item_width">94dp</dimen>
+    <dimen name="lock_memo_empty_item_height">110dp</dimen>
+    <dimen name="memo_item_spacing_horizontal">12dp</dimen>
+    <dimen name="memo_item_spacing_vertical">10dp</dimen>
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk
+        tools:overrideLibrary="com.google.firebase.ai, com.google.firebase, com.google.firebase.components" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name="com.avatye.haru.memo.HaruMemoApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_memong_logo_round"
+        android:label="@string/haru_memo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false"
+        tools:replace="android:label, android:usesCleartextTraffic">
+
+        <meta-data
+            android:name="com.naver.gfpsdk.PUBLISHER_CD"
+            android:value="N256497692" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5794118792668055~7953981527"/>
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/ga_ad_services_config"
+            tools:replace="android:resource" />
+
+        <activity
+            android:name="com.avatye.haru.memo.ui.LegacyRestoreGuideActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.avatye.haru.memo.ui.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.TrashDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingTagActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.avatye.haru.memo.ui.LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:showWhenLocked="true"
+            android:theme="@style/Theme.Memog.Transparent"
+            android:turnScreenOn="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingHelpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingServiceInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.GoogleBackupGuideActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingBackupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingMemoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.ImageDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.DrawActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SettingPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.TrashActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.TrashPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.TagManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.MemoDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.avatye.haru.memo.ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.avatye.haru.memo.ui.MemoListActivity"
+            android:exported="true" />
+
+        <service
+            android:name="com.avatye.haru.memo.service.LockScreenService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:permission="android.permission.FOREGROUND_SERVICE"
+            tools:targetApi="26" />
+        <service
+            android:name="com.avatye.haru.memo.service.MemoListWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver
+            android:name="com.avatye.haru.memo.receiver.LockScreenReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetSmall"
+            android:exported="false"
+            android:label="@string/haru_widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_memo_small_info" />
+        </receiver>
+        <receiver
+            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetMedium"
+            android:exported="true"
+            android:label="@string/haru_widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.memog2.android.ACTION_ITEM_CLICK" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_memo_medium_info" />
+        </receiver>
+    </application>
+
+</manifest>

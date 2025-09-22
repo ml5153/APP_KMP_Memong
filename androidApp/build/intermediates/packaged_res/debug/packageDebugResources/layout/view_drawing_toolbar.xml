@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_popup_rounded_gray">
+
+    <!-- region { pentoolContainer } -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyPenToolContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyPenTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/lyPencil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_circle_normal_toolbar"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lyHighlighter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btnPencil"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_drawing_pencil" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/lyHighlighter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_circle_normal_toolbar"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lyDottedLine"
+                app:layout_constraintStart_toEndOf="@id/lyPencil"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/btnHighlighter"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_drawing_highlighter" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/lyDottedLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_circle_normal_toolbar"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lyNeon"
+                app:layout_constraintStart_toEndOf="@id/lyHighlighter"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btnDottedLine"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_drawing_dottedline" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/lyNeon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_circle_normal_toolbar"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lyEraser"
+                app:layout_constraintStart_toEndOf="@id/lyDottedLine"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btnNeon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_drawing_neon" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/lyEraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_circle_normal_toolbar"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lyPalette"
+                app:layout_constraintStart_toEndOf="@id/lyNeon"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btnEraser"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_eraser_n" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/lyPalette"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lyEraser"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btnPalette"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_drawing_palette" />
+
+                <ImageView
+                    android:id="@+id/btnPaletteColor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/shape_bg_circle" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <SeekBar
+            android:id="@+id/penSizeSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/shape_seekbar_progress"
+            android:thumb="@drawable/shape_seekbar_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyPenTool" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- endregion -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

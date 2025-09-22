@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="0dp"
+        card_view:strokeColor="@color/stroke_color_light_gray"
+        card_view:strokeWidth="0.5dp">
+
+        <ImageView
+            android:id="@+id/ivGridImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:background="@color/bg_orange" />
+
+        <FrameLayout
+            android:id="@+id/lyGridImageDeleteContainer"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivGridImageDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="6dp"
+                android:src="@drawable/ic_header_trash" />
+        </FrameLayout>
+
+        <!-- 체크박스 -->
+        <FrameLayout
+            android:id="@+id/lyGridCheckboxContainer"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end|bottom"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbGridCheckbox"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0.5dp"
+                android:layout_marginTop="1dp"
+                android:background="@null"
+                android:button="@drawable/selector_item_checkbox" />
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

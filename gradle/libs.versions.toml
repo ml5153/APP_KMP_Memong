@@ -1,0 +1,91 @@
+[versions]
+agp = "8.8.0"
+biometric = "1.1.0"
+firebaseAi = "17.1.0"
+firebaseBom = "32.7.2"
+firebaseConfigKtx = "22.1.2"
+firebaseCrashlyticsNdk = "19.3.0"
+flexbox = "3.0.0"
+googleApiClientAndroid = "1.35.0"
+googleHttpClientAndroid = "1.35.0"
+googleApiServicesDrive = "v3-rev20230815-2.0.0"
+googleOauthClientJetty = "1.34.1"
+kotlin = "2.0.21"
+gson = "2.10.1"
+kotlinxSerializationJson = "1.5.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+nexusKit = "0.0.1"
+nexusKitVersion = "0.0.10"
+playServicesAuth = "21.3.0"
+recyclerview = "1.4.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+glide = "4.16.0"
+roomVersion = "2.7.2"
+ksp = "2.0.21-1.0.27"
+photoView = "2.3.0"
+colorpicker = "0.0.15"
+threeTen = "1.4.9"
+googleServices = "4.4.3"
+crashLytics = "2.9.9"
+window = "1.4.0"
+adcash = "3.1.3.21_SNAPSHOT"
+
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomVersion" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
+androidx-window = { module = "androidx.window:window", version.ref = "window" }
+firebase-ai = { module = "com.google.firebase:firebase-ai", version.ref = "firebaseAi" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx", version.ref = "firebaseConfigKtx" }
+firebase-crashlytics-ndk = { module = "com.google.firebase:firebase-crashlytics-ndk", version.ref = "firebaseCrashlyticsNdk" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+google-api-client-android = { module = "com.google.api-client:google-api-client-android", version.ref = "googleApiClientAndroid" }
+google-api-client-gson = { module = "com.google.api-client:google-api-client-gson", version.ref = "googleApiClientAndroid" }
+google-api-services-drive = { module = "com.google.apis:google-api-services-drive", version.ref = "googleApiServicesDrive" }
+google-http-client-android = { module = "com.google.http-client:google-http-client-android", version.ref = "googleHttpClientAndroid" }
+google-oauth-client-jetty = { module = "com.google.oauth-client:google-oauth-client-jetty", version.ref = "googleOauthClientJetty" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+nexus-kit = { module = "com.caffeine.common:nexus-kit", version.ref = "nexusKit" }
+nexus-kit-v0010 = { module = "com.caffeine.common:nexus-kit", version.ref = "nexusKitVersion" }
+photoView = { module = "com.github.chrisbanes:PhotoView", version.ref = "photoView" }
+colorpicker = { module = "com.github.QuadFlask:colorpicker", version.ref = "colorpicker" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+threeTen = { module = "com.jakewharton.threetenabp:threetenabp", version.ref = "threeTen" }
+adcash-bom = { module = "com.avatye.adcash:product-adcash", version.ref = "adcash" }
+adcash-applovin = { module = "com.avatye.adcash:archive-applovin", version.ref = "adcash" }
+adcash-adfit = { module = "com.avatye.adcash:archive-adfit", version.ref = "adcash" }
+adcash-cauly = { module = "com.avatye.adcash:archive-cauly", version.ref = "adcash" }
+adcash-facebook-audience = { module = "com.avatye.adcash:archive-facebook-audience", version.ref = "adcash" }
+adcash-pangle = { module = "com.avatye.adcash:archive-pangle", version.ref = "adcash" }
+adcash-unity = { module = "com.avatye.adcash:archive-unity", version.ref = "adcash" }
+adcash-vungle = { module = "com.avatye.adcash:archive-vungle", version.ref = "adcash" }
+adcash-mobwith = { module = "com.avatye.adcash:archive-mobwith", version.ref = "adcash" }
+adcash-admob = { module = "com.avatye.adcash:archive-admob", version.ref = "adcash" }
+adcash-nam = { module = "com.avatye.adcash:archive-nam", version.ref = "adcash" }
+
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinParcelize = { id = "kotlin-parcelize" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref= "ksp" }
+googleServices = { id = "com.google.gms.google-services", version.ref= "googleServices" }
+crashLytics = { id = "com.google.firebase.crashlytics", version.ref= "crashLytics" }

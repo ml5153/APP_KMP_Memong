@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trashRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 헤더 -->
+    <com.avatye.haru.memo.ui.custom.header.TrashHeaderView
+        android:id="@+id/headerTrash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 안내 문구 -->
+    <TextView
+        android:id="@+id/textNotice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:lineSpacingExtra="3dp"
+        android:padding="16dp"
+        android:text="휴지통 메모는 14일간 보관되며 이 후 영구적으로 삭제됩니다.\n단, 전체 데이터 삭제 또는 앱 삭제 후 재설치 시 휴지통의 모든 메모는 영구적으로 삭제되어 복구가 불가능합니다. ‘설정 > 백업’에서 메모를 백업해 주세요."
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerTrash" />
+
+    <FrameLayout
+        android:id="@+id/layoutContentWrapper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4F6F8"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNotice">
+
+        <!-- 비어있을 때 보여줄 이미지 -->
+        <TextView
+            android:id="@+id/tvEmptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/haru_trash_empty_text"
+            android:textColor="@color/haru_primary_gray" />
+
+        <!-- 메모 리스트 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4F6F8" />
+    </FrameLayout>
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

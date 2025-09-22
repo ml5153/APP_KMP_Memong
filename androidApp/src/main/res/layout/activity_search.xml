@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/searchRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 상단 헤더 -->
+    <com.avatye.haru.memo.ui.custom.header.SearchTagHeaderView
+        android:id="@+id/headerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 태그 추천 or 검색 결과 container -->
+    <FrameLayout
+        android:id="@+id/bodyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F4F6F8"
+        app:layout_constraintTop_toBottomOf="@id/headerSearch"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 태그 추천 레이어 -->
+        <LinearLayout
+            android:id="@+id/tagSuggestionLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#F4F6F8"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textSuggestedTagLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/haru_search_suggested_tags"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textNoTagData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ripple_transparent_rectangle"
+                android:text="아직 등록된 태그가 없어요!"
+                android:textColor="@color/haru_primary_orange"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSuggestedTags"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+        <!-- 검색 결과 리사이클러뷰 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:background="#F4F6F8"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvEmptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:text="@string/haru_search_empty_text"
+            android:textColor="@color/haru_primary_gray" />
+    </FrameLayout>
+
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

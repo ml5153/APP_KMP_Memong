@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setMemoRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.avatye.haru.memo.ui.custom.header.SettingHeaderView
+        android:id="@+id/headerSetMemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4F6F8"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerSetMemo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="@string/haru_title_quick_memo"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemNotiMemo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="12dp"-->
+<!--                android:paddingBottom="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/haru_item_title_use_noti_memo"-->
+<!--                            android:textColor="#1A1A1A"-->
+<!--                            android:textSize="15sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:text="@string/haru_item_desc_use_noti_memo"-->
+<!--                            android:textColor="#888888"-->
+<!--                            android:textSize="12sp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.appcompat.widget.SwitchCompat-->
+<!--                        android:id="@+id/notiMemoSwitch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        app:thumbTint="@color/switch_thumb_color"-->
+<!--                        app:trackTint="@color/switch_track_color" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemSSMemo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="12dp"-->
+<!--                android:paddingBottom="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/memog_item_title_use_ss_memo"-->
+<!--                            android:textColor="#1A1A1A"-->
+<!--                            android:textSize="15sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:text="@string/memog_item_desc_use_ss_memo"-->
+<!--                            android:textColor="#888888"-->
+<!--                            android:textSize="12sp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.appcompat.widget.SwitchCompat-->
+<!--                        android:id="@+id/ssSwitch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        app:thumbTint="@color/switch_thumb_color"-->
+<!--                        app:trackTint="@color/switch_track_color" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            클립보드-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemCBMemo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="12dp"-->
+<!--                android:paddingBottom="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/memog_item_title_use_cb_memo"-->
+<!--                            android:textColor="#1A1A1A"-->
+<!--                            android:textSize="15sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:text="@string/memog_item_desc_use_cb_memo"-->
+<!--                            android:textColor="#888888"-->
+<!--                            android:textSize="12sp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.appcompat.widget.SwitchCompat-->
+<!--                        android:id="@+id/cbSwitch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        app:thumbTint="@color/switch_thumb_color"-->
+<!--                        app:trackTint="@color/switch_track_color" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/itemLSMemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_rectangle"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/haru_item_title_use_ls_memo"
+                            android:textColor="#1A1A1A"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/haru_item_desc_use_ls_memo"
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/lsSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:thumbTint="@color/switch_thumb_color"
+                        app:trackTint="@color/switch_track_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="#F5F7FA" />
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:color/white"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="16dp"-->
+<!--                android:paddingBottom="8dp"-->
+<!--                android:text="@string/memog_title_set_list"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemThumbnail"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="12dp"-->
+<!--                android:paddingBottom="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/memog_item_tile_thumbnail"-->
+<!--                            android:textColor="#1A1A1A"-->
+<!--                            android:textSize="15sp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.appcompat.widget.SwitchCompat-->
+<!--                        android:id="@+id/thumbnailSwitch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        app:thumbTint="@color/switch_thumb_color"-->
+<!--                        app:trackTint="@color/switch_track_color" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemTitleSize"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="12dp"-->
+<!--                android:paddingBottom="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/memog_item_title_size"-->
+<!--                            android:textColor="#1A1A1A"-->
+<!--                            android:textSize="15sp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.appcompat.widget.SwitchCompat-->
+<!--                        android:id="@+id/titleSizeSwitch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        app:thumbTint="@color/switch_thumb_color"-->
+<!--                        app:trackTint="@color/switch_track_color" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="12dp"-->
+<!--                android:background="#F5F7FA" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/haru_title_set_memo"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/itemMDTextSize"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_item_title_memo_text_size"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textFontSizeStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="크게"
+                    android:textColor="@color/haru_primary_orange"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/mdTextSizeBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/itemTurnOffTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_rectangle"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/haru_item_turn_off_title_memo_text"
+                            android:textColor="#1A1A1A"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/haru_item_turn_off_desc_memo_text"
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/turnOffTitleSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:thumbTint="@color/switch_thumb_color"
+                        app:trackTint="@color/switch_track_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemCheckedMemoAutoSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_rectangle"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/haru_item_title_checked_memo_auto_sort"
+                            android:textColor="#1A1A1A"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/haru_item_desc_checked_memo_auto_sort"
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/checkedMemoAutoSortSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:thumbTint="@color/switch_thumb_color"
+                        app:trackTint="@color/switch_track_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemLinkQuickPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_rectangle"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/haru_item_title_quick_page"
+                            android:textColor="#1A1A1A"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/haru_item_desc_quick_page"
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/linkQuickPageSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:thumbTint="@color/switch_thumb_color"
+                        app:trackTint="@color/switch_track_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="12dp"-->
+<!--                android:background="#F5F7FA" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:color/white"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="16dp"-->
+<!--                android:paddingBottom="8dp"-->
+<!--                android:text="@string/haru_title_pointhome"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemPointHome"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingTop="12dp"-->
+<!--                android:paddingBottom="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/haru_item_title_pointhome"-->
+<!--                            android:textColor="#1A1A1A"-->
+<!--                            android:textSize="15sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:text="@string/haru_item_desc_pointhome"-->
+<!--                            android:textColor="#888888"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:text="@string/haru_item_warn_pointhome"-->
+<!--                            android:textColor="@color/red"-->
+<!--                            android:textSize="12sp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.appcompat.widget.SwitchCompat-->
+<!--                        android:id="@+id/pointHomeSwitch"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        app:thumbTint="@color/switch_thumb_color"-->
+<!--                        app:trackTint="@color/switch_track_color" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

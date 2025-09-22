@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:fontFamily">@font/pretendard_regular</item>
+        <item name="fontFamily">@font/pretendard_regular</item> <!-- AppCompat 대응 -->
+    </style>
+
+    <style name="PasswordDotStyle">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="26">6dp</item>
+        <item name="android:background">@drawable/shape_dot_circle</item>
+    </style>
+
+    <style name="KeypadButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#1A1A1A</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="ChipTextStyle" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/pretendard_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.Memog.Transparent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- imageView(Radius) -->
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+</resources>

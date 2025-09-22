@@ -1,0 +1,31 @@
+
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+
+# SwiftPM
+.build/
+Packages/
+Package.resolved
+
+# Carthage
+Carthage/Build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+.project.xcworkspace/
+xcframeworks/
+*.xcframework

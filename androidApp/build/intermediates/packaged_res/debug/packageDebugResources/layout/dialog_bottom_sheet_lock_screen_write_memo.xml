@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lockScreenWriteMemoRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_bg_rounded_top_lock_screen">
+
+    <!-- 헤더 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp">
+
+        <FrameLayout
+            android:id="@+id/lyBack"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_back" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/haru_lock_screen_memo_write"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- 추가: 저장 텍스트 -->
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textColor="@color/haru_black"
+            android:textSize="15sp"
+            android:padding="4dp"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+    <!-- 스크롤 가능한 입력 영역 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/haru_lock_screen_write_title"
+                android:paddingHorizontal="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:inputType="textCapSentences"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textColorHint="#BBBBBB" />
+
+            <EditText
+                android:id="@+id/editContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/haru_lock_screen_write_body"
+                android:paddingHorizontal="16dp"
+                android:textSize="16sp"
+                android:minLines="5"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textColorHint="#BBBBBB" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

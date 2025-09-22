@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+<!--    <color name="memong_primary_purple">#B5A8FF</color>-->
+<!--    <color name="memong_primary_pink">#FFD8DD</color>-->
+<!--    <color name="haru_primary_orange">#F7A208</color>-->
+    <color name="haru_primary_orange">#B5A8FF</color>
+<!--    <color name="haru_primary_dark_orange">#D5641E</color>-->
+    <color name="haru_primary_dark_orange">#8780B0</color>
+    <color name="haru_primary_gray">#7F8183</color>
+    <color name="haru_primary_blue">#0076ED</color>
+<!--    <color name="haru_light_blue">#01BDFB</color>-->
+    <color name="haru_light_blue">#FFD8DD</color>
+    <color name="haru_warning_red">#FF4444</color>
+    <color name="haru_black">#000000</color>
+    <color name="haru_light_black">#373737</color>
+    <color name="haru_dark_gray">#666666</color>
+    <color name="haru_gray">#999999</color>
+    <color name="haru_day_sunday">#FF3B30</color>
+    <color name="haru_day_saturday">#007AFF</color>
+    <color name="haru_day_weekday">#1C1C1E</color>
+    <color name="haru_schedule_text">#8E8E93</color>
+    <color name="haru_blue">#2196F3</color>
+    <color name="haru_orange">#FFB300</color>
+    <color name="haru_red">#E53935</color>
+    <color name="haru_dark_red">#B71C1C</color>
+
+    <color name="button_ripple_mask_color">#6F6B6B</color>
+    <color name="button_ripple_normal_color">#FFFFFF</color>
+    <color name="button_ripple_lock_color">#E4E8ED</color>
+    <color name="button_ripple_empty_color">#330076ED</color>
+    <color name="button_ripple_normal_transparent_color">#00FFFFFF</color>
+    <color name="button_ripple_normal_grey_color">#F5F5F5</color>
+    <color name="button_ripple_normal_toolbar_color">#DFE2E5</color>
+
+
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_yellow">#FDFEBC</color>
+    <color name="bg_green">#E0FFDD</color>
+    <color name="bg_blue">#D7FDFE</color>
+    <color name="bg_orange">#FCE6BF</color>
+    <color name="bg_pink">#FFE3E0</color>
+
+    <color name="stroke_color_light_gray">#D0D3D9</color>
+    <color name="item_stroke_color">#1A000000</color>
+    <color name="text_hint_color">#BCB8B8</color>
+    <color name="haru_lock_header_color">#E4E8ED</color>
+    <color name="haru_lock_detail_color">#D2D6DA</color>
+    <color name="recyclerview_color">#EDF3F8</color>
+    <color name="view_background_color">#F4F6F8</color>
+
+
+</resources>

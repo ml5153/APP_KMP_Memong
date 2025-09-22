@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 헤더 -->
+    <com.avatye.haru.memo.ui.custom.header.SettingHeaderView
+        android:id="@+id/headerSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 스크롤 가능 설정 리스트 -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4F6F8"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerSet">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 항목: 메모설정 -->
+            <LinearLayout
+                android:id="@+id/itemSetMemo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_set_memo"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/setMemoBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- 항목: 백업설정 -->
+            <LinearLayout
+                android:id="@+id/itemSetBackup"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_set_backup"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/setBackupBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- 항목: 비밀번호 설정 -->
+            <LinearLayout
+                android:id="@+id/itemSetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_set_password"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/setPasswordBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- 항목: 태그관리 -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemSetTag"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/haru_set_tag"-->
+<!--                    android:textColor="#1A1A1A"-->
+<!--                    android:textSize="15sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/setTagBtn"-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:src="@drawable/ic_chevron_right" />-->
+<!--            </LinearLayout>-->
+
+            <!-- 항목: 서비스 정보 -->
+            <LinearLayout
+                android:id="@+id/itemSetServiceInfo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_service_info"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/setServiceInfoBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- 항목: 리뷰 남기기 -->
+            <LinearLayout
+                android:id="@+id/itemReview"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/haru_write_review"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

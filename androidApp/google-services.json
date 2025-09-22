@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627972089567",
+    "project_id": "harumemo-680cf",
+    "storage_bucket": "harumemo-680cf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627972089567:android:006263ee9c459ac4136b6a",
+        "android_client_info": {
+          "package_name": "com.avatye.haru.memo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7m556se6jD0KKMorBfpFCekrOaFtTDL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

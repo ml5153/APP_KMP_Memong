@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/memoDetailRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <!-- MemoDetailHeaderView -->
+    <com.avatye.haru.memo.ui.custom.header.MemoDetailHeaderView
+        android:id="@+id/headerDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- MemoDetailSearchHeaderView -->
+    <com.avatye.haru.memo.ui.custom.header.MemoDetailSearchHeaderView
+        android:id="@+id/headerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- 본문 이미지 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBodyImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="32dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/lyBottomToolbarContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerDetail" />
+
+    <!-- 하단 툴바 -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/lyBottomToolbarContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/view_background_color"
+        app:layout_constraintBottom_toTopOf="@id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone">
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <com.avatye.haru.memo.ui.custom.toolbar.ToolbarView
+                android:id="@+id/editorToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                tools:layout_height="56dp" />
+
+        </HorizontalScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
