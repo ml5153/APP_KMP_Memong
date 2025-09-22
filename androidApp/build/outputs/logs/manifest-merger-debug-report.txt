@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:67:9-75:20
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:67:9-75:20
 	android:grantUriPermissions
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:71:13-47
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:71:13-47
 	android:authorities
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:69:13-64
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:69:13-64
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:70:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:70:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:68:13-62
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:68:13-62
 manifest
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:2:1-188:12
 MERGED from [com.avatye.adcash:product-adcash:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/68c4456db60b4b7c991c3dddf8806158/transformed/product-adcash-3.1.3.21_SNAPSHOT/AndroidManifest.xml:2:1-9:12
 MERGED from [com.avatye.adcash:platform-ssp-adhouse:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/c937d25973a3e385709c90bf360969c9/transformed/platform-ssp-adhouse-3.1.3.21_SNAPSHOT/AndroidManifest.xml:2:1-7:12
 MERGED from [com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:2:1-13:12
@@ -50,7 +50,7 @@ MERGED from [androidx.datastore:datastore-preferences:1.1.3] /Users/park-yeongsu
 MERGED from [androidx.datastore:datastore-preferences-android:1.1.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/56f9e2da8e0aafddeb6dd42ee3ceef94/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.datastore:datastore-android:1.1.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/09233342d1040e06f2a73ae950f3d098/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.datastore:datastore-core-android:1.1.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3fdcda1d29583e6bc353f3f56da17561/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
-MERGED from [:shared] /Users/park-yeongsu/Documents/develop/service/memog_kmp/shared/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:shared] /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
 MERGED from [com.avatye.adcash:platform-ssp-basement:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f39382fe949ff0d512d0e0ebf071e999/transformed/platform-ssp-basement-3.1.3.21_SNAPSHOT/AndroidManifest.xml:2:1-7:12
 MERGED from [com.avatye.adcash:archive-cauly:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/4f3665224c3e7e9ebeb0f08dc0947c00/transformed/archive-cauly-3.1.3.21_SNAPSHOT/AndroidManifest.xml:2:1-10:12
 MERGED from [com.fsn.cauly:cauly-sdk:3.5.35] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/289900487ab07e0e6efdc31509dcacef/transformed/cauly-sdk-3.5.35/AndroidManifest.xml:2:1-139:12
@@ -184,19 +184,19 @@ MERGED from [com.pangle.global:pag-gecko:2.0.0.5] /Users/park-yeongsu/Library/Ja
 MERGED from [com.pangle.global:pag-apm:2.0.0.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a6d715b1d5118239b17ea0dd642893c3/transformed/pag-apm-2.0.0.3/AndroidManifest.xml:2:1-16:12
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:15:1-22:12
 	package
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
 MERGED from [com.avatye.adcash:product-adcash:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/68c4456db60b4b7c991c3dddf8806158/transformed/product-adcash-3.1.3.21_SNAPSHOT/AndroidManifest.xml:5:5-44
 MERGED from [com.avatye.adcash:product-adcash:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/68c4456db60b4b7c991c3dddf8806158/transformed/product-adcash-3.1.3.21_SNAPSHOT/AndroidManifest.xml:5:5-44
 MERGED from [com.avatye.adcash:platform-ssp-adhouse:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/c937d25973a3e385709c90bf360969c9/transformed/platform-ssp-adhouse-3.1.3.21_SNAPSHOT/AndroidManifest.xml:5:5-44
@@ -267,8 +267,8 @@ MERGED from [androidx.datastore:datastore-android:1.1.3] /Users/park-yeongsu/Lib
 MERGED from [androidx.datastore:datastore-android:1.1.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/09233342d1040e06f2a73ae950f3d098/transformed/datastore-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.datastore:datastore-core-android:1.1.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3fdcda1d29583e6bc353f3f56da17561/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.datastore:datastore-core-android:1.1.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3fdcda1d29583e6bc353f3f56da17561/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
-MERGED from [:shared] /Users/park-yeongsu/Documents/develop/service/memog_kmp/shared/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
-MERGED from [:shared] /Users/park-yeongsu/Documents/develop/service/memog_kmp/shared/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:shared] /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:shared] /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
 MERGED from [com.avatye.adcash:platform-ssp-basement:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f39382fe949ff0d512d0e0ebf071e999/transformed/platform-ssp-basement-3.1.3.21_SNAPSHOT/AndroidManifest.xml:5:5-44
 MERGED from [com.avatye.adcash:platform-ssp-basement:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f39382fe949ff0d512d0e0ebf071e999/transformed/platform-ssp-basement-3.1.3.21_SNAPSHOT/AndroidManifest.xml:5:5-44
 MERGED from [com.avatye.adcash:archive-cauly:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/4f3665224c3e7e9ebeb0f08dc0947c00/transformed/archive-cauly-3.1.3.21_SNAPSHOT/AndroidManifest.xml:6:5-8:49
@@ -534,19 +534,19 @@ MERGED from [com.pangle.global:pag-apm:2.0.0.3] /Users/park-yeongsu/Library/Java
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:18:5-74
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:18:5-74
 	tools:overrideLibrary
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:6:9-108
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:6:9-108
 	android:targetSdkVersion
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:8:5-10:36
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:8:5-10:36
 	android:required
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:10:9-33
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:10:9-33
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:9:9-47
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:9:9-47
 uses-permission#android.permission.INTERNET
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:12:5-67
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:12:5-67
 MERGED from [com.avatye.adcash:product-adcash:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/68c4456db60b4b7c991c3dddf8806158/transformed/product-adcash-3.1.3.21_SNAPSHOT/AndroidManifest.xml:7:5-67
 MERGED from [com.avatye.adcash:product-adcash:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/68c4456db60b4b7c991c3dddf8806158/transformed/product-adcash-3.1.3.21_SNAPSHOT/AndroidManifest.xml:7:5-67
 MERGED from [com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:7:5-67
@@ -622,9 +622,9 @@ MERGED from [com.pangle.global:pag-apm:2.0.0.3] /Users/park-yeongsu/Library/Java
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:19:5-66
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:19:5-66
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:12:22-64
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:12:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:13:5-79
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:13:5-79
 MERGED from [com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:8:5-79
 MERGED from [com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:8:5-79
 MERGED from [com.naver.gfpsdk:nam-core:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/AndroidManifest.xml:9:5-79
@@ -680,66 +680,66 @@ MERGED from [com.pangle.global:pag-apm:2.0.0.3] /Users/park-yeongsu/Library/Java
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:20:5-78
 MERGED from [org.chromium.net:cronet-api:72.3626.96] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/bfd4019e093897c4e6f992bf7a1933a6/transformed/cronet-api-72.3626.96/AndroidManifest.xml:20:5-78
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:13:22-76
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:13:22-76
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:14:5-72
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:14:5-72
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:14:22-69
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:14:22-69
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:15:5-77
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:15:5-77
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:15:22-74
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:15:22-74
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:16:5-78
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:16:5-78
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:16:22-75
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:16:22-75
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:17:5-77
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:17:5-77
 MERGED from [androidx.work:work-runtime:2.7.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3ddfcda0e96fd87438829f38b60a63bc/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:5-77
 MERGED from [androidx.work:work-runtime:2.7.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3ddfcda0e96fd87438829f38b60a63bc/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:5-77
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:17:22-74
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:17:22-74
 uses-permission#android.permission.FOREGROUND_SERVICE_SPECIAL_USE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:18:5-89
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:18:5-89
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:18:22-86
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:18:22-86
 uses-permission#android.permission.VIBRATE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:19:5-66
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:19:5-66
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:19:22-63
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:19:22-63
 uses-permission#android.permission.CAMERA
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:20:5-65
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:20:5-65
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:20:22-62
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:20:22-62
 uses-permission#android.permission.READ_MEDIA_IMAGES
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:21:5-76
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:21:5-76
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:21:22-73
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:21:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:22:5-80
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:22:5-80
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:22:22-77
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:22:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:23:5-81
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:23:5-81
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:23:22-78
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:23:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:24:5-79
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:24:22-76
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:24:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:25:5-81
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:25:5-81
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:25:22-78
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:25:22-78
 uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:26:5-28:40
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:26:5-28:40
 	tools:ignore
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:28:9-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:28:9-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:27:9-66
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:27:9-66
 application
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:30:5-186:19
-INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:30:5-186:19
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:30:5-186:19
+INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:30:5-186:19
 MERGED from [com.naver.gfpsdk.mediation:nam-nda:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f7f2f60190074e2e34c35021d540e378/transformed/nam-nda-8.5.1/AndroidManifest.xml:9:5-17:19
 MERGED from [com.naver.gfpsdk.mediation:nam-nda:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f7f2f60190074e2e34c35021d540e378/transformed/nam-nda-8.5.1/AndroidManifest.xml:9:5-17:19
 MERGED from [com.naver.gfpsdk:nam-core:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/AndroidManifest.xml:12:5-22:19
@@ -879,283 +879,283 @@ MERGED from [com.pangle.global:tiktok-business-android-sdk-comp:1.3.7-rc.2] /Use
 MERGED from [com.pangle.global:pag-apm:2.0.0.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a6d715b1d5118239b17ea0dd642893c3/transformed/pag-apm-2.0.0.3/AndroidManifest.xml:14:5-20
 MERGED from [com.pangle.global:pag-apm:2.0.0.3] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a6d715b1d5118239b17ea0dd642893c3/transformed/pag-apm-2.0.0.3/AndroidManifest.xml:14:5-20
 	android:extractNativeLibs
-		INJECTED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:35:9-35
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:35:9-35
 	android:label
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:34:9-42
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:34:9-42
 		REJECTED from [com.fsn.cauly:cauly-sdk:3.5.35] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/289900487ab07e0e6efdc31509dcacef/transformed/cauly-sdk-3.5.35/AndroidManifest.xml:129:18-50
 	android:hardwareAccelerated
 		ADDED from [io.github.nasmedia-tech:admixersdk:3.0.11] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0f1c487cf3fe87cb16876f803c41d496/transformed/admixersdk-3.0.11/AndroidManifest.xml:39:9-43
 	android:icon
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:33:9-52
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:33:9-52
 	android:allowBackup
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:32:9-36
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:32:9-36
 	android:theme
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:36:9-40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:36:9-40
 	tools:replace
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:38:9-68
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:38:9-68
 	android:usesCleartextTraffic
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:37:9-45
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:37:9-45
 		REJECTED from [io.github.nasmedia-tech:admixersdk:3.0.11] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0f1c487cf3fe87cb16876f803c41d496/transformed/admixersdk-3.0.11/AndroidManifest.xml:40:9-44
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:31:9-64
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:31:9-44
 meta-data#com.naver.gfpsdk.PUBLISHER_CD
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:40:9-42:42
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:40:9-42:42
 	android:value
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:42:13-39
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:42:13-39
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:41:13-57
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:41:13-57
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:43:9-45:69
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:43:9-45:69
 	android:value
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:45:13-67
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:45:13-67
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:44:13-69
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:44:13-69
 property#android.adservices.AD_SERVICES_CONFIG
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:47:9-50:48
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:47:9-50:48
 MERGED from [com.google.android.gms:play-services-measurement-api:21.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/743ae5cf5ef92b15777b546d0be10da3/transformed/play-services-measurement-api-21.5.1/AndroidManifest.xml:30:9-32:61
 MERGED from [com.google.android.gms:play-services-measurement-api:21.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/743ae5cf5ef92b15777b546d0be10da3/transformed/play-services-measurement-api-21.5.1/AndroidManifest.xml:30:9-32:61
 MERGED from [com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:90:9-92:62
 MERGED from [com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:90:9-92:62
 	android:resource
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:49:13-58
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:49:13-58
 		REJECTED from [com.google.android.gms:play-services-measurement-api:21.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/743ae5cf5ef92b15777b546d0be10da3/transformed/play-services-measurement-api-21.5.1/AndroidManifest.xml:32:13-58
 		REJECTED from [com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:92:13-59
 	tools:replace
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:50:13-45
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:50:13-45
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:48:13-65
-activity#com.avatye.haru.memo.ui.LegacyRestoreGuideActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:52:9-54:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:48:13-65
+activity#com.memong.aos.ui.LegacyRestoreGuideActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:52:9-54:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:54:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:53:13-78
-activity#com.avatye.haru.memo.ui.SearchActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:56:9-59:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:53:13-58
+activity#com.memong.aos.ui.SearchActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:56:9-59:40
 	android:windowSoftInputMode
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:58:13-74
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:58:13-74
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:59:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:59:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:57:13-66
-activity#com.avatye.haru.memo.ui.TrashDetailActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:60:9-62:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:57:13-46
+activity#com.memong.aos.ui.TrashDetailActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:60:9-62:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:62:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:61:13-71
-activity#com.avatye.haru.memo.ui.SettingTagActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:63:9-65:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:61:13-51
+activity#com.memong.aos.ui.SettingTagActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:63:9-65:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:65:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:64:13-70
-activity#com.avatye.haru.memo.ui.LockScreenActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:77:9-85:58
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:64:13-50
+activity#com.memong.aos.ui.LockScreenActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:77:9-85:58
 	android:turnScreenOn
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:84:13-40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:84:13-40
 	android:excludeFromRecents
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:79:13-46
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:79:13-46
 	android:showWhenLocked
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:82:13-42
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:82:13-42
 	android:launchMode
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:81:13-44
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:81:13-44
 	android:windowSoftInputMode
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:85:13-55
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:85:13-55
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:80:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:80:13-37
 	android:theme
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:83:13-59
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:83:13-59
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:78:13-70
-activity#com.avatye.haru.memo.ui.SettingWebViewActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:86:9-88:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:78:13-50
+activity#com.memong.aos.ui.SettingWebViewActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:86:9-88:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:88:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:87:13-74
-activity#com.avatye.haru.memo.ui.SettingHelpActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:89:9-91:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:87:13-54
+activity#com.memong.aos.ui.SettingHelpActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:89:9-91:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:91:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:91:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:90:13-71
-activity#com.avatye.haru.memo.ui.SettingServiceInfoActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:92:9-94:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:90:13-51
+activity#com.memong.aos.ui.SettingServiceInfoActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:92:9-94:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:94:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:94:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:93:13-78
-activity#com.avatye.haru.memo.ui.GoogleBackupGuideActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:95:9-97:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:93:13-58
+activity#com.memong.aos.ui.GoogleBackupGuideActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:95:9-97:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:97:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:97:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:96:13-77
-activity#com.avatye.haru.memo.ui.SettingBackupActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:98:9-100:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:96:13-57
+activity#com.memong.aos.ui.SettingBackupActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:98:9-100:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:100:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:100:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:99:13-73
-activity#com.avatye.haru.memo.ui.SettingMemoActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:101:9-103:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:99:13-53
+activity#com.memong.aos.ui.SettingMemoActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:101:9-103:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:103:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:103:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:102:13-71
-activity#com.avatye.haru.memo.ui.SettingActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:104:9-106:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:102:13-51
+activity#com.memong.aos.ui.SettingActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:104:9-106:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:106:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:106:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:105:13-67
-activity#com.avatye.haru.memo.ui.ImageDetailActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:107:9-109:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:105:13-47
+activity#com.memong.aos.ui.ImageDetailActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:107:9-109:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:109:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:109:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:108:13-71
-activity#com.avatye.haru.memo.ui.DrawActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:110:9-112:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:108:13-51
+activity#com.memong.aos.ui.DrawActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:110:9-112:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:112:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:112:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:111:13-64
-activity#com.avatye.haru.memo.ui.PasswordActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:113:9-115:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:111:13-44
+activity#com.memong.aos.ui.PasswordActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:113:9-115:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:115:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:115:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:114:13-68
-activity#com.avatye.haru.memo.ui.SettingPasswordActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:116:9-118:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:114:13-48
+activity#com.memong.aos.ui.SettingPasswordActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:116:9-118:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:118:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:118:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:117:13-75
-activity#com.avatye.haru.memo.ui.TrashActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:119:9-121:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:117:13-55
+activity#com.memong.aos.ui.TrashActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:119:9-121:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:121:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:121:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:120:13-65
-activity#com.avatye.haru.memo.ui.TrashPasswordActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:122:9-124:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:120:13-45
+activity#com.memong.aos.ui.TrashPasswordActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:122:9-124:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:124:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:124:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:123:13-73
-activity#com.avatye.haru.memo.ui.TagManagementActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:125:9-127:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:123:13-53
+activity#com.memong.aos.ui.TagManagementActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:125:9-127:40
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:127:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:127:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:126:13-73
-activity#com.avatye.haru.memo.ui.MemoDetailActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:128:9-131:58
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:126:13-53
+activity#com.memong.aos.ui.MemoDetailActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:128:9-131:58
 	android:windowSoftInputMode
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:131:13-55
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:131:13-55
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:130:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:130:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:129:13-70
-activity#com.avatye.haru.memo.ui.SplashActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:132:9-140:20
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:129:13-50
+activity#com.memong.aos.ui.SplashActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:132:9-140:20
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:134:13-36
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:134:13-36
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:133:13-66
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:133:13-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:135:13-139:29
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:135:13-139:29
 action#android.intent.action.MAIN
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:136:17-69
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:136:17-69
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:136:25-66
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:136:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:138:17-77
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:138:17-77
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:138:27-74
-activity#com.avatye.haru.memo.ui.MemoListActivity
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:141:9-143:39
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:138:27-74
+activity#com.memong.aos.ui.MemoListActivity
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:141:9-143:39
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:143:13-36
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:143:13-36
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:142:13-68
-service#com.avatye.haru.memo.service.LockScreenService
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:145:9-151:36
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:142:13-48
+service#com.memong.aos.service.LockScreenService
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:145:9-151:36
 	android:enabled
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:147:13-35
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:147:13-35
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:148:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:148:13-37
 	android:permission
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:150:13-71
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:150:13-71
 	tools:targetApi
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:151:13-33
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:151:13-33
 	android:foregroundServiceType
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:149:13-55
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:149:13-55
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:146:13-74
-service#com.avatye.haru.memo.service.MemoListWidgetService
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:152:9-155:72
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:146:13-54
+service#com.memong.aos.service.MemoListWidgetService
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:152:9-155:72
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:154:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:154:13-37
 	android:permission
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:155:13-69
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:155:13-69
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:153:13-78
-receiver#com.avatye.haru.memo.receiver.LockScreenReceiver
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:157:9-160:40
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:153:13-58
+receiver#com.memong.aos.receiver.LockScreenReceiver
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:157:9-160:40
 	android:enabled
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:159:13-35
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:159:13-35
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:160:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:160:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:158:13-76
-receiver#com.avatye.haru.memo.ui.widget.MemoWidgetSmall
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:161:9-172:20
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:158:13-56
+receiver#com.memong.aos.ui.widget.MemoWidgetSmall
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:161:9-172:20
 	android:label
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:164:13-53
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:164:13-53
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:163:13-37
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:163:13-37
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:162:13-74
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:162:13-54
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:165:13-167:29
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:165:13-167:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:166:17-84
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:166:17-84
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:166:25-81
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:166:25-81
 meta-data#android.appwidget.provider
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:169:13-171:66
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:169:13-171:66
 	android:resource
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:171:17-63
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:171:17-63
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:170:17-58
-receiver#com.avatye.haru.memo.ui.widget.MemoWidgetMedium
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:173:9-185:20
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:170:17-58
+receiver#com.memong.aos.ui.widget.MemoWidgetMedium
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:173:9-185:20
 	android:label
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:176:13-53
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:176:13-53
 	android:exported
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:175:13-36
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:175:13-36
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:174:13-75
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:174:13-55
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE+action:name:com.example.memog2.android.ACTION_ITEM_CLICK
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:177:13-180:29
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:177:13-180:29
 action#com.example.memog2.android.ACTION_ITEM_CLICK
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:179:17-87
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:179:17-87
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:179:25-84
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:179:25-84
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:72:13-74:54
+ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:72:13-74:54
 	android:resource
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:74:17-51
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:74:17-51
 	android:name
-		ADDED from /Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:73:17-67
+		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:73:17-67
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:9:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:21.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/743ae5cf5ef92b15777b546d0be10da3/transformed/play-services-measurement-api-21.5.1/AndroidManifest.xml:24:5-68
@@ -2803,7 +2803,7 @@ ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirt
 		ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
-permission#com.avatye.haru.memo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.memong.aos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
@@ -2813,7 +2813,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
-uses-permission#com.avatye.haru.memo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.memong.aos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:26:22-94

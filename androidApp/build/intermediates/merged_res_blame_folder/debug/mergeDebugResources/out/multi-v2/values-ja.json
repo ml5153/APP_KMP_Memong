@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-ja/values-ja.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/074313b0ce5efb8fd482645fb034b684/transformed/nas-video-1.13.11/res/values-ja/values-ja.xml",

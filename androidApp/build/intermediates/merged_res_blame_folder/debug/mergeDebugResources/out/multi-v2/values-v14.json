@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-v14/values-v14.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-v14/values-v14.xml",
             "map": [
                 {
                     "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f75a1ed1b520d5ab6815d25466e6db57/transformed/mobwithSDK-1.0.55/res/values-v14/values-v14.xml",

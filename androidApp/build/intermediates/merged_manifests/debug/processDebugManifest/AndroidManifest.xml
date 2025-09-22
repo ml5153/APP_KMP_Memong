@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.avatye.haru.memo"
+    package="com.memong.aos"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -194,13 +194,13 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <permission
-        android:name="com.avatye.haru.memo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.memong.aos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.avatye.haru.memo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.memong.aos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:name="com.avatye.haru.memo.HaruMemoApplication"
+        android:name="com.memong.aos.HaruMemoApplication"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -224,22 +224,22 @@
             android:resource="@xml/ga_ad_services_config" />
 
         <activity
-            android:name="com.avatye.haru.memo.ui.LegacyRestoreGuideActivity"
+            android:name="com.memong.aos.ui.LegacyRestoreGuideActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SearchActivity"
+            android:name="com.memong.aos.ui.SearchActivity"
             android:exported="false"
             android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TrashDetailActivity"
+            android:name="com.memong.aos.ui.TrashDetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingTagActivity"
+            android:name="com.memong.aos.ui.SettingTagActivity"
             android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.avatye.haru.memo.fileprovider"
+            android:authorities="com.memong.aos.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -248,7 +248,7 @@
         </provider>
 
         <activity
-            android:name="com.avatye.haru.memo.ui.LockScreenActivity"
+            android:name="com.memong.aos.ui.LockScreenActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleTask"
@@ -257,53 +257,53 @@
             android:turnScreenOn="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingWebViewActivity"
+            android:name="com.memong.aos.ui.SettingWebViewActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingHelpActivity"
+            android:name="com.memong.aos.ui.SettingHelpActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingServiceInfoActivity"
+            android:name="com.memong.aos.ui.SettingServiceInfoActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.GoogleBackupGuideActivity"
+            android:name="com.memong.aos.ui.GoogleBackupGuideActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingBackupActivity"
+            android:name="com.memong.aos.ui.SettingBackupActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingMemoActivity"
+            android:name="com.memong.aos.ui.SettingMemoActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingActivity"
+            android:name="com.memong.aos.ui.SettingActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.ImageDetailActivity"
+            android:name="com.memong.aos.ui.ImageDetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.DrawActivity"
+            android:name="com.memong.aos.ui.DrawActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.PasswordActivity"
+            android:name="com.memong.aos.ui.PasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingPasswordActivity"
+            android:name="com.memong.aos.ui.SettingPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TrashActivity"
+            android:name="com.memong.aos.ui.TrashActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TrashPasswordActivity"
+            android:name="com.memong.aos.ui.TrashPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TagManagementActivity"
+            android:name="com.memong.aos.ui.TagManagementActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.MemoDetailActivity"
+            android:name="com.memong.aos.ui.MemoDetailActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SplashActivity"
+            android:name="com.memong.aos.ui.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -312,26 +312,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.avatye.haru.memo.ui.MemoListActivity"
+            android:name="com.memong.aos.ui.MemoListActivity"
             android:exported="true" />
 
         <service
-            android:name="com.avatye.haru.memo.service.LockScreenService"
+            android:name="com.memong.aos.service.LockScreenService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse"
             android:permission="android.permission.FOREGROUND_SERVICE" />
         <service
-            android:name="com.avatye.haru.memo.service.MemoListWidgetService"
+            android:name="com.memong.aos.service.MemoListWidgetService"
             android:exported="false"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <receiver
-            android:name="com.avatye.haru.memo.receiver.LockScreenReceiver"
+            android:name="com.memong.aos.receiver.LockScreenReceiver"
             android:enabled="true"
             android:exported="false" />
         <receiver
-            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetSmall"
+            android:name="com.memong.aos.ui.widget.MemoWidgetSmall"
             android:exported="false"
             android:label="@string/haru_widget_name" >
             <intent-filter>
@@ -343,7 +343,7 @@
                 android:resource="@xml/widget_memo_small_info" />
         </receiver>
         <receiver
-            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetMedium"
+            android:name="com.memong.aos.ui.widget.MemoWidgetMedium"
             android:exported="true"
             android:label="@string/haru_widget_name" >
             <intent-filter>
@@ -366,7 +366,7 @@
 
         <provider
             android:name="com.naver.ads.NasInitProvider"
-            android:authorities="com.avatye.haru.memo.NasInitProvider"
+            android:authorities="com.memong.aos.NasInitProvider"
             android:exported="false" >
             <meta-data
                 android:name="com.naver.gfpsdk.GfpInitializer"
@@ -406,7 +406,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.avatye.haru.memo.androidx-startup"
+            android:authorities="com.memong.aos.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
@@ -482,7 +482,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.avatye.haru.memo.firebaseinitprovider"
+            android:authorities="com.memong.aos.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
@@ -527,7 +527,7 @@
 
         <provider
             android:name="com.applovin.sdk.AppLovinInitProvider"
-            android:authorities="com.avatye.haru.memo.applovininitprovider"
+            android:authorities="com.memong.aos.applovininitprovider"
             android:exported="false"
             android:initOrder="101" />
 
@@ -623,7 +623,7 @@
 
         <provider
             android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="com.avatye.haru.memo.mobileadsinitprovider"
+            android:authorities="com.memong.aos.mobileadsinitprovider"
             android:exported="false"
             android:initOrder="100" />
 
@@ -758,7 +758,7 @@
 
         <provider
             android:name="com.kakao.adfit.AdFitSdkInitProvider"
-            android:authorities="com.avatye.haru.memo.kakao.adfit.initialize"
+            android:authorities="com.memong.aos.kakao.adfit.initialize"
             android:exported="false" />
 
         <activity
@@ -893,7 +893,7 @@
 
         <provider
             android:name="com.facebook.ads.AudienceNetworkContentProvider"
-            android:authorities="com.avatye.haru.memo.AudienceNetworkContentProvider"
+            android:authorities="com.memong.aos.AudienceNetworkContentProvider"
             android:exported="false" />
 
         <meta-data
@@ -902,7 +902,7 @@
 
         <provider
             android:name="com.avatye.adcash.platform.library.printout.PrintOutStartUp"
-            android:authorities="com.avatye.haru.memo.printout-startup"
+            android:authorities="com.memong.aos.printout-startup"
             android:exported="false"
             android:initOrder="10000" />
 

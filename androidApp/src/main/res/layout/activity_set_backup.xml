@@ -7,7 +7,7 @@
     android:background="@android:color/white">
 
     <!-- 헤더 -->
-    <com.avatye.haru.memo.ui.custom.header.SettingHeaderView
+    <com.memong.aos.ui.custom.header.SettingHeaderView
         android:id="@+id/headerSetBackup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -254,38 +254,38 @@
                     android:src="@drawable/ic_backup" />
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/itemLocalBackupLocation"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="56dp"-->
-<!--                android:background="@drawable/ripple_rectangle"-->
-<!--                android:gravity="center_vertical"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:paddingHorizontal="20dp">-->
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/itemLocalBackupLocation"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="56dp"-->
+            <!--                android:background="@drawable/ripple_rectangle"-->
+            <!--                android:gravity="center_vertical"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:paddingHorizontal="20dp">-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="@string/memog_item_title_locate_backup_storage"-->
-<!--                    android:textColor="#1A1A1A"-->
-<!--                    android:textSize="15sp" />-->
+            <!--                <TextView-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="@string/memog_item_title_locate_backup_storage"-->
+            <!--                    android:textColor="#1A1A1A"-->
+            <!--                    android:textSize="15sp" />-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/currentLocalBackupPath"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginEnd="8dp"-->
-<!--                    android:text="@string/memog_exam_locate_backup_storage"-->
-<!--                    android:textColor="#0076ED"-->
-<!--                    android:textSize="15sp" />-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/currentLocalBackupPath"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="8dp"-->
+            <!--                    android:text="@string/memog_exam_locate_backup_storage"-->
+            <!--                    android:textColor="#0076ED"-->
+            <!--                    android:textSize="15sp" />-->
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/localBackupLocationBtn"-->
-<!--                    android:layout_width="10dp"-->
-<!--                    android:layout_height="16dp"-->
-<!--                    android:src="@drawable/ic_chevron_right" />-->
-<!--            </LinearLayout>-->
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/localBackupLocationBtn"-->
+            <!--                    android:layout_width="10dp"-->
+            <!--                    android:layout_height="16dp"-->
+            <!--                    android:src="@drawable/ic_chevron_right" />-->
+            <!--            </LinearLayout>-->
 
             <LinearLayout
                 android:id="@+id/itemLocalPhotoBackup"
@@ -375,45 +375,45 @@
                 </LinearLayout>
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/itemLocalFreeSpace"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/ripple_rectangle"-->
-<!--                android:orientation="vertical"-->
-<!--                android:paddingHorizontal="20dp"-->
-<!--                android:paddingTop="16dp"-->
-<!--                android:paddingBottom="16dp">-->
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/itemLocalFreeSpace"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/ripple_rectangle"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingHorizontal="20dp"-->
+            <!--                android:paddingTop="16dp"-->
+            <!--                android:paddingBottom="16dp">-->
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:gravity="center_vertical"-->
-<!--                    android:orientation="horizontal">-->
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:gravity="center_vertical"-->
+            <!--                    android:orientation="horizontal">-->
 
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:orientation="vertical">-->
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="0dp"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:orientation="vertical">-->
 
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="@string/haru_item_free_space"-->
-<!--                            android:textColor="#1A1A1A"-->
-<!--                            android:textSize="15sp" />-->
-<!--                    </LinearLayout>-->
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="@string/haru_item_free_space"-->
+            <!--                            android:textColor="#1A1A1A"-->
+            <!--                            android:textSize="15sp" />-->
+            <!--                    </LinearLayout>-->
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/localFreeSpace"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="@string/haru_exam_free_space"-->
-<!--                        android:textColor="@color/haru_primary_orange"-->
-<!--                        android:textSize="14sp" />-->
-<!--                </LinearLayout>-->
-<!--            </LinearLayout>-->
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/localFreeSpace"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:text="@string/haru_exam_free_space"-->
+            <!--                        android:textColor="@color/haru_primary_orange"-->
+            <!--                        android:textSize="14sp" />-->
+            <!--                </LinearLayout>-->
+            <!--            </LinearLayout>-->
 
             <LinearLayout
                 android:id="@+id/itemLocalCurrentBackupDate"
@@ -625,7 +625,6 @@
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

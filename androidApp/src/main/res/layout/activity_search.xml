@@ -6,7 +6,7 @@
     android:background="@color/white">
 
     <!-- 상단 헤더 -->
-    <com.avatye.haru.memo.ui.custom.header.SearchTagHeaderView
+    <com.memong.aos.ui.custom.header.SearchTagHeaderView
         android:id="@+id/headerSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,20 +18,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#F4F6F8"
-        app:layout_constraintTop_toBottomOf="@id/headerSearch"
         app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/headerSearch">
 
         <!-- 태그 추천 레이어 -->
         <LinearLayout
             android:id="@+id/tagSuggestionLayer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#F4F6F8"
             android:orientation="vertical"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:background="#F4F6F8"
             android:visibility="visible">
 
             <TextView
@@ -67,8 +67,8 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"
             android:background="#F4F6F8"
+            android:clipToPadding="false"
             android:visibility="gone" />
 
         <TextView
@@ -76,9 +76,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:visibility="gone"
             android:text="@string/haru_search_empty_text"
-            android:textColor="@color/haru_primary_gray" />
+            android:textColor="@color/haru_primary_gray"
+            android:visibility="gone" />
     </FrameLayout>
 
 
@@ -89,7 +89,6 @@
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

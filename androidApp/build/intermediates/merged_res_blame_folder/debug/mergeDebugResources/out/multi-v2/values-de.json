@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-de/values-de.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/res/values-de/values-de.xml",

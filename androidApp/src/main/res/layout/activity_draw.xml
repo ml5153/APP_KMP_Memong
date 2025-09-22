@@ -8,14 +8,14 @@
     android:background="@android:color/white">
 
     <!-- 헤더 -->
-    <com.avatye.haru.memo.ui.custom.header.DrawHeaderView
+    <com.memong.aos.ui.custom.header.DrawHeaderView
         android:id="@+id/headerDraw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 손글씨 입력 영역 -->
-    <com.avatye.haru.memo.ui.custom.view.DrawingCanvasView
+    <com.memong.aos.ui.custom.view.DrawingCanvasView
         android:id="@+id/drawingCanvas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <com.avatye.haru.memo.ui.custom.toolbar.DrawingToolbarView
+        <com.memong.aos.ui.custom.toolbar.DrawingToolbarView
             android:id="@+id/editorToolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

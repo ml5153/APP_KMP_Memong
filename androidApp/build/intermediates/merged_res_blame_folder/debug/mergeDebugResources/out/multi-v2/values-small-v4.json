@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
                     "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-small-v4/values-small-v4.xml",

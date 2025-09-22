@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-zu/values-zu.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-zu/values-zu.xml",
             "map": [
                 {
                     "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e355e438036ad25256887d3f253fe0c0/transformed/play-services-ads-23.3.0/res/values-zu/values.xml",

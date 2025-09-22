@@ -10,14 +10,14 @@
 
 
     <!-- MemoDetailHeaderView -->
-    <com.avatye.haru.memo.ui.custom.header.MemoDetailHeaderView
+    <com.memong.aos.ui.custom.header.MemoDetailHeaderView
         android:id="@+id/headerDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- MemoDetailSearchHeaderView -->
-    <com.avatye.haru.memo.ui.custom.header.MemoDetailSearchHeaderView
+    <com.memong.aos.ui.custom.header.MemoDetailSearchHeaderView
         android:id="@+id/headerSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:fillViewport="true"
             android:scrollbars="none">
 
-            <com.avatye.haru.memo.ui.custom.toolbar.ToolbarView
+            <com.memong.aos.ui.custom.toolbar.ToolbarView
                 android:id="@+id/editorToolBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

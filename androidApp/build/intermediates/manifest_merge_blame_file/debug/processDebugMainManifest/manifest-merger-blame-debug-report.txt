@@ -1,66 +1,66 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.avatye.haru.memo"
+3    package="com.memong.aos"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-7-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
+7-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:5:5-6:111
 8        android:minSdkVersion="21"
 9        android:targetSdkVersion="35" />
 10
 11    <uses-feature
-11-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:8:5-10:36
+11-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:8:5-10:36
 12        android:name="android.hardware.camera"
-12-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:9:9-47
+12-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:9:9-47
 13        android:required="false" />
-13-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:10:9-33
+13-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:10:9-33
 14
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:12:5-67
-15-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:12:22-64
+15-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:12:5-67
+15-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:12:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:13:5-79
-16-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:13:22-76
+16-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:13:5-79
+16-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:13:22-76
 17    <uses-permission android:name="android.permission.READ_CONTACTS" />
-17-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:14:5-72
-17-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:14:22-69
+17-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:14:5-72
+17-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:14:22-69
 18    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-18-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:15:5-77
-18-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:15:22-74
+18-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:15:5-77
+18-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:15:22-74
 19    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-19-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:16:5-78
-19-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:16:22-75
+19-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:16:5-78
+19-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:16:22-75
 20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-20-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:17:5-77
-20-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:17:22-74
+20-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:17:5-77
+20-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:17:22-74
 21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
-21-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:18:5-89
-21-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:18:22-86
+21-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:18:5-89
+21-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:18:22-86
 22    <uses-permission android:name="android.permission.VIBRATE" />
-22-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:19:5-66
-22-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:19:22-63
+22-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:19:5-66
+22-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:19:22-63
 23    <uses-permission android:name="android.permission.CAMERA" />
-23-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:20:5-65
-23-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:20:22-62
+23-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:20:5-65
+23-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:20:22-62
 24    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-24-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:21:5-76
-24-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:21:22-73
+24-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:21:5-76
+24-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:21:22-73
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-25-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:22:5-80
-25-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:22:22-77
+25-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:22:5-80
+25-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:22:22-77
 26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-26-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:23:5-81
-26-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:23:22-78
+26-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:23:5-81
+26-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:23:22-78
 27    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-27-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:24:5-79
-27-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:24:22-76
+27-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:24:5-79
+27-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:24:22-76
 28    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-28-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:25:5-81
-28-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:25:22-78
+28-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:25:5-81
+28-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:25:22-78
 29    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-29-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:26:5-28:40
-29-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:27:9-66
+29-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:26:5-28:40
+29-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:27:9-66
 30    <uses-permission android:name="android.permission.WAKE_LOCK" />
 30-->[com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:9:5-68
 30-->[com.avatye.adcash:platform-ssp-adpopcorn:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e90ef9cf98712aac22b1b581098e571d/transformed/platform-ssp-adpopcorn-3.1.3.21_SNAPSHOT/AndroidManifest.xml:9:22-65
@@ -454,8 +454,8 @@
 169        <intent>
 169-->[io.github.nasmedia-tech:admixersdk:3.0.11] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0f1c487cf3fe87cb16876f803c41d496/transformed/admixersdk-3.0.11/AndroidManifest.xml:33:9-35:18
 170            <action android:name="android.intent.action.MAIN" />
-170-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:136:17-69
-170-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:136:25-66
+170-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:136:17-69
+170-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:136:25-66
 171        </intent>
 172        <intent>
 172-->[com.applovin:applovin-sdk:13.1.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/AndroidManifest.xml:8:9-10:18
@@ -517,21 +517,21 @@
 195
 196    <permission
 196-->[androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
-197        android:name="com.avatye.haru.memo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+197        android:name="com.memong.aos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 197-->[androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
 198        android:protectionLevel="signature" />
 198-->[androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
 199
-200    <uses-permission android:name="com.avatye.haru.memo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+200    <uses-permission android:name="com.memong.aos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 200-->[androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 200-->[androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
 201
 202    <application
-202-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:30:5-186:19
-203        android:name="com.avatye.haru.memo.HaruMemoApplication"
-203-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:31:9-64
+202-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:30:5-186:19
+203        android:name="com.memong.aos.HaruMemoApplication"
+203-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:31:9-44
 204        android:allowBackup="false"
-204-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:32:9-36
+204-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:32:9-36
 205        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 205-->[androidx.core:core:1.13.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
 206        android:debuggable="true"
@@ -539,289 +539,289 @@
 208        android:hardwareAccelerated="true"
 208-->[io.github.nasmedia-tech:admixersdk:3.0.11] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0f1c487cf3fe87cb16876f803c41d496/transformed/admixersdk-3.0.11/AndroidManifest.xml:39:9-43
 209        android:icon="@mipmap/ic_memong_logo_round"
-209-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:33:9-52
+209-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:33:9-52
 210        android:label="@string/haru_memo"
-210-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:34:9-42
+210-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:34:9-42
 211        android:supportsRtl="true"
-211-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:35:9-35
+211-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:35:9-35
 212        android:testOnly="true"
 213        android:theme="@style/AppTheme"
-213-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:36:9-40
+213-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:36:9-40
 214        android:usesCleartextTraffic="false" >
-214-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:37:9-45
+214-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:37:9-45
 215        <meta-data
-215-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:40:9-42:42
+215-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:40:9-42:42
 216            android:name="com.naver.gfpsdk.PUBLISHER_CD"
-216-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:41:13-57
+216-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:41:13-57
 217            android:value="N256497692" />
-217-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:42:13-39
+217-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:42:13-39
 218        <meta-data
-218-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:43:9-45:69
+218-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:43:9-45:69
 219            android:name="com.google.android.gms.ads.APPLICATION_ID"
-219-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:44:13-69
+219-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:44:13-69
 220            android:value="ca-app-pub-5794118792668055~7953981527" />
-220-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:45:13-67
+220-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:45:13-67
 221
 222        <property
-222-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:47:9-50:48
+222-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:47:9-50:48
 223            android:name="android.adservices.AD_SERVICES_CONFIG"
-223-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:48:13-65
+223-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:48:13-65
 224            android:resource="@xml/ga_ad_services_config" />
-224-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:49:13-58
+224-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:49:13-58
 225
 226        <activity
-226-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:52:9-54:40
-227            android:name="com.avatye.haru.memo.ui.LegacyRestoreGuideActivity"
-227-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:53:13-78
+226-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:52:9-54:40
+227            android:name="com.memong.aos.ui.LegacyRestoreGuideActivity"
+227-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:53:13-58
 228            android:exported="false" />
-228-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:54:13-37
+228-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:54:13-37
 229        <activity
-229-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:56:9-59:40
-230            android:name="com.avatye.haru.memo.ui.SearchActivity"
-230-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:57:13-66
+229-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:56:9-59:40
+230            android:name="com.memong.aos.ui.SearchActivity"
+230-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:57:13-46
 231            android:exported="false"
-231-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:59:13-37
+231-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:59:13-37
 232            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
-232-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:58:13-74
+232-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:58:13-74
 233        <activity
-233-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:60:9-62:40
-234            android:name="com.avatye.haru.memo.ui.TrashDetailActivity"
-234-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:61:13-71
+233-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:60:9-62:40
+234            android:name="com.memong.aos.ui.TrashDetailActivity"
+234-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:61:13-51
 235            android:exported="false" />
-235-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:62:13-37
+235-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:62:13-37
 236        <activity
-236-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:63:9-65:40
-237            android:name="com.avatye.haru.memo.ui.SettingTagActivity"
-237-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:64:13-70
+236-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:63:9-65:40
+237            android:name="com.memong.aos.ui.SettingTagActivity"
+237-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:64:13-50
 238            android:exported="false" />
-238-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:65:13-37
+238-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:65:13-37
 239
 240        <provider
 241            android:name="androidx.core.content.FileProvider"
-241-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:68:13-62
-242            android:authorities="com.avatye.haru.memo.fileprovider"
-242-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:69:13-64
+241-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:68:13-62
+242            android:authorities="com.memong.aos.fileprovider"
+242-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:69:13-64
 243            android:exported="false"
-243-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:70:13-37
+243-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:70:13-37
 244            android:grantUriPermissions="true" >
-244-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:71:13-47
+244-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:71:13-47
 245            <meta-data
-245-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:72:13-74:54
+245-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:72:13-74:54
 246                android:name="android.support.FILE_PROVIDER_PATHS"
-246-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:73:17-67
+246-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:73:17-67
 247                android:resource="@xml/file_paths" />
-247-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:74:17-51
+247-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:74:17-51
 248        </provider>
 249
 250        <activity
-250-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:77:9-85:58
-251            android:name="com.avatye.haru.memo.ui.LockScreenActivity"
-251-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:78:13-70
+250-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:77:9-85:58
+251            android:name="com.memong.aos.ui.LockScreenActivity"
+251-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:78:13-50
 252            android:excludeFromRecents="true"
-252-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:79:13-46
+252-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:79:13-46
 253            android:exported="false"
-253-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:80:13-37
+253-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:80:13-37
 254            android:launchMode="singleTask"
-254-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:81:13-44
+254-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:81:13-44
 255            android:showWhenLocked="true"
-255-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:82:13-42
+255-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:82:13-42
 256            android:theme="@style/Theme.Memog.Transparent"
-256-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:83:13-59
+256-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:83:13-59
 257            android:turnScreenOn="true"
-257-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:84:13-40
+257-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:84:13-40
 258            android:windowSoftInputMode="adjustResize" />
-258-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:85:13-55
+258-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:85:13-55
 259        <activity
-259-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:86:9-88:40
-260            android:name="com.avatye.haru.memo.ui.SettingWebViewActivity"
-260-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:87:13-74
+259-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:86:9-88:40
+260            android:name="com.memong.aos.ui.SettingWebViewActivity"
+260-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:87:13-54
 261            android:exported="false" />
-261-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:88:13-37
+261-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:88:13-37
 262        <activity
-262-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:89:9-91:40
-263            android:name="com.avatye.haru.memo.ui.SettingHelpActivity"
-263-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:90:13-71
+262-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:89:9-91:40
+263            android:name="com.memong.aos.ui.SettingHelpActivity"
+263-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:90:13-51
 264            android:exported="false" />
-264-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:91:13-37
+264-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:91:13-37
 265        <activity
-265-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:92:9-94:40
-266            android:name="com.avatye.haru.memo.ui.SettingServiceInfoActivity"
-266-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:93:13-78
+265-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:92:9-94:40
+266            android:name="com.memong.aos.ui.SettingServiceInfoActivity"
+266-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:93:13-58
 267            android:exported="false" />
-267-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:94:13-37
+267-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:94:13-37
 268        <activity
-268-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:95:9-97:40
-269            android:name="com.avatye.haru.memo.ui.GoogleBackupGuideActivity"
-269-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:96:13-77
+268-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:95:9-97:40
+269            android:name="com.memong.aos.ui.GoogleBackupGuideActivity"
+269-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:96:13-57
 270            android:exported="false" />
-270-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:97:13-37
+270-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:97:13-37
 271        <activity
-271-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:98:9-100:40
-272            android:name="com.avatye.haru.memo.ui.SettingBackupActivity"
-272-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:99:13-73
+271-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:98:9-100:40
+272            android:name="com.memong.aos.ui.SettingBackupActivity"
+272-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:99:13-53
 273            android:exported="false" />
-273-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:100:13-37
+273-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:100:13-37
 274        <activity
-274-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:101:9-103:40
-275            android:name="com.avatye.haru.memo.ui.SettingMemoActivity"
-275-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:102:13-71
+274-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:101:9-103:40
+275            android:name="com.memong.aos.ui.SettingMemoActivity"
+275-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:102:13-51
 276            android:exported="false" />
-276-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:103:13-37
+276-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:103:13-37
 277        <activity
-277-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:104:9-106:40
-278            android:name="com.avatye.haru.memo.ui.SettingActivity"
-278-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:105:13-67
+277-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:104:9-106:40
+278            android:name="com.memong.aos.ui.SettingActivity"
+278-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:105:13-47
 279            android:exported="false" />
-279-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:106:13-37
+279-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:106:13-37
 280        <activity
-280-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:107:9-109:40
-281            android:name="com.avatye.haru.memo.ui.ImageDetailActivity"
-281-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:108:13-71
+280-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:107:9-109:40
+281            android:name="com.memong.aos.ui.ImageDetailActivity"
+281-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:108:13-51
 282            android:exported="false" />
-282-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:109:13-37
+282-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:109:13-37
 283        <activity
-283-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:110:9-112:40
-284            android:name="com.avatye.haru.memo.ui.DrawActivity"
-284-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:111:13-64
+283-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:110:9-112:40
+284            android:name="com.memong.aos.ui.DrawActivity"
+284-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:111:13-44
 285            android:exported="false" />
-285-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:112:13-37
+285-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:112:13-37
 286        <activity
-286-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:113:9-115:40
-287            android:name="com.avatye.haru.memo.ui.PasswordActivity"
-287-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:114:13-68
+286-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:113:9-115:40
+287            android:name="com.memong.aos.ui.PasswordActivity"
+287-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:114:13-48
 288            android:exported="false" />
-288-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:115:13-37
+288-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:115:13-37
 289        <activity
-289-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:116:9-118:40
-290            android:name="com.avatye.haru.memo.ui.SettingPasswordActivity"
-290-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:117:13-75
+289-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:116:9-118:40
+290            android:name="com.memong.aos.ui.SettingPasswordActivity"
+290-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:117:13-55
 291            android:exported="false" />
-291-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:118:13-37
+291-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:118:13-37
 292        <activity
-292-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:119:9-121:40
-293            android:name="com.avatye.haru.memo.ui.TrashActivity"
-293-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:120:13-65
+292-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:119:9-121:40
+293            android:name="com.memong.aos.ui.TrashActivity"
+293-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:120:13-45
 294            android:exported="false" />
-294-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:121:13-37
+294-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:121:13-37
 295        <activity
-295-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:122:9-124:40
-296            android:name="com.avatye.haru.memo.ui.TrashPasswordActivity"
-296-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:123:13-73
+295-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:122:9-124:40
+296            android:name="com.memong.aos.ui.TrashPasswordActivity"
+296-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:123:13-53
 297            android:exported="false" />
-297-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:124:13-37
+297-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:124:13-37
 298        <activity
-298-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:125:9-127:40
-299            android:name="com.avatye.haru.memo.ui.TagManagementActivity"
-299-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:126:13-73
+298-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:125:9-127:40
+299            android:name="com.memong.aos.ui.TagManagementActivity"
+299-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:126:13-53
 300            android:exported="false" />
-300-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:127:13-37
+300-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:127:13-37
 301        <activity
-301-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:128:9-131:58
-302            android:name="com.avatye.haru.memo.ui.MemoDetailActivity"
-302-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:129:13-70
+301-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:128:9-131:58
+302            android:name="com.memong.aos.ui.MemoDetailActivity"
+302-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:129:13-50
 303            android:exported="false"
-303-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:130:13-37
+303-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:130:13-37
 304            android:windowSoftInputMode="adjustResize" />
-304-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:131:13-55
+304-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:131:13-55
 305        <activity
-305-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:132:9-140:20
-306            android:name="com.avatye.haru.memo.ui.SplashActivity"
-306-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:133:13-66
+305-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:132:9-140:20
+306            android:name="com.memong.aos.ui.SplashActivity"
+306-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:133:13-46
 307            android:exported="true" >
-307-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:134:13-36
+307-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:134:13-36
 308            <intent-filter>
-308-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:135:13-139:29
+308-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:135:13-139:29
 309                <action android:name="android.intent.action.MAIN" />
-309-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:136:17-69
-309-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:136:25-66
+309-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:136:17-69
+309-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:136:25-66
 310
 311                <category android:name="android.intent.category.LAUNCHER" />
-311-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:138:17-77
-311-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:138:27-74
+311-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:138:17-77
+311-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:138:27-74
 312            </intent-filter>
 313        </activity>
 314        <activity
-314-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:141:9-143:39
-315            android:name="com.avatye.haru.memo.ui.MemoListActivity"
-315-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:142:13-68
+314-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:141:9-143:39
+315            android:name="com.memong.aos.ui.MemoListActivity"
+315-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:142:13-48
 316            android:exported="true" />
-316-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:143:13-36
+316-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:143:13-36
 317
 318        <service
-318-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:145:9-151:36
-319            android:name="com.avatye.haru.memo.service.LockScreenService"
-319-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:146:13-74
+318-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:145:9-151:36
+319            android:name="com.memong.aos.service.LockScreenService"
+319-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:146:13-54
 320            android:enabled="true"
-320-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:147:13-35
+320-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:147:13-35
 321            android:exported="false"
-321-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:148:13-37
+321-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:148:13-37
 322            android:foregroundServiceType="specialUse"
-322-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:149:13-55
+322-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:149:13-55
 323            android:permission="android.permission.FOREGROUND_SERVICE" />
-323-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:150:13-71
+323-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:150:13-71
 324        <service
-324-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:152:9-155:72
-325            android:name="com.avatye.haru.memo.service.MemoListWidgetService"
-325-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:153:13-78
+324-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:152:9-155:72
+325            android:name="com.memong.aos.service.MemoListWidgetService"
+325-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:153:13-58
 326            android:exported="false"
-326-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:154:13-37
+326-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:154:13-37
 327            android:permission="android.permission.BIND_REMOTEVIEWS" />
-327-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:155:13-69
+327-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:155:13-69
 328
 329        <receiver
-329-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:157:9-160:40
-330            android:name="com.avatye.haru.memo.receiver.LockScreenReceiver"
-330-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:158:13-76
+329-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:157:9-160:40
+330            android:name="com.memong.aos.receiver.LockScreenReceiver"
+330-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:158:13-56
 331            android:enabled="true"
-331-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:159:13-35
+331-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:159:13-35
 332            android:exported="false" />
-332-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:160:13-37
+332-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:160:13-37
 333        <receiver
-333-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:161:9-172:20
-334            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetSmall"
-334-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:162:13-74
+333-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:161:9-172:20
+334            android:name="com.memong.aos.ui.widget.MemoWidgetSmall"
+334-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:162:13-54
 335            android:exported="false"
-335-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:163:13-37
+335-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:163:13-37
 336            android:label="@string/haru_widget_name" >
-336-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:164:13-53
+336-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:164:13-53
 337            <intent-filter>
-337-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:165:13-167:29
+337-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:165:13-167:29
 338                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-338-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:166:17-84
-338-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:166:25-81
+338-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:166:17-84
+338-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:166:25-81
 339            </intent-filter>
 340
 341            <meta-data
-341-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:169:13-171:66
+341-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:169:13-171:66
 342                android:name="android.appwidget.provider"
-342-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:170:17-58
+342-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:170:17-58
 343                android:resource="@xml/widget_memo_small_info" />
-343-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:171:17-63
+343-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:171:17-63
 344        </receiver>
 345        <receiver
-345-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:173:9-185:20
-346            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetMedium"
-346-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:174:13-75
+345-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:173:9-185:20
+346            android:name="com.memong.aos.ui.widget.MemoWidgetMedium"
+346-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:174:13-55
 347            android:exported="true"
-347-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:175:13-36
+347-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:175:13-36
 348            android:label="@string/haru_widget_name" >
-348-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:176:13-53
+348-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:176:13-53
 349            <intent-filter>
-349-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:177:13-180:29
+349-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:177:13-180:29
 350                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-350-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:166:17-84
-350-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:166:25-81
+350-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:166:17-84
+350-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:166:25-81
 351                <action android:name="com.example.memog2.android.ACTION_ITEM_CLICK" />
-351-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:179:17-87
-351-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:179:25-84
+351-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:179:17-87
+351-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:179:25-84
 352            </intent-filter>
 353
 354            <meta-data
-354-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:169:13-171:66
+354-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:169:13-171:66
 355                android:name="android.appwidget.provider"
-355-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:170:17-58
+355-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:170:17-58
 356                android:resource="@xml/widget_memo_medium_info" />
-356-->/Users/park-yeongsu/Documents/develop/service/memog_kmp/androidApp/src/main/AndroidManifest.xml:171:17-63
+356-->/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/androidApp/src/main/AndroidManifest.xml:171:17-63
 357        </receiver>
 358
 359        <activity
@@ -843,7 +843,7 @@
 367-->[com.naver.gfpsdk:nam-core:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/AndroidManifest.xml:13:9-21:20
 368            android:name="com.naver.ads.NasInitProvider"
 368-->[com.naver.gfpsdk:nam-core:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/AndroidManifest.xml:14:13-57
-369            android:authorities="com.avatye.haru.memo.NasInitProvider"
+369            android:authorities="com.memong.aos.NasInitProvider"
 369-->[com.naver.gfpsdk:nam-core:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/AndroidManifest.xml:15:13-67
 370            android:exported="false" >
 370-->[com.naver.gfpsdk:nam-core:8.5.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/148390af85d8de4e5475fc4aed570c56/transformed/nam-core-8.5.1/AndroidManifest.xml:16:13-37
@@ -920,7 +920,7 @@
 407-->[com.unity3d.ads:unity-ads:4.15.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/ebe13e8a90896508610bf8f9c38f3ca6/transformed/unity-ads-4.15.1/AndroidManifest.xml:52:9-62:20
 408            android:name="androidx.startup.InitializationProvider"
 408-->[com.unity3d.ads:unity-ads:4.15.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/ebe13e8a90896508610bf8f9c38f3ca6/transformed/unity-ads-4.15.1/AndroidManifest.xml:53:13-67
-409            android:authorities="com.avatye.haru.memo.androidx-startup"
+409            android:authorities="com.memong.aos.androidx-startup"
 409-->[com.unity3d.ads:unity-ads:4.15.1] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/ebe13e8a90896508610bf8f9c38f3ca6/transformed/unity-ads-4.15.1/AndroidManifest.xml:54:13-68
 410            android:exported="false" >
 410-->[androidx.work:work-runtime:2.7.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3ddfcda0e96fd87438829f38b60a63bc/transformed/work-runtime-2.7.0/AndroidManifest.xml:34:13-37
@@ -1068,7 +1068,7 @@
 483-->[com.google.firebase:firebase-common:22.0.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/9015e250c5192e07351ec345719d4c68/transformed/firebase-common-22.0.0/AndroidManifest.xml:23:9-28:39
 484            android:name="com.google.firebase.provider.FirebaseInitProvider"
 484-->[com.google.firebase:firebase-common:22.0.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/9015e250c5192e07351ec345719d4c68/transformed/firebase-common-22.0.0/AndroidManifest.xml:24:13-77
-485            android:authorities="com.avatye.haru.memo.firebaseinitprovider"
+485            android:authorities="com.memong.aos.firebaseinitprovider"
 485-->[com.google.firebase:firebase-common:22.0.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/9015e250c5192e07351ec345719d4c68/transformed/firebase-common-22.0.0/AndroidManifest.xml:25:13-72
 486            android:directBootAware="true"
 486-->[com.google.firebase:firebase-common:22.0.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/9015e250c5192e07351ec345719d4c68/transformed/firebase-common-22.0.0/AndroidManifest.xml:26:13-43
@@ -1148,7 +1148,7 @@
 528-->[com.applovin:applovin-sdk:13.1.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/AndroidManifest.xml:25:9-29:39
 529            android:name="com.applovin.sdk.AppLovinInitProvider"
 529-->[com.applovin:applovin-sdk:13.1.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/AndroidManifest.xml:26:13-65
-530            android:authorities="com.avatye.haru.memo.applovininitprovider"
+530            android:authorities="com.memong.aos.applovininitprovider"
 530-->[com.applovin:applovin-sdk:13.1.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/AndroidManifest.xml:27:13-72
 531            android:exported="false"
 531-->[com.applovin:applovin-sdk:13.1.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/AndroidManifest.xml:28:13-37
@@ -1337,7 +1337,7 @@
 624-->[com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:63:9-68:43
 625            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
 625-->[com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:64:13-76
-626            android:authorities="com.avatye.haru.memo.mobileadsinitprovider"
+626            android:authorities="com.memong.aos.mobileadsinitprovider"
 626-->[com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:65:13-73
 627            android:exported="false"
 627-->[com.google.android.gms:play-services-ads-lite:23.3.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/011d781b6aac5bb6833ca4db88facc44/transformed/play-services-ads-lite-23.3.0/AndroidManifest.xml:66:13-37
@@ -1597,7 +1597,7 @@
 759-->[com.kakao.adfit:ads-base:3.17.2] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/aa3c32259388801f0417fbbb03ca78cf/transformed/ads-base-3.17.2/AndroidManifest.xml:32:9-35:40
 760            android:name="com.kakao.adfit.AdFitSdkInitProvider"
 760-->[com.kakao.adfit:ads-base:3.17.2] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/aa3c32259388801f0417fbbb03ca78cf/transformed/ads-base-3.17.2/AndroidManifest.xml:33:13-64
-761            android:authorities="com.avatye.haru.memo.kakao.adfit.initialize"
+761            android:authorities="com.memong.aos.kakao.adfit.initialize"
 761-->[com.kakao.adfit:ads-base:3.17.2] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/aa3c32259388801f0417fbbb03ca78cf/transformed/ads-base-3.17.2/AndroidManifest.xml:34:13-74
 762            android:exported="false" />
 762-->[com.kakao.adfit:ads-base:3.17.2] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/aa3c32259388801f0417fbbb03ca78cf/transformed/ads-base-3.17.2/AndroidManifest.xml:35:13-37
@@ -1856,7 +1856,7 @@
 894-->[com.facebook.android:audience-network-sdk:6.19.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/6e4ce143e4d14739af0aa93271b9a365/transformed/audience-network-sdk-6.19.0/AndroidManifest.xml:26:9-29:40
 895            android:name="com.facebook.ads.AudienceNetworkContentProvider"
 895-->[com.facebook.android:audience-network-sdk:6.19.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/6e4ce143e4d14739af0aa93271b9a365/transformed/audience-network-sdk-6.19.0/AndroidManifest.xml:27:13-75
-896            android:authorities="com.avatye.haru.memo.AudienceNetworkContentProvider"
+896            android:authorities="com.memong.aos.AudienceNetworkContentProvider"
 896-->[com.facebook.android:audience-network-sdk:6.19.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/6e4ce143e4d14739af0aa93271b9a365/transformed/audience-network-sdk-6.19.0/AndroidManifest.xml:28:13-82
 897            android:exported="false" />
 897-->[com.facebook.android:audience-network-sdk:6.19.0] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/6e4ce143e4d14739af0aa93271b9a365/transformed/audience-network-sdk-6.19.0/AndroidManifest.xml:29:13-37
@@ -1872,7 +1872,7 @@
 903-->[com.avatye.adcash:platform-library-printout:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/67f75139d421e4ed2eb4ca161e2a2158/transformed/platform-library-printout-3.1.3.21_SNAPSHOT/AndroidManifest.xml:8:9-12:41
 904            android:name="com.avatye.adcash.platform.library.printout.PrintOutStartUp"
 904-->[com.avatye.adcash:platform-library-printout:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/67f75139d421e4ed2eb4ca161e2a2158/transformed/platform-library-printout-3.1.3.21_SNAPSHOT/AndroidManifest.xml:9:13-87
-905            android:authorities="com.avatye.haru.memo.printout-startup"
+905            android:authorities="com.memong.aos.printout-startup"
 905-->[com.avatye.adcash:platform-library-printout:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/67f75139d421e4ed2eb4ca161e2a2158/transformed/platform-library-printout-3.1.3.21_SNAPSHOT/AndroidManifest.xml:10:13-68
 906            android:exported="false"
 906-->[com.avatye.adcash:platform-library-printout:3.1.3.21_SNAPSHOT] /Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/67f75139d421e4ed2eb4ca161e2a2158/transformed/platform-library-printout-3.1.3.21_SNAPSHOT/AndroidManifest.xml:11:13-37

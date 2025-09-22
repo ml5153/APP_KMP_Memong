@@ -7,7 +7,7 @@
     android:background="@android:color/white">
 
     <!-- 커스텀 헤더 -->
-    <com.avatye.haru.memo.ui.custom.header.TrashHeaderView
+    <com.memong.aos.ui.custom.header.TrashHeaderView
         android:id="@+id/headerTrashDetail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

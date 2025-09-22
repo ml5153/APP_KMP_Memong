@@ -13,10 +13,10 @@ android {
         checkReleaseBuilds = false
     }
 
-    namespace = "com.avatye.haru.memo"
+    namespace = "com.memong.aos"
     compileSdk = 35
     defaultConfig {
-        applicationId = "com.avatye.haru.memo"
+        applicationId = "com.memong.aos"
         minSdk = 21
         targetSdk = 35
         versionCode = 1

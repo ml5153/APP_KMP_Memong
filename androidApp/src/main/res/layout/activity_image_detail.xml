@@ -7,7 +7,7 @@
     android:background="@android:color/black">
 
     <!-- 헤더 -->
-    <com.avatye.haru.memo.ui.custom.header.ImageDetailHeaderView
+    <com.memong.aos.ui.custom.header.ImageDetailHeaderView
         android:id="@+id/headerImageDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

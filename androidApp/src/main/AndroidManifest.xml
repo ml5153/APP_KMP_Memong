@@ -28,7 +28,7 @@
         tools:ignore="ScopedStorage" />
 
     <application
-        android:name="com.avatye.haru.memo.HaruMemoApplication"
+        android:name=".HaruMemoApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_memong_logo_round"
         android:label="@string/haru_memo"
@@ -50,18 +50,18 @@
             tools:replace="android:resource" />
 
         <activity
-            android:name="com.avatye.haru.memo.ui.LegacyRestoreGuideActivity"
+            android:name=".ui.LegacyRestoreGuideActivity"
             android:exported="false" />
 
         <activity
-            android:name="com.avatye.haru.memo.ui.SearchActivity"
+            android:name=".ui.SearchActivity"
             android:windowSoftInputMode="stateAlwaysVisible|adjustResize"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TrashDetailActivity"
+            android:name=".ui.TrashDetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingTagActivity"
+            android:name=".ui.SettingTagActivity"
             android:exported="false" />
 
         <provider
@@ -75,7 +75,7 @@
         </provider>
 
         <activity
-            android:name="com.avatye.haru.memo.ui.LockScreenActivity"
+            android:name=".ui.LockScreenActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleTask"
@@ -84,53 +84,53 @@
             android:turnScreenOn="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingWebViewActivity"
+            android:name=".ui.SettingWebViewActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingHelpActivity"
+            android:name=".ui.SettingHelpActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingServiceInfoActivity"
+            android:name=".ui.SettingServiceInfoActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.GoogleBackupGuideActivity"
+            android:name=".ui.GoogleBackupGuideActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingBackupActivity"
+            android:name=".ui.SettingBackupActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingMemoActivity"
+            android:name=".ui.SettingMemoActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingActivity"
+            android:name=".ui.SettingActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.ImageDetailActivity"
+            android:name=".ui.ImageDetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.DrawActivity"
+            android:name=".ui.DrawActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.PasswordActivity"
+            android:name=".ui.PasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SettingPasswordActivity"
+            android:name=".ui.SettingPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TrashActivity"
+            android:name=".ui.TrashActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TrashPasswordActivity"
+            android:name=".ui.TrashPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.TagManagementActivity"
+            android:name=".ui.TagManagementActivity"
             android:exported="false" />
         <activity
-            android:name="com.avatye.haru.memo.ui.MemoDetailActivity"
+            android:name=".ui.MemoDetailActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.avatye.haru.memo.ui.SplashActivity"
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -139,27 +139,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.avatye.haru.memo.ui.MemoListActivity"
+            android:name=".ui.MemoListActivity"
             android:exported="true" />
 
         <service
-            android:name="com.avatye.haru.memo.service.LockScreenService"
+            android:name=".service.LockScreenService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse"
             android:permission="android.permission.FOREGROUND_SERVICE"
             tools:targetApi="26" />
         <service
-            android:name="com.avatye.haru.memo.service.MemoListWidgetService"
+            android:name=".service.MemoListWidgetService"
             android:exported="false"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <receiver
-            android:name="com.avatye.haru.memo.receiver.LockScreenReceiver"
+            android:name=".receiver.LockScreenReceiver"
             android:enabled="true"
             android:exported="false" />
         <receiver
-            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetSmall"
+            android:name=".ui.widget.MemoWidgetSmall"
             android:exported="false"
             android:label="@string/haru_widget_name">
             <intent-filter>
@@ -171,7 +171,7 @@
                 android:resource="@xml/widget_memo_small_info" />
         </receiver>
         <receiver
-            android:name="com.avatye.haru.memo.ui.widget.MemoWidgetMedium"
+            android:name=".ui.widget.MemoWidgetMedium"
             android:exported="true"
             android:label="@string/haru_widget_name">
             <intent-filter>
