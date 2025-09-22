@@ -42,6 +42,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "memog2"
+rootProject.name = "Memong"
 include(":androidApp")
 include(":shared")
