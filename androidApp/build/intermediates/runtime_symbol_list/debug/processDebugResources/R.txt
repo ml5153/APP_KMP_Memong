@@ -1781,6 +1781,7 @@ int color highlighted_text_material_dark 0x7f06011e
 int color highlighted_text_material_light 0x7f06011f
 int color ic_haru_memo_logo_background 0x7f060120
 int color ic_memog_logo_background 0x7f060121
+int color ic_memong_launcher_background 0x7f0603ea
 int color ic_memong_logo_background 0x7f060122
 int color item_stroke_color 0x7f060123
 int color m3_appbar_overlay_color 0x7f060124
@@ -3796,6 +3797,7 @@ int drawable ic_main_popup_error_image 0x7f08029f
 int drawable ic_main_popup_loading_image 0x7f0802a0
 int drawable ic_memo_list_new_memo 0x7f0802a1
 int drawable ic_memog_logo_foreground 0x7f0802a2
+int drawable ic_memong_launcher_foreground 0x7f080400
 int drawable ic_memong_splash_logo 0x7f0802a3
 int drawable ic_minus 0x7f0802a4
 int drawable ic_mtrl_checked_circle 0x7f0802a5
@@ -4452,7 +4454,6 @@ int id btnEraser 0x7f0a012b
 int id btnGallery 0x7f0a012c
 int id btnGoogleDrive 0x7f0a012d
 int id btnHighlighter 0x7f0a012e
-int id btnHowTo 0x7f0a012f
 int id btnIncreaseSize 0x7f0a0130
 int id btnIncreaseSizeContainer 0x7f0a0131
 int id btnLock 0x7f0a0132
@@ -4809,7 +4810,6 @@ int id imageview_sitelogo 0x7f0a0290
 int id imageview_thumbnail 0x7f0a0291
 int id imageview_title 0x7f0a0292
 int id imgGoogleDrive 0x7f0a0293
-int id imgInfoIcon 0x7f0a0294
 int id imgLogo 0x7f0a0295
 int id imgMemoListIcon 0x7f0a0296
 int id imgNewMomoIcon 0x7f0a0297
@@ -4898,7 +4898,6 @@ int id label_badge 0x7f0a02e9
 int id labeled 0x7f0a02ea
 int id layout 0x7f0a02eb
 int id layoutAdClickInfo 0x7f0a02ec
-int id layoutBottomSub 0x7f0a02ed
 int id layoutContainer 0x7f0a02ee
 int id layoutContentWrapper 0x7f0a02ef
 int id layoutMemoContentWrapper 0x7f0a02f0
@@ -5965,6 +5964,8 @@ int mipmap ic_haru_memo_logo 0x7f100001
 int mipmap ic_haru_memo_logo_round 0x7f100002
 int mipmap ic_memog_logo 0x7f100003
 int mipmap ic_memog_logo_round 0x7f100004
+int mipmap ic_memong_launcher 0x7f100011
+int mipmap ic_memong_launcher_round 0x7f100012
 int mipmap ic_memong_logo 0x7f100005
 int mipmap ic_memong_logo_foreground 0x7f100006
 int mipmap ic_memong_logo_round 0x7f100007

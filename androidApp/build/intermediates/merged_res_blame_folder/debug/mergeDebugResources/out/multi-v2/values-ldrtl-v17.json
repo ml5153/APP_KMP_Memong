@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -206,7 +206,7 @@
         android:debuggable="true"
         android:extractNativeLibs="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_memong_logo_round"
+        android:icon="@mipmap/ic_memong_launcher"
         android:label="@string/haru_memo"
         android:supportsRtl="true"
         android:testOnly="true"

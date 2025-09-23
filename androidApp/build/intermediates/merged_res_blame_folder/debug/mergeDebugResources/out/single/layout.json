@@ -1,382 +1,314 @@
 [
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_draw.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_draw.xml"
+        "merged": "com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_custom_restore.xml",
+        "source": "com.memong.aos.androidApp-main-92:/layout/dialog_memo_custom_restore.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_memo_detail_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_memo_detail_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_search_tag_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_search_tag_header.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_trash_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_trash_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_lock_screen.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_lock_screen.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_grid.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_grid.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_memo_menu.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_memo_menu.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_bottom_sheet_eraser_tool.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_bottom_sheet_eraser_tool.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_date_block.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_date_block.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_custom_ad.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_custom_ad.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/widget_memo_medium.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/widget_memo_medium.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_ai_answer_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_ai_answer_custom.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_drawing_toolbar.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_drawing_toolbar.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_memo_list.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_memo_list.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_list.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_list.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_bottom_sheet_lock_screen_memo_list.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_bottom_sheet_lock_screen_memo_list.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_title_block.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_title_block.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_tag_management.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_tag_management.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_bottom_sheet_lock_screen_set.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_bottom_sheet_lock_screen_set.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_image_detail_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_image_detail_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_ai_answer_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_ai_answer_custom.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_memo.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set_memo.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_splash.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_splash.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_color_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_color_custom.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/custom_progress_view.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/custom_progress_view.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_trash_grid.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_trash_grid.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_image_detail_pager.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_image_detail_pager.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_splash.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_splash.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set_password.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set_password.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_memo_menu.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_memo_menu.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_bottom_sheet_memo_ifno_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_bottom_sheet_memo_ifno_custom.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_trash_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_trash_header.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_help.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set_help.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_bottom_sheet_eraser_tool.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_bottom_sheet_eraser_tool.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_set_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_set_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_body_block.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_body_block.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_drawing_toolbar.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_drawing_toolbar.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_trash_grid.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_trash_grid.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/custom_progress_view.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/custom_progress_view.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_legacy_restore_guide.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_legacy_restore_guide.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_menu.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_menu.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set_memo.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set_memo.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_image_detail_pager.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_image_detail_pager.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_trash_detail.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_trash_detail.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_title_block.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_title_block.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_lock_empty_important_memo.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_lock_empty_important_memo.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_bottom_sheet_lock_screen_write_memo.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_bottom_sheet_lock_screen_write_memo.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/notification_auto_backup.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/notification_auto_backup.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_press_home_key.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_press_home_key.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_memo.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set_memo.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_set_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_set_header.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_body_block.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_body_block.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_search.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_search.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_trash.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_trash.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_grid.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_grid.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_web_view.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set_web_view.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_toolbar.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_toolbar.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_setting_tag.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_setting_tag.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_image_block.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_image_block.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_search.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_search.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_image_detail_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_image_detail_header.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_block_image_grid.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_block_image_grid.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_color_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_color_custom.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_memo_detail_search_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_memo_detail_search_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_password.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_password.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_image_detail.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_image_detail.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_bottom_sheet_pen_tool.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_bottom_sheet_pen_tool.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/widget_memo_medium.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/widget_memo_medium.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/notification_lockscreen.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/notification_lockscreen.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_trash_detail.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_trash_detail.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_sorting_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_sorting_custom.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_trash.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_trash.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_main_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_main_header.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_lock_empty_important_memo.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_lock_empty_important_memo.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set_web_view.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set_web_view.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_password.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_setting_tag.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_setting_tag.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_trash_password.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_trash_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_widget_memo_list.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_widget_memo_list.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_trash_password.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_trash_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set_service_info.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set_service_info.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_tag_chip.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_tag_chip.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_image_detail.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_image_detail.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_tag_select.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_tag_select.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_chip.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_chip.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_password.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_grid_legacy.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_grid_legacy.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_backup.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set_backup.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_bottom_sheet_lock_screen_memo_list.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_bottom_sheet_lock_screen_memo_list.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_main_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_main_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_popup_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_popup_custom.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_memo_detail.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_memo_detail.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_memo_detail_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_memo_detail_header.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_trash_detail.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_trash_detail.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_memo_detail.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_memo_detail.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_bottom_sheet_pen_tool.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_bottom_sheet_pen_tool.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_section_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_section_header.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_memo_list.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_memo_list.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_ai_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_ai_custom.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_password.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_trash.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_trash.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/notification_lockscreen.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/notification_lockscreen.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_google_backup_guide.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_google_backup_guide.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_custom_forget_password.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_custom_forget_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_block_tag_list.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_block_tag_list.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_setting_tag.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_setting_tag.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_tag_select.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_tag_select.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_tag_management.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_tag_management.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_memo_detail_search_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_memo_detail_search_header.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_block_tag_list.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_block_tag_list.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_tag_add.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_tag_add.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_search_tag_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_search_tag_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_block_image_grid.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_block_image_grid.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_legacy_restore_guide.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_legacy_restore_guide.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_custom_ad.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_custom_ad.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_sorting_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_sorting_custom.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/notification_auto_backup.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/notification_auto_backup.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_lock_screen.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_lock_screen.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_tag_management.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_tag_management.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_draw_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_draw_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_draw_header.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_draw_header.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_custom.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/widget_memo_small.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/widget_memo_small.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_web_view.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set_web_view.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_custom.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_custom.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_chip.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_chip.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set_help.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set_help.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_tag_add.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_tag_add.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_menu.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_menu.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_service_info.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set_service_info.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_section_header.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_section_header.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_draw.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_draw.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_list_legacy.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_list_legacy.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_memo_list.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_memo_list.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_custom_restore.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_custom_restore.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_custom_restore.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_custom_restore.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_popup_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_popup_custom.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_trash_password.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_trash_password.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_password.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_password.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_tag_chip.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_tag_chip.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_memo_detail.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_memo_detail.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_empty.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_empty.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_toolbar.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_toolbar.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/view_editor_toolbar.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/view_editor_toolbar.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_press_home_key.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_press_home_key.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_list_legacy.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_list_legacy.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_bottom_sheet_memo_ifno_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_bottom_sheet_memo_ifno_custom.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/activity_set_backup.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/activity_set_backup.xml"
     },
     {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_draw.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_draw.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/item_memo_tag_block.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/item_memo_tag_block.xml"
     },
     {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_grid_legacy.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_grid_legacy.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_memo_ai_custom.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_memo_ai_custom.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_help.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set_help.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_widget_memo_list.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_widget_memo_list.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_bottom_sheet_lock_screen_set.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_bottom_sheet_lock_screen_set.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_google_backup_guide.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_google_backup_guide.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/widget_memo_small.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/widget_memo_small.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_backup.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/activity_set_backup.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/dialog_bottom_sheet_lock_screen_write_memo.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/dialog_bottom_sheet_lock_screen_write_memo.xml"
-    },
-    {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_image_detail.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_image_detail.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_tag_block.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_tag_block.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_empty.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_empty.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_list.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_list.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_image_block.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_image_block.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/view_editor_toolbar.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/view_editor_toolbar.xml"
-    },
-    {
-        "merged": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-5:/layout/item_memo_date_block.xml",
-        "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/daemon/8.10.2/com.memong.aos.androidApp-main-8:/layout/item_memo_date_block.xml"
-    },
-    {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_set_service_info.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_set_service_info.xml"
-    },
-    {
-        "merged": "com.memong.aos.androidApp-mergeDebugResources-5:/layout/activity_search.xml",
-        "source": "com.memong.aos.androidApp-main-8:/layout/activity_search.xml"
+        "merged": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-mergeDebugResources-89:/layout/dialog_memo_custom_forget_password.xml",
+        "source": "/Users/daon/.gradle/daemon/8.10.2/com.memong.aos.androidApp-main-92:/layout/dialog_memo_custom_forget_password.xml"
     }
 ]

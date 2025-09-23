@@ -1,29 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-v28/values-v28.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/8cb55c6f3349724f32d0708a39c52000/transformed/pag-sdk-ad-unfat-7104-20250326173127/res/values-v28/values-v28.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "7",
-                        "endColumns": "12",
-                        "endOffsets": "395"
-                    },
-                    "to": {
-                        "startLines": "28",
-                        "startColumns": "4",
-                        "startOffsets": "1962",
-                        "endLines": "33",
-                        "endColumns": "12",
-                        "endOffsets": "2302"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-v28/values-v28.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +23,26 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f65c9ec185b941170bd771c9027da508/transformed/appcompat-1.7.0/res/values-v28/values-v28.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/8cb55c6f3349724f32d0708a39c52000/transformed/pag-sdk-ad-unfat-7104-20250326173127/res/values-v28/values-v28.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "395"
+                    },
+                    "to": {
+                        "startLines": "28",
+                        "startColumns": "4",
+                        "startOffsets": "1962",
+                        "endLines": "33",
+                        "endColumns": "12",
+                        "endOffsets": "2302"
+                    }
+                },
+                {
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/f65c9ec185b941170bd771c9027da508/transformed/appcompat-1.7.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

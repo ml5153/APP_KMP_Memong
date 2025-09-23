@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-zh-rMO/values-zh-rMO.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-zh-rMO/values-zh-rMO.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/res/values-zh-rMO/values-zh-rMO.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/045fd98de58d11b9832b1f300ab7260d/transformed/applovin-sdk-13.1.0/res/values-zh-rMO/values-zh-rMO.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
