@@ -40,10 +40,10 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = "haru_memo_aos_release_key"
+            keyAlias = "haru_memo_aos_store_key"
             storePassword = "memong!@12"
             keyPassword = "memong!@#123"
-            storeFile = file("../../keystore/memong_release_key/memong_release.keystore")
+            storeFile = file("../../keystore/memong_store_key/release_key.keystore")
         }
     }
 

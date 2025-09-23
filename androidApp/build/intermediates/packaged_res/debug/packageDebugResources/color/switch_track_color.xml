@@ -1,4 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true" android:color="@color/haru_primary_orange" /> <!-- ON 상태 -->
-    <item android:color="#D8DBDE" /> <!-- OFF 상태 -->
-</selector>
