@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "627972089567",
-    "project_id": "harumemo-680cf",
-    "storage_bucket": "harumemo-680cf.firebasestorage.app"
+    "project_number": "371460989513",
+    "project_id": "memong-e8e31",
+    "storage_bucket": "memong-e8e31.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:627972089567:android:006263ee9c459ac4136b6a",
+        "mobilesdk_app_id": "1:371460989513:android:26d8ca2e24aeed0198d598",
         "android_client_info": {
           "package_name": "com.memong.aos"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC7m556se6jD0KKMorBfpFCekrOaFtTDL0"
+          "current_key": "AIzaSyDcbDYS4a-hxjV2xIJfW9G5KfemsDKDMh0"
         }
       ],
       "services": {
