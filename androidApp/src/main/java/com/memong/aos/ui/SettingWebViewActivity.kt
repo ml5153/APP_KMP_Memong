@@ -32,19 +32,19 @@ internal class SettingWebViewActivity : BaseActivity() {
         private val webViewContentMap = mapOf(
             R.string.haru_webview_mode_notice to WebViewContent(
                 SettingHeaderView.SetHeaderMode.NOTICE,
-                "https://sites.google.com/view/harumemo-notice/%ED%99%88"
+                "https://sites.google.com/view/memongnotice/%ED%99%88?authuser=1"
             ),
             R.string.haru_webview_mode_terms to WebViewContent(
                 SettingHeaderView.SetHeaderMode.TERMS,
-                "https://sites.google.com/view/harumemo-terms/%ED%99%88"
+                "https://sites.google.com/view/memongterms/%ED%99%88?authuser=1"
             ),
             R.string.haru_webview_mode_backup to WebViewContent(
                 SettingHeaderView.SetHeaderMode.GUIDE_B,
-                "https://sites.google.com/view/harumemo-guide-backup/%ED%99%88"
+                "https://sites.google.com/view/memongguidebackup/%ED%99%88?authuser=1"
             ),
             R.string.haru_webview_mode_faq to WebViewContent(
                 SettingHeaderView.SetHeaderMode.GUIDE_F,
-                "https://sites.google.com/view/harumemo-faq/%ED%99%88"
+                "https://sites.google.com/view/memongfaq/%ED%99%88?authuser=1"
             )
         )
     }
