@@ -12,7 +12,16 @@
           "package_name": "com.memong.aos"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "371460989513-vrbgc2kp2b89js2aik06smu6n5e6qb0e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.memong.aos",
+            "certificate_hash": "9911c0881df1d3a0752c8b12464fff04d1d2923a"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDcbDYS4a-hxjV2xIJfW9G5KfemsDKDMh0"
