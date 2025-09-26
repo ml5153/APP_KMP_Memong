@@ -1214,9 +1214,9 @@ internal class SettingBackupActivity : BaseActivity() {
         )
 
         dialog.setTitleText(getString(R.string.haru_restore_data_select))
-        dialog.setBottomSubText(
-            getString(R.string.haru_restore_memog_legacy)
-        )
+//        dialog.setBottomSubText(
+//            getString(R.string.haru_restore_memog_legacy)
+//        )
         dialog.show()
     }
 
