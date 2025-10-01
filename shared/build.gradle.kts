@@ -37,6 +37,7 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.nexus.kit.v0010)
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

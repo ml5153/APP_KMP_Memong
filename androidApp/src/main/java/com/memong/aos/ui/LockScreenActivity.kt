@@ -12,6 +12,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
@@ -266,7 +267,7 @@ internal class LockScreenActivity : BaseActivity() {
             onSuccess = { response ->
                 runOnUiThread {
 
-                    val displayAddress = response.location?.displayAddress
+                    val displayAddress = getKoreanAddress(lat, lon)
                     binding?.textLocation?.text =
                         displayAddress ?: getString(R.string.haru_location_unknown)
 
@@ -449,6 +450,23 @@ internal class LockScreenActivity : BaseActivity() {
 
             // 8. fallback
             else -> R.drawable.ic_ls_weather_cloudy
+        }
+    }
+
+    private fun getKoreanAddress(lat: Double, lon: Double): String? {
+        return try {
+            val geocoder = Geocoder(this, Locale.getDefault()) // 시스템 언어 기반
+            val addresses = geocoder.getFromLocation(lat, lon, 1)
+            addresses?.firstOrNull()?.let {
+                // 보통 [0]은 전체 주소, [1]은 시/구/군 같은 행정구역
+                // 원하는 포맷에 맞게 조합
+                val city = it.locality ?: ""
+                val district = it.subLocality ?: ""
+                if (city.isNotBlank() && district.isNotBlank()) "$city $district"
+                else it.getAddressLine(0) // fallback: 전체 주소
+            }
+        } catch (e: Exception) {
+            null
         }
     }
 
