@@ -1210,7 +1210,7 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
 
         return when {
             // 작성 / 수정
-            lower.contains("작성") -> "오른 쪽 하단 주황색 버튼을 눌러 새 메모를 작성할 수 있어요!"
+            lower.contains("작성") -> "오른 쪽 하단 보라색 버튼을 눌러 새 메모를 작성할 수 있어요!"
             lower.contains("수정") -> "작성된 메모를 클릭해 상세 화면에 진입한 후 본문을 눌러 수정해보세요."
             lower.contains("저장") -> "작성 또는 수정 후 상단 저장 버튼 또는 뒤로가기 시 바로 메모 내용이 저장됩니다!"
 

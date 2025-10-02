@@ -67,3 +67,26 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Gradle
+.gradle/
+**/build/
+
+# IDE / Android Studio
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Kotlin Multiplatform
+*.kotlin_module
+
+# Captures / NDK / Native
+captures/
+.externalNativeBuild/
+
+# iOS (KMP일 경우 Xcode 폴더도 무시)
+xcuserdata/
+*.xcworkspace
+Pods/

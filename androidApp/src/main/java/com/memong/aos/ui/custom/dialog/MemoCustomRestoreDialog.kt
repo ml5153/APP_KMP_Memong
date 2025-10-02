@@ -24,15 +24,15 @@ class MemoCustomRestoreDialog(
 
         binding.btnPhoneBackup.setOnClickListener { onPhoneBackupClick() }
         binding.btnGoogleDrive.setOnClickListener { onGoogleDriveClick() }
-        binding.btnHowTo.setOnClickListener { onHowToClick() }
+//        binding.btnHowTo.setOnClickListener { onHowToClick() }
     }
 
     fun setTitleText(text: String) {
         binding.tvTitle.text = text
     }
 
-    fun setBottomSubText(text: String) {
-        binding.tvBottomSub.text = text
-    }
+//    fun setBottomSubText(text: String) {
+//        binding.tvBottomSub.text = text
+//    }
 
 }

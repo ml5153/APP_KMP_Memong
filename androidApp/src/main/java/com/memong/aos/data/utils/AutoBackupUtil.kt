@@ -38,7 +38,7 @@ object AutoBackupUtil {
 
                 val backupDir = File(
                     Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-                    "HaruMemo"
+                    "Memong"
                 )
                 if (!backupDir.exists()) backupDir.mkdirs()
 

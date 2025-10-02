@@ -128,6 +128,6 @@ object EventUtil {
             putString("action", action)
             label?.let { putString("label", it) }
         }
-        firebaseAnalytics.logEvent("haru_event", bundle)
+        firebaseAnalytics.logEvent("memong_event", bundle)
     }
 }
