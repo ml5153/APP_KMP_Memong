@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customInitPhotoDialogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_bg_rounded_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="@string/haru_sorting_dialog_title"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 작성일 최신 순 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyLatestCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple_rectangle"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <RadioButton
+                android:id="@+id/rbLatestCreate"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:buttonTint="@color/haru_primary_orange"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/haru_sorting_dialog_latest_create"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rbLatestCreate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- 작성일 오래된 순 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyOldestCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple_rectangle"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <RadioButton
+                android:id="@+id/rbOldestCreate"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:buttonTint="@color/haru_primary_orange"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/haru_sorting_dialog_oldest_create"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rbOldestCreate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 수정일 최신 순 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyLatestUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple_rectangle"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <RadioButton
+                android:id="@+id/rbLatestUpdate"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:buttonTint="@color/haru_primary_orange"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/haru_sorting_dialog_latest_update"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rbLatestUpdate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 수정일 오래된 순 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyOldestUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple_rectangle"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <RadioButton
+                android:id="@+id/rbOldestUpdate"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:buttonTint="@color/haru_primary_orange"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/haru_sorting_dialog_oldest_update"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rbOldestUpdate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 사용자 지정 순 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple_rectangle"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <RadioButton
+                android:id="@+id/rbCustom"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:buttonTint="@color/haru_primary_orange"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/haru_sorting_dialog_custom"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rbCustom"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</FrameLayout>

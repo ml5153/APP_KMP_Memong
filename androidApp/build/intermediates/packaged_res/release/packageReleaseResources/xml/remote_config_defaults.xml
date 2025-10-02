@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <!-- 메인 팝업 세팅을 JSON 형태로 통합 -->
+    <entry>
+        <key>main_popup_setting</key>
+        <value>
+            {
+            "use_main_popup": false,
+            "main_popup_target_versions": "",
+            "main_popup_load_image": "https://drive.google.com/file/d/1pKqRTkURhaOHZkIM1G7bJ6lXAZfHk0a_/view?usp=sharing",
+            "main_popup_landing_page": 1,
+            "main_popup_landing_url": "https://sites.google.com/view/harumemo-notice/%ED%99%88",
+            "main_popup_keep_date": "2025/08/01/00:00-2100/12/31/23:59"
+            }
+        </value>
+    </entry>
+
+    <!-- 인앱 업데이트 기본값 -->
+    <entry>
+        <key>in_app_update_setting</key>
+        <value>
+            {
+            "force_update_enabled": false,
+            "min_supported_version": 1,
+            "update_message": "새로운 기능을 사용하려면 최신 버전으로 업데이트 해주세요.",
+            "update_url": "https://play.google.com/store/apps/details?id=com.avatye.haru.memo",
+            "update_type": 1
+            }
+        </value>
+    </entry>
+
+    <!-- 별도 관리 항목 -->
+    <entry>
+        <key>has_new_notice</key>
+        <value>false</value>
+    </entry>
+
+    <entry>
+        <key>splash_time</key>
+        <value>1</value>
+    </entry>
+</defaultsMap>

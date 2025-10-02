@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lvSectionHeaderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <!-- 핀(비밀메모, 즐겨찾기) -->
+    <RelativeLayout
+        android:id="@+id/lySectionPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSectionHeaderIcon"
+            android:layout_width="13dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_item_lock2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/ivSectionHeaderIcon"
+            android:textColor="@color/haru_black"
+            android:textSize="16sp"
+            tools:text="비밀메모" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSectionMemoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvSectionTitle"
+            android:textColor="@color/haru_black"
+            android:layout_marginStart="4dp"
+            android:textSize="10sp"
+            tools:text="(2)" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvSectionMemoArrow"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_arrow_down" />
+    </RelativeLayout>
+
+
+    <!-- 날짜별 전체 -->
+    <RelativeLayout
+        android:id="@+id/lySectionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSectionDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="8dp"
+            android:textColor="@color/haru_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="오늘" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSectionDateCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="8dp"
+            android:layout_toEndOf="@+id/tvSectionDateTitle"
+            android:textColor="@color/haru_black"
+            android:layout_marginStart="4dp"
+            android:textSize="10sp"
+            tools:text="(2)" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvSectionDateArrow"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_down" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

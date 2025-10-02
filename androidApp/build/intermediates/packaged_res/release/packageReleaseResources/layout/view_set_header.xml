@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@android:color/white">
+
+    <!-- 내부 콘텐츠: 패딩 있는 ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="8dp">
+
+        <FrameLayout
+            android:id="@+id/btnSetBack"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_back" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txSet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/haru_set_default"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSetBack"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- divideView: 패딩 영향 받지 않게 FrameLayout의 child로 배치 -->
+    <View
+        android:id="@+id/divideView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#E4E8ED" />
+</FrameLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <!-- Back Button -->
+        <FrameLayout
+            android:id="@+id/lyBack"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_back" />
+        </FrameLayout>
+
+        <!-- Search Input -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:focusableInTouchMode="true"
+            android:hint="검색어를 입력해주세요."
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="#CCCCCC"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyClear"
+            app:layout_constraintStart_toEndOf="@id/lyBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Clear Button -->
+        <FrameLayout
+            android:id="@+id/lyClear"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnClear"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#DDDDDD"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvIndicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Indicator -->
+        <TextView
+            android:id="@+id/tvIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="2/7"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyMoveUp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Move Up -->
+        <FrameLayout
+            android:id="@+id/lyMoveUp"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyMoveDown"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnMoveUp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_up"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <!-- Move Down -->
+        <FrameLayout
+            android:id="@+id/lyMoveDown"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/btnMoveDown"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_down"
+                android:visibility="visible" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- divideView: 패딩 영향 받지 않게 FrameLayout의 child로 배치 -->
+    <View
+        android:id="@+id/divideView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#E4E8ED" />
+</FrameLayout>
+
+
+

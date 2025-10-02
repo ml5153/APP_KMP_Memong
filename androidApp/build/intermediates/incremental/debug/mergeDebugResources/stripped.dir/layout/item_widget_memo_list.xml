@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_widget_header"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="70dp">
+
+    <!-- 전체 콘텐츠 -->
+    <LinearLayout
+        android:id="@+id/widget_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp"> <!-- 아래 여백 확보 -->
+
+        <!-- 상단 콘텐츠 -->
+        <LinearLayout
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:id="@+id/list_widget_imgBody"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:src="@drawable/widget_sample_image"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/list_widget_tvContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 바텀 고정 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/widget_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:id="@+id/list_widget_tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2015.07.01"
+            android:textColor="#888888"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/list_widget_imgImportant"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/ic_important_selector"
+            android:visibility="visible" />
+    </LinearLayout>
+</FrameLayout>

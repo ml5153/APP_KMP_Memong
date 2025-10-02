@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lockScreenRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lockscreen_background"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <FrameLayout
+        android:id="@+id/lySettings"
+        android:layout_width="@dimen/dimen_header_icone_space_padding"
+        android:layout_height="@dimen/dimen_header_icone_space_padding"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ripple_circle"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/buttonSettings"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/haru_settings"
+            android:src="@drawable/ic_ls_settings" />
+
+    </FrameLayout>
+
+    <!-- 위치 / 날짜 / 시간 -->
+    <TextView
+        android:id="@+id/textLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/haru_location"
+        android:textColor="@color/haru_black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/haru_date"
+        android:textColor="@color/haru_black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/textLocation"
+        app:layout_constraintTop_toBottomOf="@id/textLocation" />
+
+    <!-- 시간 영역 (예: 08:45) -->
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/haru_time"
+        android:textColor="@color/haru_black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textDate"
+        app:layout_constraintTop_toBottomOf="@id/textDate" />
+
+    <!-- AM/PM 영역 -->
+    <TextView
+        android:id="@+id/textAmPm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/haru_am_pm"
+        android:textColor="@color/haru_black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/textTime"
+        app:layout_constraintStart_toEndOf="@id/textTime" />
+
+    <TextView
+        android:id="@+id/textTemperature_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/haru_temperature_main"
+        android:textColor="@color/haru_black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textTime"
+        app:layout_constraintTop_toBottomOf="@id/textTime" />
+
+    <TextView
+        android:id="@+id/textTemperature_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/haru_temperature_sub"
+        android:textColor="@color/haru_black"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textTemperature_main"
+        app:layout_constraintStart_toEndOf="@id/textTemperature_main" />
+
+    <TextView
+        android:id="@+id/textTemperatureDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/haru_temperature_diff"
+        android:textColor="@color/haru_black"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/textTemperature_main"
+        app:layout_constraintStart_toEndOf="@id/textTemperature_sub" />
+
+    <!-- 미세먼지 정보 -->
+    <LinearLayout
+        android:id="@+id/airQualityContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/textTemperature_main"
+        app:layout_constraintTop_toBottomOf="@id/textTemperatureDiff">
+
+        <TextView
+            android:id="@+id/textPM10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/pm_very_good"
+            android:drawablePadding="4dp"
+            android:text="@string/haru_pm10"
+            android:textColor="@color/haru_gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textPMStatus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/haru_pm_good"
+            android:textColor="@color/haru_blue"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textPM25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableStart="@drawable/pm_little_bad"
+            android:drawablePadding="4dp"
+            android:text="@string/haru_pm25"
+            android:textColor="@color/haru_gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textPMStatus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/haru_pm_bad"
+            android:textColor="@color/haru_orange"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 날씨 아이콘 -->
+    <ImageView
+        android:id="@+id/imageWeatherIcon"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="false"
+        android:src="@drawable/ic_ls_weather_sunny_cloudy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 메모 섹션 -->
+    <TextView
+        android:id="@+id/textFavoriteMemoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/haru_favorite_memo"
+        android:textColor="@color/haru_black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/airQualityContainer" />
+
+    <TextView
+        android:id="@+id/textViewModeToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/ic_ls_calendar"
+        android:drawablePadding="4dp"
+        android:text="@string/haru_view_as_calendar"
+        android:textColor="@color/haru_black"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textFavoriteMemoTitle" />
+
+    <!-- 카드형 보기 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFavoriteMemos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/textFavoriteMemoTitle" />
+
+    <!-- 하단 FAB 아이콘 -->
+    <FrameLayout
+        android:id="@+id/iconMemoList"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/shape_bg_ls_list"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imgMemoListIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_ls_memo_list"
+            app:tint="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/iconMemoWrite"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/shape_bg_new_memo_gradient"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imgNewMomoIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_memo_list_new_memo"
+            app:tint="@android:color/white" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iconCamera"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_ls_camera"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconPhone"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_ls_phone"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 잠금 해제 힌트 -->
+    <LinearLayout
+        android:id="@+id/lockHintContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/iconPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textUnlockHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/haru_slide_to_unlock"
+            android:textColor="@color/haru_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iconUnlockArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_ls_arrow_right" />
+    </LinearLayout>
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

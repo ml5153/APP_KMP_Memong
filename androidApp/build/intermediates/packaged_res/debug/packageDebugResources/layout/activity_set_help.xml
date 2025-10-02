@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setHelpRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- 헤더 -->
+    <com.memong.aos.ui.custom.header.SettingHeaderView
+        android:id="@+id/headerSetHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Body -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4F6F8"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBannerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerSetHelp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 섹션 안내 -->
+            <TextView
+                android:id="@+id/textHelpGuideTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="@string/haru_title_guide"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <!-- 메뉴 항목들 -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemMemoWriteGuide"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/memog_w_guide"-->
+<!--                    android:textColor="#1A1A1A"-->
+<!--                    android:textSize="15sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/memoWriteGuideBtn"-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:src="@drawable/ic_chevron_right" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/itemMemoEditGuide"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:background="@drawable/ripple_rectangle"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/memog_e_guide"-->
+<!--                    android:textColor="#1A1A1A"-->
+<!--                    android:textSize="15sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/memoEditGuideBtn"-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:src="@drawable/ic_chevron_right" />-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/itemBackupGuide"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_b_guide"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/memoBackupGuideBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemFaq"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple_rectangle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/haru_f_guide"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/faqBtn"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.avatye.adcash.view.BannerAdView
+        android:id="@+id/bottomBannerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

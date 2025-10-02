@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <!-- ← Back -->
+        <FrameLayout
+            android:id="@+id/lyBack"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toStartOf="@+id/lyAction2"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_back" />
+        </FrameLayout>
+
+        <!-- 중앙 텍스트 -->
+        <TextView
+            android:id="@+id/tvCenterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="3개"
+            android:textColor="@color/haru_primary_orange"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lyBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 기능 버튼들 (최대 4개) -->
+        <FrameLayout
+            android:id="@+id/lyAction1"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/lyAction2"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyAction2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnAction1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_check" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lyAction2"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/lyAction3"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyAction3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnAction2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_check" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lyAction3"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/lyAction2"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyAction4"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnAction3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_check" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/lyAction4"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/lyAction2"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lyMainHeaderCheckbox"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnAction4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_header_check" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lyMainHeaderCheckbox"
+            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_height="@dimen/dimen_header_icone_space_padding"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/lyAction2"
+            android:background="@drawable/ripple_circle"
+            android:visibility="gone"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbMainHeaderCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:background="@null"
+                android:button="@drawable/selector_checkbox" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- divideView: 패딩 영향 받지 않게 FrameLayout의 child로 배치 -->
+    <View
+        android:id="@+id/divideView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#E4E8ED" />
+</FrameLayout>
+

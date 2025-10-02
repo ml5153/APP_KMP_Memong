@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listRootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeColor="@color/item_stroke_color"
+    app:strokeWidth="0.5dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:id="@+id/lyItemMemoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/listLayoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:paddingTop="9dp"
+            android:paddingStart="9dp"
+            android:paddingEnd="9dp"
+            android:background="@drawable/ripple_rectangle"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/listLayoutBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 자물쇠 -->
+                <ImageView
+                    android:id="@+id/listImgLock"
+                    android:layout_width="13dp"
+                    android:layout_height="11dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_item_lock"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <!-- 이미지 -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/listImgBody"
+                    android:layout_width="38dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:layout_marginEnd="6dp"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView"
+                    tools:src="@drawable/ic_item_sample_image"
+                    tools:visibility="visible" />
+
+                <!-- 본문 텍스트 -->
+                <TextView
+                    android:id="@+id/listTvBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:visibility="visible"
+                    tools:text="미리보기 텍스트입니다. Android15 대응 해야됩니다. 겁나 어렵네요.. 개발이 참 어렵다.." />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:id="@+id/lyGridFooterContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+                <!-- 날짜 -->
+                <TextView
+                    android:id="@+id/listTvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textColor="#888888"
+                    android:textSize="8sp"
+                    tools:text="25.07.03" />
+
+
+                <RelativeLayout
+                    android:id="@+id/lyGridFooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end">
+
+                    <!-- 즐겨찾기 -->
+                    <FrameLayout
+                        android:id="@+id/lyListImgImportant"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        tools:background="@color/bg_pink">
+
+                        <ImageView
+                            android:id="@+id/list_imgImportant"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_important_selector" />
+                    </FrameLayout>
+
+                    <!-- 드래그 -->
+                    <FrameLayout
+                        android:id="@+id/listDragContainer"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/lyListImgImportant"
+                        android:visibility="gone"
+                        tools:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/listDrag"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_item_drag" />
+                    </FrameLayout>
+
+
+                    <!-- 체크박스 -->
+                    <FrameLayout
+                        android:id="@+id/listCheckboxContainer"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/lyListImgImportant"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/listCheckbox"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:layout_marginStart="0.5dp"
+                            android:layout_marginTop="1dp"
+                            android:button="@drawable/selector_item_checkbox" />
+                    </FrameLayout>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
