@@ -90,3 +90,6 @@ captures/
 xcuserdata/
 *.xcworkspace
 Pods/
+
+# local.properties
+**/local.properties

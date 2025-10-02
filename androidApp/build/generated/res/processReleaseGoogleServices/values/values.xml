@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">627972089567</string>
-    <string name="google_api_key" translatable="false">AIzaSyC7m556se6jD0KKMorBfpFCekrOaFtTDL0</string>
-    <string name="google_app_id" translatable="false">1:627972089567:android:006263ee9c459ac4136b6a</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC7m556se6jD0KKMorBfpFCekrOaFtTDL0</string>
-    <string name="google_storage_bucket" translatable="false">harumemo-680cf.firebasestorage.app</string>
-    <string name="project_id" translatable="false">harumemo-680cf</string>
-</resources>

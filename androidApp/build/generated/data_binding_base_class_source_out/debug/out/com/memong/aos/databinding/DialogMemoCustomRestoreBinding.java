@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.memong.aos.R;
@@ -25,9 +24,6 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
   public final LinearLayout btnGoogleDrive;
 
   @NonNull
-  public final AppCompatButton btnHowTo;
-
-  @NonNull
   public final LinearLayout btnPhoneBackup;
 
   @NonNull
@@ -37,22 +33,13 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
   public final ImageView imgGoogleDrive;
 
   @NonNull
-  public final ImageView imgInfoIcon;
-
-  @NonNull
   public final ImageView imgPhoneBackup;
-
-  @NonNull
-  public final LinearLayout layoutBottomSub;
 
   @NonNull
   public final LinearLayout messageContainer;
 
   @NonNull
   public final LinearLayout restoreOptionsContainer;
-
-  @NonNull
-  public final TextView tvBottomSub;
 
   @NonNull
   public final TextView tvGoogleDrive;
@@ -64,25 +51,19 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
   public final TextView tvTitle;
 
   private DialogMemoCustomRestoreBinding(@NonNull LinearLayout rootView,
-      @NonNull LinearLayout btnGoogleDrive, @NonNull AppCompatButton btnHowTo,
-      @NonNull LinearLayout btnPhoneBackup, @NonNull LinearLayout dialogRoot,
-      @NonNull ImageView imgGoogleDrive, @NonNull ImageView imgInfoIcon,
-      @NonNull ImageView imgPhoneBackup, @NonNull LinearLayout layoutBottomSub,
-      @NonNull LinearLayout messageContainer, @NonNull LinearLayout restoreOptionsContainer,
-      @NonNull TextView tvBottomSub, @NonNull TextView tvGoogleDrive,
+      @NonNull LinearLayout btnGoogleDrive, @NonNull LinearLayout btnPhoneBackup,
+      @NonNull LinearLayout dialogRoot, @NonNull ImageView imgGoogleDrive,
+      @NonNull ImageView imgPhoneBackup, @NonNull LinearLayout messageContainer,
+      @NonNull LinearLayout restoreOptionsContainer, @NonNull TextView tvGoogleDrive,
       @NonNull TextView tvPhoneBackup, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnGoogleDrive = btnGoogleDrive;
-    this.btnHowTo = btnHowTo;
     this.btnPhoneBackup = btnPhoneBackup;
     this.dialogRoot = dialogRoot;
     this.imgGoogleDrive = imgGoogleDrive;
-    this.imgInfoIcon = imgInfoIcon;
     this.imgPhoneBackup = imgPhoneBackup;
-    this.layoutBottomSub = layoutBottomSub;
     this.messageContainer = messageContainer;
     this.restoreOptionsContainer = restoreOptionsContainer;
-    this.tvBottomSub = tvBottomSub;
     this.tvGoogleDrive = tvGoogleDrive;
     this.tvPhoneBackup = tvPhoneBackup;
     this.tvTitle = tvTitle;
@@ -121,12 +102,6 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnHowTo;
-      AppCompatButton btnHowTo = ViewBindings.findChildViewById(rootView, id);
-      if (btnHowTo == null) {
-        break missingId;
-      }
-
       id = R.id.btnPhoneBackup;
       LinearLayout btnPhoneBackup = ViewBindings.findChildViewById(rootView, id);
       if (btnPhoneBackup == null) {
@@ -141,21 +116,9 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imgInfoIcon;
-      ImageView imgInfoIcon = ViewBindings.findChildViewById(rootView, id);
-      if (imgInfoIcon == null) {
-        break missingId;
-      }
-
       id = R.id.imgPhoneBackup;
       ImageView imgPhoneBackup = ViewBindings.findChildViewById(rootView, id);
       if (imgPhoneBackup == null) {
-        break missingId;
-      }
-
-      id = R.id.layoutBottomSub;
-      LinearLayout layoutBottomSub = ViewBindings.findChildViewById(rootView, id);
-      if (layoutBottomSub == null) {
         break missingId;
       }
 
@@ -168,12 +131,6 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
       id = R.id.restoreOptionsContainer;
       LinearLayout restoreOptionsContainer = ViewBindings.findChildViewById(rootView, id);
       if (restoreOptionsContainer == null) {
-        break missingId;
-      }
-
-      id = R.id.tvBottomSub;
-      TextView tvBottomSub = ViewBindings.findChildViewById(rootView, id);
-      if (tvBottomSub == null) {
         break missingId;
       }
 
@@ -195,10 +152,9 @@ public final class DialogMemoCustomRestoreBinding implements ViewBinding {
         break missingId;
       }
 
-      return new DialogMemoCustomRestoreBinding((LinearLayout) rootView, btnGoogleDrive, btnHowTo,
-          btnPhoneBackup, dialogRoot, imgGoogleDrive, imgInfoIcon, imgPhoneBackup, layoutBottomSub,
-          messageContainer, restoreOptionsContainer, tvBottomSub, tvGoogleDrive, tvPhoneBackup,
-          tvTitle);
+      return new DialogMemoCustomRestoreBinding((LinearLayout) rootView, btnGoogleDrive,
+          btnPhoneBackup, dialogRoot, imgGoogleDrive, imgPhoneBackup, messageContainer,
+          restoreOptionsContainer, tvGoogleDrive, tvPhoneBackup, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

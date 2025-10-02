@@ -35,6 +35,7 @@
     <color name="haru_warning_red">#FF4444</color>
     <color name="ic_haru_memo_logo_background">#FFFFFF</color>
     <color name="ic_memog_logo_background">#FFFFFF</color>
+    <color name="ic_memong_launcher_background">#B5A8FF</color>
     <color name="ic_memong_logo_background">#B5A8FF</color>
     <color name="item_stroke_color">#1A000000</color>
     <color name="recyclerview_color">#EDF3F8</color>

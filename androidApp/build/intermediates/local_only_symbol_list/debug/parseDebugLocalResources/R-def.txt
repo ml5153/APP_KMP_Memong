@@ -42,6 +42,7 @@ color haru_schedule_text
 color haru_warning_red
 color ic_haru_memo_logo_background
 color ic_memog_logo_background
+color ic_memong_launcher_background
 color ic_memong_logo_background
 color item_stroke_color
 color recyclerview_color
@@ -168,6 +169,7 @@ drawable ic_main_popup_error_image
 drawable ic_main_popup_loading_image
 drawable ic_memo_list_new_memo
 drawable ic_memog_logo_foreground
+drawable ic_memong_launcher_foreground
 drawable ic_memong_splash_logo
 drawable ic_minus
 drawable ic_new_memo_selector
@@ -314,7 +316,6 @@ id btnEraser
 id btnGallery
 id btnGoogleDrive
 id btnHighlighter
-id btnHowTo
 id btnIncreaseSize
 id btnIncreaseSizeContainer
 id btnLock
@@ -432,7 +433,6 @@ id imageGuide
 id imageViewPager
 id imageWeatherIcon
 id imgGoogleDrive
-id imgInfoIcon
 id imgLogo
 id imgMemoListIcon
 id imgNewMomoIcon
@@ -491,7 +491,6 @@ id labelLocalBackup
 id labelNotice
 id labelNoticeIcon
 id labelTerms
-id layoutBottomSub
 id layoutContainer
 id layoutContentWrapper
 id layoutMemoContentWrapper
@@ -808,6 +807,8 @@ mipmap ic_haru_memo_logo
 mipmap ic_haru_memo_logo_round
 mipmap ic_memog_logo
 mipmap ic_memog_logo_round
+mipmap ic_memong_launcher
+mipmap ic_memong_launcher_round
 mipmap ic_memong_logo
 mipmap ic_memong_logo_foreground
 mipmap ic_memong_logo_round

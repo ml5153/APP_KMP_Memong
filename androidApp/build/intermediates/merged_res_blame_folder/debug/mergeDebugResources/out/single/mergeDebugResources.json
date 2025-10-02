@@ -4,10 +4,6 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-hdpi/lockscreen_background.png"
     },
     {
-        "merged": "com.memong.aos.androidApp-debug-6:/drawable_preview_memong_widget_medium.png.flat",
-        "source": "com.memong.aos.androidApp-main-8:/drawable/preview_memong_widget_medium.png"
-    },
-    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxhdpi_ic_image_detail_close.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxhdpi/ic_image_detail_close.png"
     },
@@ -86,6 +82,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/color_switch_track_color.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/color/switch_track_color.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable_preview_memong_widget_small.xml.flat",
+        "source": "com.memong.aos.androidApp-main-8:/drawable/preview_memong_widget_small.xml"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_pm_very_good.png.flat",
@@ -244,10 +244,6 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/pm_very_good.png"
     },
     {
-        "merged": "com.memong.aos.androidApp-debug-6:/drawable_preview_memong_widget_small.png.flat",
-        "source": "com.memong.aos.androidApp-main-8:/drawable/preview_memong_widget_small.png"
-    },
-    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_ic_plus.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xhdpi/ic_plus.png"
     },
@@ -274,6 +270,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/layout_activity_trash_detail.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/layout/activity_trash_detail.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-xhdpi_ic_memong_launcher.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-xhdpi/ic_memong_launcher.webp"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_ic_header_camera.png.flat",
@@ -456,6 +456,10 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xhdpi/ic_ls_memo_list.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_preview_memong_widget_medium.png.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/preview_memong_widget_medium.png"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_ic_editor_checkbox.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/ic_editor_checkbox.png"
     },
@@ -490,6 +494,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable_shape_bg_circle_white_selected.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/drawable/shape_bg_circle_white_selected.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-anydpi-v26_ic_memong_launcher.xml.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-anydpi-v26/ic_memong_launcher.xml"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-hdpi_ic_editor_clipboard.png.flat",
@@ -534,6 +542,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/xml_widget_memo_medium_info.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/xml/widget_memo_medium_info.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-mdpi_ic_memong_launcher.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-mdpi/ic_memong_launcher.webp"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable_shape_dot_circle.xml.flat",
@@ -594,6 +606,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/layout_custom_progress_view.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/layout/custom_progress_view.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-xxxhdpi_ic_memong_launcher_round.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-xxxhdpi/ic_memong_launcher_round.webp"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxhdpi_ic_ls_weather_mostly_cloudy.png.flat",
@@ -732,6 +748,10 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-mdpi/ic_ai_clipboard.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-xxxhdpi_ic_memong_launcher.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-xxxhdpi/ic_memong_launcher.webp"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/mipmap-mdpi_ic_haru_memo_logo_round.webp.flat",
         "source": "com.memong.aos.androidApp-main-8:/mipmap-mdpi/ic_haru_memo_logo_round.webp"
     },
@@ -818,6 +838,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_ic_ai_clipboard.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/ic_ai_clipboard.png"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxhdpi_preview_memong_widget_medium.png.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxhdpi/preview_memong_widget_medium.png"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/layout_widget_memo_medium.xml.flat",
@@ -948,6 +972,10 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-ldpi/ic_item_lock2.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable_ic_memong_launcher_foreground.xml.flat",
+        "source": "com.memong.aos.androidApp-main-8:/drawable/ic_memong_launcher_foreground.xml"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_ic_image_detail_download.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/ic_image_detail_download.png"
     },
@@ -982,6 +1010,14 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxhdpi_ic_dialog_camera.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxhdpi/ic_dialog_camera.png"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-mdpi_ic_memong_launcher_round.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-mdpi/ic_memong_launcher_round.webp"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-hdpi_ic_memong_launcher_round.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-hdpi/ic_memong_launcher_round.webp"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-hdpi_ic_header_draw_redo.png.flat",
@@ -1042,6 +1078,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_ic_ls_weather_windy.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/ic_ls_weather_windy.png"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-xhdpi_ic_memong_launcher_round.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-xhdpi/ic_memong_launcher_round.webp"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/layout_view_search_tag_header.xml.flat",
@@ -1208,6 +1248,10 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-ldpi/ic_plus3.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable_ic_memong_splash_logo.xml.flat",
+        "source": "com.memong.aos.androidApp-main-8:/drawable/ic_memong_splash_logo.xml"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_preview_memo_widget_medium.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xhdpi/preview_memo_widget_medium.png"
     },
@@ -1312,6 +1356,10 @@
         "source": "com.memong.aos.androidApp-main-8:/drawable/ripple_rectangle_all_radius_12dp.xml"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-xxhdpi_ic_memong_launcher_round.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-xxhdpi/ic_memong_launcher_round.webp"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_ic_plus2.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxxhdpi/ic_plus2.png"
     },
@@ -1350,10 +1398,6 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable_selector_item_checkbox.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/drawable/selector_item_checkbox.xml"
-    },
-    {
-        "merged": "com.memong.aos.androidApp-debug-6:/drawable_ic_memong_splash_logo.png.flat",
-        "source": "com.memong.aos.androidApp-main-8:/drawable/ic_memong_splash_logo.png"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_ic_ks_weather_sunny_rain.png.flat",
@@ -1530,6 +1574,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable_shape_bg_circle_transparent.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/drawable/shape_bg_circle_transparent.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_preview_memong_widget_medium.png.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-xhdpi/preview_memong_widget_medium.png"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_ic_header_paste.png.flat",
@@ -1912,6 +1960,10 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-mdpi/ic_ls_calendar.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-hdpi_ic_memong_launcher.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-hdpi/ic_memong_launcher.webp"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_memo_none_write.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xhdpi/memo_none_write.png"
     },
@@ -1922,6 +1974,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-ldpi_ic_editor_highlight.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-ldpi/ic_editor_highlight.png"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-ldpi_preview_memong_widget_medium.png.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-ldpi/preview_memong_widget_medium.png"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-anydpi-v24_ic_plus3.xml.flat",
@@ -2388,8 +2444,16 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xhdpi/ic_image_detail_download.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-xxhdpi_ic_memong_launcher.webp.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-xxhdpi/ic_memong_launcher.webp"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable_shape_bg_circle.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/drawable/shape_bg_circle.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-mdpi_preview_memong_widget_medium.png.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-mdpi/preview_memong_widget_medium.png"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xhdpi_ic_check_color.png.flat",
@@ -2712,6 +2776,10 @@
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-ldpi/ic_ls_weather_night_clear.png"
     },
     {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-anydpi-v24_preview_memong_widget_medium.xml.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-anydpi-v24/preview_memong_widget_medium.xml"
+    },
+    {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxhdpi_ic_search_p.png.flat",
         "source": "com.memong.aos.androidApp-pngs-1:/drawable-xxhdpi/ic_search_p.png"
     },
@@ -2726,6 +2794,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable_gd_backup_guide2.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/drawable/gd_backup_guide2.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/mipmap-anydpi-v26_ic_memong_launcher_round.xml.flat",
+        "source": "com.memong.aos.androidApp-main-8:/mipmap-anydpi-v26/ic_memong_launcher_round.xml"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxhdpi_ic_editor_highlight.png.flat",
@@ -2838,6 +2910,10 @@
     {
         "merged": "com.memong.aos.androidApp-debug-6:/layout_view_memo_detail_header.xml.flat",
         "source": "com.memong.aos.androidApp-main-8:/layout/view_memo_detail_header.xml"
+    },
+    {
+        "merged": "com.memong.aos.androidApp-debug-6:/drawable-hdpi_preview_memong_widget_medium.png.flat",
+        "source": "com.memong.aos.androidApp-pngs-1:/drawable-hdpi/preview_memong_widget_medium.png"
     },
     {
         "merged": "com.memong.aos.androidApp-debug-6:/drawable-xxxhdpi_ic_header_view_mode_grid.png.flat",
