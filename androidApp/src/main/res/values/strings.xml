@@ -4,7 +4,7 @@
     <string name="haru_developing_function">기능 개발 중입니다.</string>
 
     <!-- APP-NAME -->
-    <string name="haru_memo">메몽</string>
+    <string name="haru_memo">Memong</string>
 
     <!-- LOG-NAME -->
     <string name="haru_log_moudle_name">HaruMemo</string>
@@ -418,7 +418,7 @@
     <string name="haru_bottom_sheet_info_add_tag">+ 태그추가</string>
 
     <!-- 위젯 -->
-    <string name="haru_widget_name">메몽</string>
+    <string name="haru_widget_name">Memong</string>
     <string name="haru_widget_empty_text">작성된 메모가 없습니다.</string>
 
     <!-- 태그 -->
@@ -434,7 +434,7 @@
     <string name="haru_trash_notice">이 메모는 14일 후 삭제됩니다.</string>
 
     <!-- 종료 다이얼로그 -->
-    <string name="haru_exit_dialog_title">메몽 종료</string>
+    <string name="haru_exit_dialog_title">Memong 종료</string>
     <string name="haru_exit_dialog_message">앱을 종료하시겠습니까?</string>
     <string name="haru_dialog_exit_confirm">종료</string>
     <string name="haru_search_suggested_tags">태그</string>]

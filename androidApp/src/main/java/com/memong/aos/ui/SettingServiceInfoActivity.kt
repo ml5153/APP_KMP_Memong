@@ -95,8 +95,8 @@ internal class SettingServiceInfoActivity : BaseActivity() {
         b.textVersion.text = getString(R.string.haru_setting_current_version, version)
 
         b.itemInquiry.setOnClickListener {
-            val email = "dai852991@gmail.com"
-            val subject = "[메몽 이용문의]"
+            val email = "memongpig@gmail.com"
+            val subject = "[Memong 이용문의]"
 
             val account = PreferenceUtil.get(
                 KEY_GOOGLE_ACCOUNT_EMAIL,
