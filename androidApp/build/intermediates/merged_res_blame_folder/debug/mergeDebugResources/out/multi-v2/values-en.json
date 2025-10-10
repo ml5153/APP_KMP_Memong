@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-en/values-en.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/1682aa25a8eeb0816e245e9b3a46c962/transformed/applovin-sdk-13.1.0/res/values-en/values-en.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/1682aa25a8eeb0816e245e9b3a46c962/transformed/applovin-sdk-13.1.0/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/978b1ea0aa1169c2bb8c66ec78f77069/transformed/pag-sdk-ad-unfat-7104-20250326173127/res/values-en/values-en.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/978b1ea0aa1169c2bb8c66ec78f77069/transformed/pag-sdk-ad-unfat-7104-20250326173127/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

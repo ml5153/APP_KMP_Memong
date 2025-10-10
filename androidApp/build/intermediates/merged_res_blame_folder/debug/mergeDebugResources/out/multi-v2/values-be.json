@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-be/values-be.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-be/values-be.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0c086357c0a4e97070ede2c203c9e6cb/transformed/appcompat-1.7.0/res/values-be/values-be.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/6f10a9a6a8514ecdb05bff818cbf7f78/transformed/core-1.13.0/res/values-be/values-be.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,562,665,786",
+                        "endColumns": "97,101,99,100,105,102,120,100",
+                        "endOffsets": "148,250,350,451,557,660,781,882"
+                    },
+                    "to": {
+                        "startLines": "40,41,42,43,44,45,46,173",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3587,3685,3787,3887,3988,4094,4197,16020",
+                        "endColumns": "97,101,99,100,105,102,120,100",
+                        "endOffsets": "3680,3782,3882,3983,4089,4192,4313,16116"
+                    }
+                },
+                {
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/0c086357c0a4e97070ede2c203c9e6cb/transformed/appcompat-1.7.0/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/780943d83eb862d8773e1ff88cbf5f81/transformed/play-services-base-18.5.0/res/values-be/values.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/780943d83eb862d8773e1ff88cbf5f81/transformed/play-services-base-18.5.0/res/values-be/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3042a9864ef952ed47d2193df4848ced/transformed/material-1.12.0/res/values-be/values-be.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/3042a9864ef952ed47d2193df4848ced/transformed/material-1.12.0/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +74,24 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/c0c8fea67cdad6a743b1cd5cc364426d/transformed/browser-1.6.0-alpha02/res/values-be/values-be.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/81944e8e84a82a9c6dcd8a616ab2e15d/transformed/biometric-1.1.0/res/values-be/values-be.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,167,261,391,542,681,810,937,1088,1187,1329,1481",
+                        "endColumns": "111,93,129,150,138,128,126,150,98,141,151,126",
+                        "endOffsets": "162,256,386,537,676,805,932,1083,1182,1324,1476,1603"
+                    },
+                    "to": {
+                        "startLines": "68,70,77,78,79,80,81,82,83,84,85,86",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "6862,7083,7742,7872,8023,8162,8291,8418,8569,8668,8810,8962",
+                        "endColumns": "111,93,129,150,138,128,126,150,98,141,151,126",
+                        "endOffsets": "6969,7172,7867,8018,8157,8286,8413,8564,8663,8805,8957,9084"
+                    }
+                },
+                {
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/c0c8fea67cdad6a743b1cd5cc364426d/transformed/browser-1.6.0-alpha02/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -74,24 +108,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f8c4260f0adeb461ac98a35d56b1be23/transformed/play-services-basement-18.4.0/res/values-be/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "141",
-                        "endOffsets": "336"
-                    },
-                    "to": {
-                        "startLines": "58",
-                        "startColumns": "4",
-                        "startOffsets": "5634",
-                        "endColumns": "145",
-                        "endOffsets": "5775"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e09fc24269eb3a608747ede30446bf69/transformed/play-services-ads-23.3.0/res/values-be/values.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/e09fc24269eb3a608747ede30446bf69/transformed/play-services-ads-23.3.0/res/values-be/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -108,37 +125,20 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/6f10a9a6a8514ecdb05bff818cbf7f78/transformed/core-1.13.0/res/values-be/values-be.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/f8c4260f0adeb461ac98a35d56b1be23/transformed/play-services-basement-18.4.0/res/values-be/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,562,665,786",
-                        "endColumns": "97,101,99,100,105,102,120,100",
-                        "endOffsets": "148,250,350,451,557,660,781,882"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "141",
+                        "endOffsets": "336"
                     },
                     "to": {
-                        "startLines": "40,41,42,43,44,45,46,173",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3587,3685,3787,3887,3988,4094,4197,16020",
-                        "endColumns": "97,101,99,100,105,102,120,100",
-                        "endOffsets": "3680,3782,3882,3983,4089,4192,4313,16116"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/81944e8e84a82a9c6dcd8a616ab2e15d/transformed/biometric-1.1.0/res/values-be/values-be.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,167,261,391,542,681,810,937,1088,1187,1329,1481",
-                        "endColumns": "111,93,129,150,138,128,126,150,98,141,151,126",
-                        "endOffsets": "162,256,386,537,676,805,932,1083,1182,1324,1476,1603"
-                    },
-                    "to": {
-                        "startLines": "68,70,77,78,79,80,81,82,83,84,85,86",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "6862,7083,7742,7872,8023,8162,8291,8418,8569,8668,8810,8962",
-                        "endColumns": "111,93,129,150,138,128,126,150,98,141,151,126",
-                        "endOffsets": "6969,7172,7867,8018,8157,8286,8413,8564,8663,8805,8957,9084"
+                        "startLines": "58",
+                        "startColumns": "4",
+                        "startOffsets": "5634",
+                        "endColumns": "145",
+                        "endOffsets": "5775"
                     }
                 }
             ]

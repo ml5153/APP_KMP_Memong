@@ -182,7 +182,7 @@
     <string name="haru_exam_locate_backup_storage">스마트폰 백업 폴더</string>
     <string name="haru_exam_version_name">1.0.0</string>
     <string name="haru_exit_dialog_message">앱을 종료하시겠습니까?</string>
-    <string name="haru_exit_dialog_title">메몽 종료</string>
+    <string name="haru_exit_dialog_title">Memong 종료</string>
     <string name="haru_f_guide">자주 찾는 도움말</string>
     <string name="haru_favorite_memo">즐겨찾는 메모</string>
     <string name="haru_go_to_settings">설정으로 이동</string>
@@ -293,7 +293,7 @@
     <string name="haru_log_moudle_name">HaruMemo</string>
     <string name="haru_main_popup_close">닫기</string>
     <string name="haru_main_popup_not_show_today">오늘하루 보지않기</string>
-    <string name="haru_memo">메몽</string>
+    <string name="haru_memo">Memong</string>
     <string name="haru_memo_delete_move_to_trash">선택하신 메모가 삭제되어 휴지통으로 이동되었습니다.</string>
     <string name="haru_menu_ai">AI 질문</string>
     <string name="haru_menu_ai_summation">AI 요약</string>
@@ -452,7 +452,7 @@
     <string name="haru_webview_mode_notice">notice</string>
     <string name="haru_webview_mode_terms">terms</string>
     <string name="haru_widget_empty_text">작성된 메모가 없습니다.</string>
-    <string name="haru_widget_name">메몽</string>
+    <string name="haru_widget_name">Memong</string>
     <string name="haru_write_review">리뷰 남기기</string>
     <string name="password_0">0</string>
     <string name="password_1">1</string>

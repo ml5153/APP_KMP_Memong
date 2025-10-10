@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0c086357c0a4e97070ede2c203c9e6cb/transformed/appcompat-1.7.0/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/0c086357c0a4e97070ede2c203c9e6cb/transformed/appcompat-1.7.0/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/6f10a9a6a8514ecdb05bff818cbf7f78/transformed/core-1.13.0/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/6f10a9a6a8514ecdb05bff818cbf7f78/transformed/core-1.13.0/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/c0c8fea67cdad6a743b1cd5cc364426d/transformed/browser-1.6.0-alpha02/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/c0c8fea67cdad6a743b1cd5cc364426d/transformed/browser-1.6.0-alpha02/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/81944e8e84a82a9c6dcd8a616ab2e15d/transformed/biometric-1.1.0/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/81944e8e84a82a9c6dcd8a616ab2e15d/transformed/biometric-1.1.0/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

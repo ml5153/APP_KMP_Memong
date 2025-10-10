@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-4:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.memong.aos.androidApp-mergeDebugResources-88:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/3042a9864ef952ed47d2193df4848ced/transformed/material-1.12.0/res/values-large-v4/values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,169,285,407",
-                        "endColumns": "113,115,121,133",
-                        "endOffsets": "164,280,402,536"
-                    },
-                    "to": {
-                        "startLines": "14,15,16,17",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "887,1001,1117,1239",
-                        "endColumns": "113,115,121,133",
-                        "endOffsets": "996,1112,1234,1368"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/717696bad03d1f37aa1befee257b56fa/transformed/cauly-sdk-3.5.35/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/717696bad03d1f37aa1befee257b56fa/transformed/cauly-sdk-3.5.35/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/0c086357c0a4e97070ede2c203c9e6cb/transformed/appcompat-1.7.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/3042a9864ef952ed47d2193df4848ced/transformed/material-1.12.0/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,169,285,407",
+                        "endColumns": "113,115,121,133",
+                        "endOffsets": "164,280,402,536"
+                    },
+                    "to": {
+                        "startLines": "14,15,16,17",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "887,1001,1117,1239",
+                        "endColumns": "113,115,121,133",
+                        "endOffsets": "996,1112,1234,1368"
+                    }
+                },
+                {
+                    "source": "/Users/daon/.gradle/caches/8.10.2/transforms/0c086357c0a4e97070ede2c203c9e6cb/transformed/appcompat-1.7.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
