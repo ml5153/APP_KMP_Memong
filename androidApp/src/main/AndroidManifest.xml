@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-sdk
-        tools:overrideLibrary="com.google.firebase.ai, com.google.firebase, com.google.firebase.components" />
+        tools:overrideLibrary="com.google.firebase.ai, com.google.firebase, com.google.firebase.components, com.google.android.gms.ads.impl, com.google.android.gms.ads" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -42,7 +42,7 @@
             android:value="N256497692" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5794118792668055~7953981527"/>
+            android:value="ca-app-pub-4719210282750059~3963976602"/>
 
         <property
             android:name="android.adservices.AD_SERVICES_CONFIG"

@@ -1,5 +1,6 @@
 package com.memong.aos.ui.custom.dialog
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
@@ -14,12 +15,13 @@ import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
-import com.avatye.adcash.AdError
 import com.avatye.adcash.BannerAdSize
-import com.avatye.adcash.view.BannerAdView
 import com.avatye.haru.log.LogTrack
+import com.google.android.gms.ads.LoadAdError
+import com.memong.aos.BuildConfig
 import com.memong.aos.data.utils.Util
 import com.memong.aos.databinding.DialogMemoCustomAdBinding
+import com.memong.aos.ui.custom.view.NativeAdView
 
 internal class MemoCustomAdDialog(
     context: Context,
@@ -33,7 +35,7 @@ internal class MemoCustomAdDialog(
     private var radiusPx = Util.dpToPx(context, 12).toFloat()
 
     companion object {
-        const val NAME = "MemogCustomAdDialog"
+        const val NAME = "MemoCustomAdDialog"
     }
 
     init {
@@ -48,11 +50,10 @@ internal class MemoCustomAdDialog(
         // 메시지 카드 전체 둥글게
         binding.messageContainer.setAllCornersRadius(radiusPx)
 
-        with(binding.finishPopupBanner) {
-            listener = object : BannerAdView.Listener {
-                override fun onLoaded() {
-                    LogTrack.i { "$NAME -> init ->  BannerAdView.Listener::onLoaded" }
-
+        binding.finishPopupBanner.apply {
+            loadListener = object : NativeAdView.LoadListener {
+                override fun onAdLoaded() {
+                    LogTrack.i { "$NAME -> init ->  NativeAdView.Listener::onLoaded" }
                     // 광고 보임
                     binding.finishPopupBanner.isVisible = true
 
@@ -63,9 +64,9 @@ internal class MemoCustomAdDialog(
                     binding.messageContainer.setBottomCornersRadius(radiusPx)
                 }
 
-                override fun onFailed(adError: AdError) {
+                override fun onAdFailed(error: LoadAdError) {
                     LogTrack.e {
-                        "$NAME -> init ->  BannerAdView.Listener::onFailed { errorCode: ${adError.errorCode}, errorMessage: ${adError.errorMessage}  }"
+                        "$NAME -> init ->  NativeAdView.Listener::onFailed { errorCode: ${error.code}, errorMessage: ${error.message}  }"
                     }
 
                     // 광고 숨김
@@ -75,14 +76,17 @@ internal class MemoCustomAdDialog(
                     binding.messageContainer.setAllCornersRadius(radiusPx)
                 }
 
-                override fun onClicked() {
-                    LogTrack.i { "$NAME -> init ->  BannerAdView.Listener::onClicked" }
+                override fun onAdClicked() {
+                    LogTrack.i { "$NAME -> init ->  NativeAdView.Listener::onAdClicked" }
+                }
+
+                override fun onAdImpression() {
+                    LogTrack.i { "$NAME -> init ->  NativeAdView.Listener::onAdImpression" }
                 }
             }
-            setPlacementId(placementId = placementId)
-            setBannerAdSize(size = bannerAdSize)
-            requestAd()
+            loadNativeBanner(context as Activity)
         }
+
     }
 
     fun setTitleSpannable(normal: String, highlight: String, highlightColor: Int) {
@@ -193,12 +197,10 @@ internal class MemoCustomAdDialog(
 
     fun onPause() {
         LogTrack.i { "$NAME -> onPause" }
-        binding.finishPopupBanner.onPause()
     }
 
     fun onResume() {
         LogTrack.i { "$NAME -> onResume" }
-        binding.finishPopupBanner.onResume()
     }
 
     fun onDestroy() {

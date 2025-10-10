@@ -3,6 +3,7 @@ package com.memong.aos
 import android.app.Application
 import com.avatye.adcash.ADCashSDK
 import com.avatye.haru.log.LogTrack
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseApp
 import com.google.firebase.ai.GenerativeModel
@@ -50,6 +51,10 @@ internal class HaruMemoApplication : Application() {
             appSecret = BuildConfig.ADCASH_APP_SECRET,
         )
         builder.build()
+
+        // Mediation-Admob
+        MobileAds.initialize(this) {}
+
 
         // AI
         generativeModel = Firebase.ai(

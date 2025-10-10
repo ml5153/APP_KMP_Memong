@@ -20,6 +20,10 @@ public final class BuildConfig {
   // Field from build type: debug
   public static final String ADCASH_FINISH_POPUP_PID = "4f6a61a3-b60a-4d65-beab-c3d4a73a85f8";
   // Field from build type: debug
+  public static final String ADMOB_BANNER_UNIT_ID = "ca-app-pub-4719210282750059/1759010319";
+  // Field from build type: debug
+  public static final String ADMOB_NATIVE_UNIT_ID = "ca-app-pub-4719210282750059/2090182804";
+  // Field from build type: debug
   public static final boolean FORCE_UPDATE_OVERRIDE = false;
   // Field from build type: debug
   public static final int MIN_SUPPORTED_VERSION_OVERRIDE = 0;

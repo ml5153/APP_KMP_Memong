@@ -14,11 +14,10 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <com.avatye.adcash.view.BannerAdView
+        <com.memong.aos.ui.custom.view.NativeAdView
             android:id="@+id/finishPopupBanner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_width="300dp"
+            android:layout_height="250dp" />
 
 
         <!-- 메시지 카드 영역 -->
