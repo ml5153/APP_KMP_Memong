@@ -30,7 +30,7 @@
     <application
         android:name=".HaruMemoApplication"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_memong_launcher"
+        android:icon="@mipmap/ic_memong_app_logo_round"
         android:label="@string/haru_memo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"

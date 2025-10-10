@@ -32,6 +32,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.avatye.haru.network.api.APIWeather
+import com.avatye.haru.network.api.WeatherCacheManager
+import com.avatye.haru.network.res.ResLSWeather
 import com.avatye.haru.network.res.WeatherNow
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -66,6 +68,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
+import java.time.LocalTime
 import java.util.Calendar
 import java.util.Locale
 
@@ -242,84 +245,111 @@ internal class LockScreenActivity : BaseActivity() {
     }
 
     private fun loadLockScreenWeather() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED
+        val ctx = this
+
+        // 1️⃣ 기본값 먼저 표시 (캐시 없을 경우 대비)
+        applyWeatherDefaults()
+
+        // 2️⃣ 캐시 즉시 표시 (있으면 즉시 반영)
+        WeatherCacheManager.load(ctx)?.let { cached ->
+            LogTrack.d("LockScreen") { "Cached weather loaded" }
+            runOnUiThread { updateWeatherUI(cached) }
+        } ?: run {
+            LogTrack.d("LockScreen") { "No cached weather found" }
+        }
+
+        // 3️⃣ 권한 체크
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
         ) {
-            applyWeatherDefaults()
+            LogTrack.w("LockScreen") { "Location permission not granted" }
             return
         }
 
+        // 4️⃣ 위치 정보 확인
         val location = getLastKnownLocation()
         if (location == null) {
-            applyWeatherDefaults()
+            LogTrack.w("LockScreen") { "Location is null" }
             return
         }
 
         val lat = location.latitude
         val lon = location.longitude
 
-        // 기본값을 먼저 보여주고 → 비동기 응답으로 최신값 적용
-        applyWeatherDefaults()
+        // 5️⃣ 캐시 유효성 체크 (10분 이내면 스킵)
+        if (WeatherCacheManager.lastUpdateElapsedMinutes(ctx) < 10) {
+            LogTrack.d("LockScreen") { "Weather cache still valid (<10min), skip refresh" }
+            return
+        }
 
+        // 6️⃣ 최신 데이터 요청
         APIWeather.requestLSWeather(
             lat = lat,
             lon = lon,
             onSuccess = { response ->
-                runOnUiThread {
-
-                    val displayAddress = getKoreanAddress(lat, lon)
-                    binding?.textLocation?.text =
-                        displayAddress ?: getString(R.string.haru_location_unknown)
-
-                    val tempNow = response.weather?.now?.temp?.now
-                    val tempMin = response.weather?.now?.temp?.min
-                    val tempMax = response.weather?.now?.temp?.max
-                    val tempYes = response.weather?.now?.temp?.yes
-
-                    binding?.textTemperatureMain?.text = "${tempNow ?: "-"}°"
-                    binding?.textTemperatureSub?.text = "${tempMin ?: "-"}° / ${tempMax ?: "-"}°"
-
-                    val diff = if (tempNow != null && tempYes != null) {
-                        val d = tempNow - tempYes
-                        when {
-                            d > 0 -> "어제보다 ${d}도 높아요"
-                            d < 0 -> "어제보다 ${-d}도 낮아요"
-                            else -> "어제와 같아요"
-                        }
-                    } else {
-                        ""
-                    }
-                    binding?.textTemperatureDiff?.text = diff
-
-                    val pm10Grade = response.air?.now?.pm10?.grade
-                    binding?.textPM10?.apply {
-                        setText(R.string.haru_pm10)
-                        setCompoundDrawablesWithIntrinsicBounds(getPMDrawable(pm10Grade), 0, 0, 0)
-                    }
-                    binding?.textPMStatus1?.apply {
-                        text = getPMText(pm10Grade)
-                        setTextColor(getPMTextColor(pm10Grade))
-                    }
-
-                    val pm25Grade = response.air?.now?.pm25?.grade
-                    binding?.textPM25?.apply {
-                        setText(R.string.haru_pm25)
-                        setCompoundDrawablesWithIntrinsicBounds(getPMDrawable(pm25Grade), 0, 0, 0)
-                    }
-                    binding?.textPMStatus2?.apply {
-                        text = getPMText(pm25Grade)
-                        setTextColor(getPMTextColor(pm25Grade))
-                    }
-
-                    val weatherNow = response.weather?.now
-                    binding?.imageWeatherIcon?.setImageResource(getWeatherIconRes(weatherNow))
-                }
+                LogTrack.d("LockScreen") { "Weather refreshed successfully" }
+                WeatherCacheManager.save(ctx, response)
+                runOnUiThread { updateWeatherUI(response) }
             },
             onFailure = {
-                it.printStackTrace()
-                runOnUiThread { applyWeatherDefaults() }
+                LogTrack.e("LockScreen") { "Weather update failed: ${it.message}" }
+                runOnUiThread {
+                    // 캐시가 없을 때만 기본 UI로 복구
+                    if (WeatherCacheManager.load(ctx) == null) {
+                        applyWeatherDefaults()
+                    }
+                }
             }
         )
+    }
+
+    private fun updateWeatherUI(response: ResLSWeather) {
+        val displayAddress = getKoreanAddress(
+            response.latitude ?: 0.0,
+            response.longitude ?: 0.0
+        )
+
+        binding?.apply {
+            // 위치명
+            textLocation.text = displayAddress ?: getString(R.string.haru_location_unknown)
+
+            // 온도 정보
+            val tempNow = response.weather?.now?.temp?.now
+            val tempMin = response.weather?.now?.temp?.min
+            val tempMax = response.weather?.now?.temp?.max
+            val tempYes = response.weather?.now?.temp?.yes
+
+            textTemperatureMain.text = "${tempNow ?: "-"}°"
+            textTemperatureSub.text = "${tempMin ?: "-"}° / ${tempMax ?: "-"}°"
+
+            val diffText = if (tempNow != null && tempYes != null) {
+                val d = tempNow - tempYes
+                when {
+                    d > 0 -> "어제보다 ${d}도 높아요"
+                    d < 0 -> "어제보다 ${-d}도 낮아요"
+                    else -> "어제와 같아요"
+                }
+            } else ""
+            textTemperatureDiff.text = diffText
+
+            // 대기질
+            val pm10Grade = response.air?.now?.pm10?.grade
+            val pm25Grade = response.air?.now?.pm25?.grade
+
+            textPM10.setCompoundDrawablesWithIntrinsicBounds(getPMDrawable(pm10Grade), 0, 0, 0)
+            textPMStatus1.text = getPMText(pm10Grade)
+            textPMStatus1.setTextColor(getPMTextColor(pm10Grade))
+
+            textPM25.setCompoundDrawablesWithIntrinsicBounds(getPMDrawable(pm25Grade), 0, 0, 0)
+            textPMStatus2.text = getPMText(pm25Grade)
+            textPMStatus2.setTextColor(getPMTextColor(pm25Grade))
+
+            // 날씨 아이콘
+            val weatherNow = response.weather?.now
+            imageWeatherIcon.setImageResource(getWeatherIconRes(weatherNow))
+        }
     }
 
     private fun applyWeatherDefaults() {
@@ -340,10 +370,7 @@ internal class LockScreenActivity : BaseActivity() {
             textPM10.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pm_no_data, 0, 0, 0)
             textPMStatus1.text = "..."
             textPMStatus1.setTextColor(
-                ContextCompat.getColor(
-                    this@LockScreenActivity,
-                    R.color.haru_gray
-                )
+                ContextCompat.getColor(this@LockScreenActivity, R.color.haru_gray)
             )
 
             // 초미세먼지
@@ -351,10 +378,7 @@ internal class LockScreenActivity : BaseActivity() {
             textPM25.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pm_no_data, 0, 0, 0)
             textPMStatus2.text = "..."
             textPMStatus2.setTextColor(
-                ContextCompat.getColor(
-                    this@LockScreenActivity,
-                    R.color.haru_gray
-                )
+                ContextCompat.getColor(this@LockScreenActivity, R.color.haru_gray)
             )
         }
     }
@@ -370,7 +394,6 @@ internal class LockScreenActivity : BaseActivity() {
     }
 
     private fun getPMText(grade: Int?): String = when (grade) {
-        1 -> "매우좋음"
         2 -> "좋음"
         3 -> "보통"
         4 -> "조금나쁨"
@@ -400,56 +423,51 @@ internal class LockScreenActivity : BaseActivity() {
         else -> ContextCompat.getColor(this, R.color.haru_gray)
     }
 
+    // 🌦️ Open-Meteo 코드 기준 아이콘 매핑
     fun getWeatherIconRes(now: WeatherNow?): Int {
-        val type = now?.type
-        val skyType = now?.sky?.type ?: -1
-        val rainType = now?.rain?.type ?: 0
-        val rainRate = now?.rain?.rate ?: 0
-        val isNight = type?.startsWith("night") == true
+        val type = now?.type ?: return R.drawable.ic_ls_weather_cloudy
 
-        val specialTypes = setOf("windy", "thunder", "thunder_rain", "snow")
+        // 단순히 낮/밤 구분 (06~18시는 낮)
+        val isNight = isNightTime()
 
-        return when {
-            // 1. 강한 비
-            type !in specialTypes && rainType == 1 && rainRate >= 30 ->
+        return when (type) {
+            "clear" ->
+                if (isNight) R.drawable.ic_ls_weather_night_clear
+                else R.drawable.ic_ls_weather_sunny
+
+            "partly_cloudy" ->
+                if (isNight) R.drawable.ic_ls_weather_night_cloudy
+                else R.drawable.ic_ls_weather_sunny_cloudy
+
+            "cloudy", "fog" ->
+                R.drawable.ic_ls_weather_cloudy
+
+            "drizzle", "freezing_rain" ->
                 R.drawable.ic_ls_weather_rain_light
 
-            // 2. 약한 비
-            type !in specialTypes && rainType == 1 && rainRate in 1..29 -> {
+            "rain" ->
                 if (isNight) R.drawable.ic_ls_weather_rain_night
                 else R.drawable.ic_ls_weather_rain_sunny
-            }
 
-            // 3. 흐림
-            type !in specialTypes && skyType == 4 -> R.drawable.ic_ls_weather_cloudy
+            "snow" ->
+                R.drawable.ic_ls_weather_snow
 
-            // 4. 구름 많음
-            type !in specialTypes && skyType == 3 -> {
-                if (isNight) R.drawable.ic_ls_weather_night_cloudy
-                else R.drawable.ic_ls_weather_sunny_cloudy
-            }
+            "thunder" ->
+                R.drawable.ic_ls_weather_thunder
 
-            // 5. 구름 조금
-            type !in specialTypes && skyType == 2 -> {
-                if (isNight) R.drawable.ic_ls_weather_night_cloudy
-                else R.drawable.ic_ls_weather_sunny_cloudy
-            }
+            else ->
+                R.drawable.ic_ls_weather_cloudy
+        }
+    }
 
-            // 6. 맑음
-            type == "day_clear" && type !in specialTypes && skyType <= 1 ->
-                R.drawable.ic_ls_weather_sunny
-
-            type == "night_clear" && type !in specialTypes && skyType <= 1 ->
-                R.drawable.ic_ls_weather_night_clear
-
-            // 7. 특수 조건
-            type == "windy" -> R.drawable.ic_ls_weather_windy
-            type == "thunder" -> R.drawable.ic_ls_weather_thunder
-            type == "thunder_rain" -> R.drawable.ic_ls_weather_thunder_rain
-            type == "snow" -> R.drawable.ic_ls_weather_snow
-
-            // 8. fallback
-            else -> R.drawable.ic_ls_weather_cloudy
+    @SuppressLint("NewApi")
+    private fun isNightTime(): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val hour = java.time.LocalTime.now().hour
+            hour !in 6..18
+        } else {
+            val hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)
+            hour !in 6..18
         }
     }
 

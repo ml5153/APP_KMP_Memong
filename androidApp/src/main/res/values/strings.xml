@@ -536,5 +536,6 @@
     <string name="haru_ai_close">취소</string>
     <string name="haru_ai_close_summary">닫기</string>
     <string name="haru_ai_next">다른 질문하기</string>
+    <string name="memong_ls_weather_provide">Weather data provided by Open-Meteo (https://open-meteo.com)</string>
 
 </resources>

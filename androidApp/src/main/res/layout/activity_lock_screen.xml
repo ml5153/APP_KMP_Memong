@@ -309,6 +309,20 @@
             android:src="@drawable/ic_ls_arrow_right" />
     </LinearLayout>
 
+    <!-- 데이터 출처 표시 -->
+    <TextView
+        android:id="@+id/textWeatherSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/memong_ls_weather_provide"
+        android:textColor="@color/haru_gray"
+        android:textSize="8sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/bottomBannerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <com.avatye.adcash.view.BannerAdView
         android:id="@+id/bottomBannerView"
         android:layout_width="wrap_content"

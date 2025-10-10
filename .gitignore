@@ -93,3 +93,7 @@ Pods/
 
 # local.properties
 **/local.properties
+
+# Ignore KMP transformed metadata libraries
+.kotlin/metadata/
+.kotlin/klib/
