@@ -47,59 +47,75 @@ android {
         }
     }
 
-    android {
-        buildTypes {
-            getByName("debug") {
-                isMinifyEnabled = false
-                isDebuggable = true
-
-                // 디버그 빌드에서는 강제 업데이트 비활성화 + 업데이트 타입도 오버라이드
-                buildConfigField("boolean", "FORCE_UPDATE_OVERRIDE", "false")
-                buildConfigField("int", "MIN_SUPPORTED_VERSION_OVERRIDE", "0")
-                buildConfigField("int", "UPDATE_TYPE_OVERRIDE", "1") // 1 = IMMEDIATE, 2 = FLEXIBLE
-                buildConfigField("String", "ADCASH_APP_ID", "\"9a39111d20e5467ba729ad5f5ddb9a0d\"")
-                buildConfigField("String", "ADCASH_APP_SECRET", "\"191e43fe1a63477b\"")
-                buildConfigField("String", "ADCASH_BOTTOM_BANNER_PID", "\"0db53989-fbf6-4b32-b546-e1417d16e718\"")
-                buildConfigField("String", "ADCASH_FINISH_POPUP_PID", "\"4f6a61a3-b60a-4d65-beab-c3d4a73a85f8\"")
-                buildConfigField("String", "ADCASH_FIND_PASSWORD_PID", "\"341911f8-18e4-4e8e-806d-3576d796e712\"")
-
-                manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-3940256099942544~3347511713"
-                buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-3940256099942544/2247696110\"")
-                buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-3940256099942544/6300978111\"")
-            }
-
-            getByName("release") {
-                proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
-                )
-                signingConfig = signingConfigs.getByName("release")
-                isMinifyEnabled = false
-                isDebuggable = false
-
-                // 운영 릴리즈 빌드에서는 Remote Config 값 사용
-                buildConfigField("boolean", "FORCE_UPDATE_OVERRIDE", "false")
-                buildConfigField("int", "MIN_SUPPORTED_VERSION_OVERRIDE", "0")
-                buildConfigField("int", "UPDATE_TYPE_OVERRIDE", "0") // 0 = Remote Config 사용
-                buildConfigField("String", "ADCASH_APP_ID", "\"9a39111d20e5467ba729ad5f5ddb9a0d\"")
-                buildConfigField("String", "ADCASH_APP_SECRET", "\"191e43fe1a63477b\"")
-                buildConfigField("String", "ADCASH_BOTTOM_BANNER_PID", "\"0db53989-fbf6-4b32-b546-e1417d16e718\"")
-                buildConfigField("String", "ADCASH_FINISH_POPUP_PID", "\"4f6a61a3-b60a-4d65-beab-c3d4a73a85f8\"")
-                buildConfigField("String", "ADCASH_FIND_PASSWORD_PID", "\"341911f8-18e4-4e8e-806d-3576d796e712\"")
-
-                manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-4719210282750059~3963976602"
-                buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-4719210282750059/2090182804\"")
-                buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-4719210282750059/1759010319\"")
-            }
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+
+    buildTypes {
+        getByName("debug") {
+            isMinifyEnabled = false
+            isDebuggable = true
+
+            // 디버그 빌드에서는 강제 업데이트 비활성화 + 업데이트 타입도 오버라이드
+            buildConfigField("boolean", "FORCE_UPDATE_OVERRIDE", "false")
+            buildConfigField("int", "MIN_SUPPORTED_VERSION_OVERRIDE", "0")
+            buildConfigField("int", "UPDATE_TYPE_OVERRIDE", "1") // 1 = IMMEDIATE, 2 = FLEXIBLE
+        }
+
+        getByName("release") {
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = false
+            isDebuggable = false
+
+            // 운영 릴리즈 빌드에서는 Remote Config 값 사용
+            buildConfigField("boolean", "FORCE_UPDATE_OVERRIDE", "false")
+            buildConfigField("int", "MIN_SUPPORTED_VERSION_OVERRIDE", "0")
+            buildConfigField("int", "UPDATE_TYPE_OVERRIDE", "0") // 0 = Remote Config 사용
+        }
+    }
+
+
+    flavorDimensions += "env"
+
+    productFlavors {
+        create("stage") {
+            dimension = "env"
+            applicationIdSuffix = ".stage"
+            versionNameSuffix = "-stage"
+
+            buildConfigField("String", "ADCASH_APP_ID", "\"9a39111d20e5467ba729ad5f5ddb9a0d\"")
+            buildConfigField("String", "ADCASH_APP_SECRET", "\"191e43fe1a63477b\"")
+            buildConfigField("String", "ADCASH_BOTTOM_BANNER_PID", "\"0db53989-fbf6-4b32-b546-e1417d16e718\"")
+            buildConfigField("String", "ADCASH_FINISH_POPUP_PID", "\"4f6a61a3-b60a-4d65-beab-c3d4a73a85f8\"")
+            buildConfigField("String", "ADCASH_FIND_PASSWORD_PID", "\"341911f8-18e4-4e8e-806d-3576d796e712\"")
+
+            // ADMob Sample KEY
+            manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-3940256099942544~3347511713"
+            buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-3940256099942544/2247696110\"")
+            buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-3940256099942544/6300978111\"")
+        }
+
+        create("product") {
+            dimension = "env"
+            buildConfigField("String", "ADCASH_APP_ID", "\"9a39111d20e5467ba729ad5f5ddb9a0d\"")
+            buildConfigField("String", "ADCASH_APP_SECRET", "\"191e43fe1a63477b\"")
+            buildConfigField("String", "ADCASH_BOTTOM_BANNER_PID", "\"0db53989-fbf6-4b32-b546-e1417d16e718\"")
+            buildConfigField("String", "ADCASH_FINISH_POPUP_PID", "\"4f6a61a3-b60a-4d65-beab-c3d4a73a85f8\"")
+            buildConfigField("String", "ADCASH_FIND_PASSWORD_PID", "\"341911f8-18e4-4e8e-806d-3576d796e712\"")
+
+            manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-4719210282750059~3963976602"
+            buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-4719210282750059/2090182804\"")
+            buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-4719210282750059/1759010319\"")
+        }
     }
 }
 
