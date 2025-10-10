@@ -4,6 +4,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ResLSWeather(
+    val latitude: Double? = null,
+    val longitude: Double? = null,
     val location: Location? = null,
     val weather: Weather? = null,
     val air: Air? = null,
@@ -55,7 +57,8 @@ data class Temp(
     val sen: Float? = null,
     val min: Int? = null,
     val max: Int? = null,
-    val yes: Int? = null
+    val yes: Int? = null,             // 어제 기온
+    val diff: Int? = null             // 🌡️ 어제 대비 온도차 (+면 더 따뜻함, -면 더 추움)
 )
 
 @Serializable

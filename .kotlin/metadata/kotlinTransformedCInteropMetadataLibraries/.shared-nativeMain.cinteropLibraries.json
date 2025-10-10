@@ -1,22 +1,22 @@
 [
   {
     "moduleId": "org.jetbrains.kotlinx:atomicfu:0.23.1",
-    "file": "/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.1-nativeMain-cinterop/org.jetbrains.kotlinx_atomicfu-cinterop-interop-wFq7cg.klib",
+    "file": "/Users/daon/AndroidStudioProjects/Memong_KMP/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.1-nativeMain-cinterop/org.jetbrains.kotlinx_atomicfu-cinterop-interop-wFq7cg.klib",
     "sourceSetName": "nativeMain"
   },
   {
     "moduleId": "io.ktor:ktor-utils:3.0.2",
-    "file": "/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-utils-3.0.2-iosMain-cinterop/io.ktor_ktor-utils-cinterop-threadUtils-kGNXpQ.klib",
+    "file": "/Users/daon/AndroidStudioProjects/Memong_KMP/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-utils-3.0.2-iosMain-cinterop/io.ktor_ktor-utils-cinterop-threadUtils-kGNXpQ.klib",
     "sourceSetName": "iosMain"
   },
   {
     "moduleId": "io.ktor:ktor-io:3.0.2",
-    "file": "/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-io-3.0.2-iosMain-cinterop/io.ktor_ktor-io-cinterop-mutex-G8iuZg.klib",
+    "file": "/Users/daon/AndroidStudioProjects/Memong_KMP/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-io-3.0.2-iosMain-cinterop/io.ktor_ktor-io-cinterop-mutex-G8iuZg.klib",
     "sourceSetName": "iosMain"
   },
   {
     "moduleId": "io.ktor:ktor-network:3.0.2",
-    "file": "/Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-network-3.0.2-iosMain-cinterop/io.ktor_ktor-network-cinterop-network-CO_i4g.klib",
+    "file": "/Users/daon/AndroidStudioProjects/Memong_KMP/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-network-3.0.2-iosMain-cinterop/io.ktor_ktor-network-cinterop-network-CO_i4g.klib",
     "sourceSetName": "iosMain"
   }
 ]

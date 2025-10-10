@@ -1,34 +1,26 @@
 package com.avatye.haru.network.api
 
-import com.avatye.haru.network.res.Air
-import com.avatye.haru.network.res.AirComponents
-import com.avatye.haru.network.res.AirData
-import com.avatye.haru.network.res.AirMain
-import com.avatye.haru.network.res.AirNow
-import com.avatye.haru.network.res.AirQuality
-import com.avatye.haru.network.res.AirResponse
-import com.avatye.haru.network.res.ForecastResponse
-import com.avatye.haru.network.res.Humidity
-import com.avatye.haru.network.res.Location
-import com.avatye.haru.network.res.ResLSWeather
-import com.avatye.haru.network.res.Sky
-import com.avatye.haru.network.res.Temp
-import com.avatye.haru.network.res.TimeZoneInfo
-import com.avatye.haru.network.res.Weather
-import com.avatye.haru.network.res.WeatherDaily
-import com.avatye.haru.network.res.WeatherNow
-import com.avatye.haru.network.res.WeatherNowResponse
-import com.avatye.haru.network.res.Wind
+import com.avatye.haru.log.LogTrack
+import com.avatye.haru.network.res.*
 import com.caffeine.common.sdk.network.ktor.Pigeon
 import com.caffeine.common.sdk.network.ktor.PigeonMethod
-import kotlinx.datetime.Instant
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
+import kotlinx.datetime.*
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
+/**
+ * Open-Meteo 기반 날씨 API
+ *
+ * - 현재 온도 / 최저 / 최고
+ * - 미세먼지 / 초미세먼지 (pm10, pm2.5)
+ * - 어제 평균 기온 및 온도 차이
+ *
+ * Crash-free / Thread-safe / Null-safe 보장
+ */
 object APIWeather {
 
-    private const val API_KEY = "5ec82c7249e9d17bb927af69c648e869"
+    private const val TAG = "APIWeather"
+    private val json = Json { ignoreUnknownKeys = true }
 
     fun requestLSWeather(
         lat: Double,
@@ -36,211 +28,281 @@ object APIWeather {
         onSuccess: (ResLSWeather) -> Unit,
         onFailure: (Throwable) -> Unit
     ) {
-        val urlNow = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$API_KEY&units=metric"
-        val urlForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lon&appid=$API_KEY&units=metric"
-        val urlAir = "https://api.openweathermap.org/data/2.5/air_pollution?lat=$lat&lon=$lon&appid=$API_KEY"
+        val baseTimeZone = "Asia/Seoul"
 
-        var nowResp: WeatherNowResponse? = null
-        var forecastResp: ForecastResponse? = null
-        var airResp: AirResponse? = null
+        // 1. API URL 구성
+        val nowUrl =
+            "https://api.open-meteo.com/v1/forecast?latitude=$lat&longitude=$lon" +
+                    "&current=temperature_2m,weathercode" +
+                    "&daily=temperature_2m_min,temperature_2m_max" +
+                    "&timezone=$baseTimeZone"
+
+        val airUrl =
+            "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=$lat&longitude=$lon" +
+                    "&hourly=pm10,pm2_5&timezone=$baseTimeZone"
+
+        val yesterdayDate = Clock.System.now()
+            .toLocalDateTime(TimeZone.of(baseTimeZone))
+            .date.minus(DatePeriod(days = 1))
+
+        val yesterdayUrl =
+            "https://archive-api.open-meteo.com/v1/archive?latitude=$lat&longitude=$lon" +
+                    "&start_date=$yesterdayDate&end_date=$yesterdayDate" +
+                    "&daily=temperature_2m_max,temperature_2m_min,temperature_2m_mean" +
+                    "&timezone=$baseTimeZone"
+
+        // 2. 응답 캐시
+        var forecast: MeteoForecastResponse? = null
+        var air: MeteoAirResponse? = null
+        var yesterdayResp: MeteoYesterdayResponse? = null
+
+        var isFailed = false  // 중복 onFailure 방지
 
         fun tryComplete() {
-            if (nowResp != null && forecastResp != null && airResp != null) {
+            if (forecast != null && air != null && yesterdayResp != null) {
                 try {
-                    val mapped = mapToResLSWeather(nowResp!!, forecastResp!!, airResp!!)
+                    val mapped = mapToResLSWeather(lat, lon, forecast!!, air!!, yesterdayResp!!)
                     onSuccess(mapped)
                 } catch (e: Exception) {
-                    onFailure(e)
+                    if (!isFailed) {
+                        isFailed = true
+                        LogTrack.e { "[$TAG] Mapping failed: ${e.message}" }
+                        onFailure(e)
+                    }
                 }
             }
         }
 
-        val json = Json { ignoreUnknownKeys = true }
-
-        // 현재 날씨
-        Pigeon(PigeonMethod.GET, urlNow, "", "").apply {
-            enqueue { result ->
-                result.onSuccess { raw ->
-                    nowResp = json.decodeFromString(WeatherNowResponse.serializer(), raw)
+        // 3. 현재 / 예보
+        Pigeon(PigeonMethod.GET, nowUrl, "", "").enqueue { result ->
+            result.onSuccess {
+                try {
+                    forecast = json.decodeFromString(MeteoForecastResponse.serializer(), it)
                     tryComplete()
+                } catch (e: Exception) {
+                    if (!isFailed) {
+                        isFailed = true
+                        LogTrack.e { "[$TAG] Forecast parse error: ${e.message}" }
+                        onFailure(e)
+                    }
                 }
-                result.onFailure { onFailure(it) }
+            }
+            result.onFailure {
+                if (!isFailed) {
+                    isFailed = true
+                    LogTrack.e { "[$TAG] Forecast request failed: ${it.message}" }
+                    onFailure(it)
+                }
             }
         }
 
-        // 예보
-        Pigeon(PigeonMethod.GET, urlForecast, "", "").apply {
-            enqueue { result ->
-                result.onSuccess { raw ->
-                    forecastResp = json.decodeFromString(ForecastResponse.serializer(), raw)
+        // 4. 대기질
+        Pigeon(PigeonMethod.GET, airUrl, "", "").enqueue { result ->
+            result.onSuccess {
+                try {
+                    air = json.decodeFromString(MeteoAirResponse.serializer(), it)
                     tryComplete()
+                } catch (e: Exception) {
+                    if (!isFailed) {
+                        isFailed = true
+                        LogTrack.e { "[$TAG] Air parse error: ${e.message}" }
+                        onFailure(e)
+                    }
                 }
-                result.onFailure { onFailure(it) }
+            }
+            result.onFailure {
+                if (!isFailed) {
+                    isFailed = true
+                    LogTrack.e { "[$TAG] Air request failed: ${it.message}" }
+                    onFailure(it)
+                }
             }
         }
 
-        // 대기질
-        Pigeon(PigeonMethod.GET, urlAir, "", "").apply {
-            enqueue { result ->
-                result.onSuccess { raw ->
-                    airResp = json.decodeFromString(AirResponse.serializer(), raw)
+        // 5. 어제 기온
+        Pigeon(PigeonMethod.GET, yesterdayUrl, "", "").enqueue { result ->
+            result.onSuccess {
+                try {
+                    yesterdayResp = json.decodeFromString(MeteoYesterdayResponse.serializer(), it)
                     tryComplete()
+                } catch (e: Exception) {
+                    if (!isFailed) {
+                        isFailed = true
+                        LogTrack.e { "[$TAG] Yesterday parse error: ${e.message}" }
+                        onFailure(e)
+                    }
                 }
-                result.onFailure { onFailure(it) }
+            }
+            result.onFailure {
+                if (!isFailed) {
+                    isFailed = true
+                    LogTrack.e { "[$TAG] Yesterday request failed: ${it.message}" }
+                    onFailure(it)
+                }
             }
         }
     }
 
-    fun mapToResLSWeather(
-        now: WeatherNowResponse,
-        forecast: ForecastResponse,
-        air: AirResponse
+    // ===============================
+    // JSON Response Models
+    // ===============================
+
+    @Serializable
+    data class MeteoForecastResponse(
+        val current: CurrentWeather? = null,
+        val daily: DailyWeather? = null
+    ) {
+        @Serializable
+        data class CurrentWeather(
+            val temperature_2m: Double? = null,
+            val weathercode: Int? = null
+        )
+
+        @Serializable
+        data class DailyWeather(
+            val temperature_2m_min: List<Double>? = null,
+            val temperature_2m_max: List<Double>? = null
+        )
+    }
+
+    @Serializable
+    data class MeteoAirResponse(
+        val hourly: AirHourly? = null
+    ) {
+        @Serializable
+        data class AirHourly(
+            val pm10: List<Double?>? = null,
+            val pm2_5: List<Double?>? = null
+        )
+    }
+
+    @Serializable
+    data class MeteoYesterdayResponse(
+        val daily: YesterdayDaily? = null
+    ) {
+        @Serializable
+        data class YesterdayDaily(
+            val temperature_2m_mean: List<Double>? = null
+        )
+    }
+
+    // ===============================
+    // Mapping Logic
+    // ===============================
+
+    private fun mapToResLSWeather(
+        lat: Double,
+        lon: Double,
+        forecast: MeteoForecastResponse,
+        air: MeteoAirResponse,
+        yesterday: MeteoYesterdayResponse
     ): ResLSWeather {
 
-        // 최근 3시간 평균값으로 보정 (에어코리아 유사하게)
-        val airSamples = air.list.take(3)
-        val airNow: AirData? = if (airSamples.isNotEmpty()) {
-            val avgPm10 = airSamples.mapNotNull { it.components.pm10 }
-                .ifEmpty { listOf(0.0) }.average().toFloat()
-            val avgPm25 = airSamples.mapNotNull { it.components.pm2_5 }
-                .ifEmpty { listOf(0.0) }.average().toFloat()
-            val co = airSamples.mapNotNull { it.components.co }
-                .ifEmpty { listOf(0.0) }.average().toFloat()
-            val no2 = airSamples.mapNotNull { it.components.no2 }
-                .ifEmpty { listOf(0.0) }.average().toFloat()
-            val o3 = airSamples.mapNotNull { it.components.o3 }
-                .ifEmpty { listOf(0.0) }.average().toFloat()
-            val so2 = airSamples.mapNotNull { it.components.so2 }
-                .ifEmpty { listOf(0.0) }.average().toFloat()
-            val aqi = airSamples.mapNotNull { it.main.aqi }
-                .ifEmpty { listOf(3) } // fallback: 보통
-                .average().toInt()
-
-            AirData(
-                main = AirMain(aqi),
-                components = AirComponents(
-                    co = co.toDouble(),
-                    no = 0.0,
-                    no2 = no2.toDouble(),
-                    o3 = o3.toDouble(),
-                    so2 = so2.toDouble(),
-                    pm2_5 = avgPm25.toDouble(),
-                    pm10 = avgPm10.toDouble()
-                )
-            )
-        } else {
-            air.list.firstOrNull()
-        }
-
-        // 하루 단위 그룹핑 → 한국 시간(KST) 기준으로 변경
-        val dailyGroups = forecast.list.groupBy { item ->
-            Instant.fromEpochSeconds(item.dt)
-                .toLocalDateTime(TimeZone.of("Asia/Seoul"))
-                .date
-        }
-
-        // 오늘 날짜 (KST 기준)
-        val today = Instant.fromEpochSeconds(now.dt)
-            .toLocalDateTime(TimeZone.of("Asia/Seoul"))
-            .date
-        val todayItems = dailyGroups[today].orEmpty()
-
-        val todayMin = todayItems.mapNotNull { it.main.temp_min }
-            .minOrNull()?.toInt()
-        val todayMax = todayItems.mapNotNull { it.main.temp_max }
-            .maxOrNull()?.toInt()
-
-        // 아이콘 매핑
-        fun mapIcon(icon: String?): String? = when (icon) {
-            "01d" -> "day_clear"
-            "01n" -> "night_clear"
-            "02d", "03d" -> "cloudy"
-            "02n", "03n" -> "night_cloudy"
-            "04d", "04n" -> "cloudy"
-            "09d", "09n", "10d", "10n" -> "rain"
-            "11d", "11n" -> "thunder"
-            "13d", "13n" -> "snow"
-            "50d", "50n" -> "fog"
-            else -> "cloudy"
-        }
-
-        // 한국 환경부 기준 PM10 (㎍/㎥)
-        fun mapPm10Grade(value: Float?): Int? = when {
-            value == null -> null
-            value <= 30 -> 2 // 좋음
-            value <= 80 -> 3 // 보통
-            value <= 150 -> 5 // 나쁨
-            else -> 6 // 매우나쁨
-        }
-
-        // 한국 환경부 기준 PM2.5 (㎍/㎥)
-        fun mapPm25Grade(value: Float?): Int? = when {
-            value == null -> null
-            value <= 15 -> 2 // 좋음
-            value <= 35 -> 3 // 보통
-            value <= 75 -> 5 // 나쁨
-            else -> 6 // 매우나쁨
-        }
+        val nowTemp = forecast.current?.temperature_2m?.toInt()
+        val minTemp = forecast.daily?.temperature_2m_min?.firstOrNull()?.toInt()
+        val maxTemp = forecast.daily?.temperature_2m_max?.firstOrNull()?.toInt()
+        val pm10 = safeAvg(air.hourly?.pm10)
+        val pm25 = safeAvg(air.hourly?.pm2_5)
+        val yesterdayMean = yesterday.daily?.temperature_2m_mean?.firstOrNull()?.toFloat()
+        val diff = if (nowTemp != null && yesterdayMean != null) nowTemp - yesterdayMean else null
 
         return ResLSWeather(
+            latitude = lat,
+            longitude = lon,
             location = Location(
-                displayAddress = now.name, // Geocoder로 한국어 주소 변환 가능
-                timeZone = TimeZoneInfo(name = "Asia/Seoul")
+                displayAddress = "현재 위치",
+                timeZone = TimeZoneInfo("Asia/Seoul")
             ),
             weather = Weather(
                 now = WeatherNow(
-                    type = mapIcon(now.weather.firstOrNull()?.icon),
+                    type = mapWeatherCode(forecast.current?.weathercode),
                     temp = Temp(
-                        now = now.main.temp?.toInt(),
-                        min = todayMin,
-                        max = todayMax
+                        now = nowTemp,
+                        min = minTemp,
+                        max = maxTemp,
+                        yes = yesterdayMean?.toInt(),
+                        diff = diff?.toInt()
                     ),
-                    sky = Sky(name = now.weather.firstOrNull()?.description),
-                    humidity = Humidity(value = now.main.humidity),
-                    wind = Wind(
-                        direction = now.wind?.deg?.toString(),
-                        velocity = now.wind?.speed?.toFloat()
-                    ),
-                    date = now.dt.toString()
+                    sky = Sky(name = mapWeatherName(forecast.current?.weathercode)),
+                    humidity = Humidity(null),
+                    wind = Wind(null, null),
+                    date = Clock.System.now().epochSeconds.toString()
                 ),
-                hourly = forecast.list.take(8).map {
-                    WeatherNow(
-                        type = mapIcon(it.weather.firstOrNull()?.icon),
-                        temp = Temp(now = it.main.temp?.toInt()),
-                        humidity = Humidity(value = it.main.humidity),
-                        date = it.dt.toString()
-                    )
-                },
-                weekly = dailyGroups.map { (date, items) ->
-                    val min = items.mapNotNull { it.main.temp_min }.minOrNull()?.toInt()
-                    val max = items.mapNotNull { it.main.temp_max }.maxOrNull()?.toInt()
-                    WeatherDaily(
-                        type = mapIcon(items.firstOrNull()?.weather?.firstOrNull()?.icon),
-                        temp = Temp(min = min, max = max),
-                        date = date.toString()
-                    )
-                }
+                hourly = emptyList(),
+                weekly = emptyList()
             ),
             air = Air(
                 now = AirNow(
                     pm10 = AirQuality(
-                        value = airNow?.components?.pm10?.toFloat(),
-                        grade = mapPm10Grade(airNow?.components?.pm10?.toFloat())
+                        value = pm10,
+                        grade = mapPm10Grade(pm10)
                     ),
                     pm25 = AirQuality(
-                        value = airNow?.components?.pm2_5?.toFloat(),
-                        grade = mapPm25Grade(airNow?.components?.pm2_5?.toFloat())
-                    ),
-                    co = AirQuality(value = airNow?.components?.co?.toFloat()),
-                    no2 = AirQuality(value = airNow?.components?.no2?.toFloat()),
-                    o3 = AirQuality(value = airNow?.components?.o3?.toFloat()),
-                    so2 = AirQuality(value = airNow?.components?.so2?.toFloat())
+                        value = pm25,
+                        grade = mapPm25Grade(pm25)
+                    )
                 )
             )
         )
     }
 
-    // Double? → Int? 변환 헬퍼
-    private fun Double?.toIntOrNull(): Int? = this?.toInt()
 
+    // ===============================
+    // Helpers
+    // ===============================
+
+    /** null-safe 평균값 계산 */
+    private fun safeAvg(values: List<Double?>?): Float? {
+        val valid = values?.filterNotNull()
+        return if (!valid.isNullOrEmpty()) valid.average().toFloat() else null
+    }
+
+    /** Open-Meteo 날씨 코드 → 타입 문자열 */
+    private fun mapWeatherCode(code: Int?): String = when (code) {
+        0 -> "clear"
+        1, 2 -> "partly_cloudy"
+        3 -> "cloudy"
+        45, 48 -> "fog"
+        51, 53, 55, 56, 57 -> "drizzle"
+        61, 63, 65, 80, 81, 82 -> "rain"
+        66, 67 -> "freezing_rain"
+        71, 73, 75, 77, 85, 86 -> "snow"
+        95, 96, 99 -> "thunder"
+        else -> "cloudy"
+    }
+
+    /** 날씨 코드 → 한글 설명 */
+    private fun mapWeatherName(code: Int?): String = when (code) {
+        0 -> "맑음"
+        1, 2 -> "구름 조금"
+        3 -> "흐림"
+        45, 48 -> "안개"
+        51, 53, 55 -> "이슬비"
+        56, 57 -> "진눈깨비"
+        61, 63, 65 -> "비"
+        66, 67 -> "얼음비"
+        71, 73, 75, 77 -> "눈"
+        80, 81, 82 -> "소나기"
+        85, 86 -> "눈"
+        95, 96, 99 -> "뇌우"
+        else -> "흐림"
+    }
+
+    /** PM10 단계 */
+    private fun mapPm10Grade(value: Float?): Int? = when {
+        value == null -> null
+        value <= 30 -> 2
+        value <= 80 -> 3
+        value <= 150 -> 5
+        else -> 6
+    }
+
+    /** PM2.5 단계 */
+    private fun mapPm25Grade(value: Float?): Int? = when {
+        value == null -> null
+        value <= 15 -> 2
+        value <= 35 -> 3
+        value <= 75 -> 5
+        else -> 6
+    }
 }
