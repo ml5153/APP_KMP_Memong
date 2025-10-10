@@ -38,7 +38,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.memong.aos.BuildConfig
-import com.memong.aos.HaruMemoApplication
+import com.memong.aos.MemongApplication
 import com.memong.aos.MemoEventFlow
 import com.memong.aos.R
 import com.memong.aos.data.database.MemoDatabase
@@ -181,7 +181,7 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
 
 
     private val generativeModel by lazy {
-        (application as HaruMemoApplication).generativeModel
+        (application as MemongApplication).generativeModel
     }
 
 
@@ -2359,7 +2359,7 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
 
         // 2) 태그명 -> 메모 리스트로 그룹핑 (태그 없으면 "태그 없음")
         val grouped: MutableMap<String, MutableList<MemoEntity>> = linkedMapOf()
-        val noneTagLabel = "태그없는 메모"
+        val noneTagLabel = getString(R.string.haru_section_section_untagged)
 
         for (memo in memos) {
             val tags = memoIdToTagNames[memo._id].orEmpty()

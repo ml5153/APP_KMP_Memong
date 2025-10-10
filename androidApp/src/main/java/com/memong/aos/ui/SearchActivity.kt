@@ -493,7 +493,7 @@ internal class SearchActivity : BaseActivity() {
 
             when (currentHeaderState) {
                 HeaderState.INITIAL -> {
-                    toastShort(context, "검색어를 입력해주세요")
+                    toastShort(context, getString(R.string.haru_search_term))
                 }
 
                 HeaderState.SELECTOR_ACTIVE -> {
@@ -530,7 +530,7 @@ internal class SearchActivity : BaseActivity() {
 
     private fun initHeaderState() = with(binding.headerSearch) {
         setEditText("")
-        setHint("검색어를 입력해주세요")
+        setHint(getString(R.string.haru_search_term))
         showClearButton(true)
         showCheckbox(false)
         showDeleteButton(false)

@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:background="@null"
-            android:hint="내용"
+            android:hint="@string/haru_search_hint_contents"
             android:textColorHint="@color/text_hint_color"
             android:inputType="text"
             android:maxLines="1"

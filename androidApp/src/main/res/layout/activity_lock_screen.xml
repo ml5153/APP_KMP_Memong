@@ -315,7 +315,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:text="@string/haru_lock_ls_weather_provide"
+        android:text="@string/haru_lock_screen_ls_weather_provide"
         android:textColor="@color/haru_gray"
         android:textSize="8sp"
         android:gravity="center"

@@ -11,6 +11,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
+import com.memong.aos.R
 import com.memong.aos.data.extension.showIme
 import com.memong.aos.databinding.ViewSearchTagHeaderBinding
 
@@ -53,7 +54,7 @@ internal class SearchTagHeaderView @JvmOverloads constructor(
         }
 
         // 초기 상태
-        binding.tvTitle.hint = "새로운 태그 첨부"
+        binding.tvTitle.hint = context.getString(R.string.haru_add_new_tag)
         showClearButton(false)
         showCheckbox(false)
         showDeleteButton(false)
@@ -84,7 +85,7 @@ internal class SearchTagHeaderView @JvmOverloads constructor(
                 isEnabled = true
                 setText("")
                 setTextColor(blackColor)
-                hint = "새로운 태그 첨부"
+                hint = context.getString(R.string.haru_add_new_tag)
             }
             showClearButton(false)
             showCheckbox(false)

@@ -7,7 +7,7 @@
     <string name="haru_memo">Memong</string>
 
     <!-- LOG-NAME -->
-    <string name="haru_log_moudle_name">HaruMemo</string>
+    <string name="haru_log_moudle_name">Memong</string>
 
     <!-- Common -->
     <string name="haru_common_layout_save">Save</string>
@@ -24,6 +24,15 @@
     <string name="haru_header_date_mode_unavailable_when_custom_sort">“Custom Order” disables date mode.</string>
     <string name="haru_header_tag_mode_unavailable_when_custom_sort">“Custom Order” disables tag mode.</string>
 
+    <!-- Memo-Section-->
+    <string name="haru_section_layout_lock_memo">Lock Memo</string>
+    <string name="haru_section_layout_important_memo">Important Memo</string>
+    <string name="haru_section_section_today">Today</string>
+    <string name="haru_section_section_yesterday">Yesterday</string>
+    <string name="haru_section_section_last7">Previous 7 days</string>
+    <string name="haru_section_section_last30">Previous 30 days</string>
+    <string name="haru_section_section_untagged">Untagged Memo</string>
+
     <!-- Memo-Select-Mode -->
     <string name="haru_header_selected_mode_count_text">%1$s/%2$s</string>
     <string name="haru_header_selected_mode_copy_memo">_Copy</string>
@@ -39,7 +48,6 @@
     <string name="haru_create_write_memo_mode_save">Memo saved.</string>
     <string name="haru_create_write_memo_mode_no_save">There is no memo content to save.</string>
     <string name="haru_create_write_memo_mode_button">Add New Memo</string>
-    There is no memo content to save.
 
     <!-- Memo-Modify-Memo-Mode -->
     <string name="haru_modify_memo_mode_update">Memo updated.</string>
@@ -239,10 +247,10 @@
 
     <!-- Dialog: Memo Sorting -->
     <string name="haru_sorting_dialog_title">Sort Memos</string>
-    <string name="haru_sorting_dialog_latest_create">Newest by Creation Date</string>
-    <string name="haru_sorting_dialog_oldest_create">Oldest by Creation Date</string>
-    <string name="haru_sorting_dialog_latest_update">Newest by Update Date</string>
-    <string name="haru_sorting_dialog_oldest_update">Oldest by Update Date</string>
+    <string name="haru_sorting_dialog_latest_create">Newest\nby Creation Date</string>
+    <string name="haru_sorting_dialog_oldest_create">Oldest\nby Creation Date</string>
+    <string name="haru_sorting_dialog_latest_update">Newest\nby Update Date</string>
+    <string name="haru_sorting_dialog_oldest_update">Oldest\nby Update Date</string>
     <string name="haru_sorting_dialog_custom">Custom Order</string>
 
     <!-- Support Info / Service Info Settings -->
@@ -372,6 +380,7 @@
     <string name="haru_lock_screen_write_title">Enter title</string>
     <string name="haru_lock_screen_write_body">Enter content</string>
     <string name="haru_lock_screen_memo_save">Save</string>
+    <string name="haru_lock_screen_ls_weather_provide">Weather data provided by Open-Meteo (https://open-meteo.com)</string>
     <string name="haru_location_unknown">Unable to fetch location.</string>
 
     <!-- Lock-screen Permissions -->
@@ -395,6 +404,11 @@
     <string name="haru_trash_toast_notice_today">This memo is scheduled for deletion today</string>
     <string name="haru_trash_toast_notice_expired">This memo is past deletion date</string>
     <string name="haru_empty_select_memo">No memo selected.</string>
+    <string name="haru_trash_memo_notice">
+    Memos in the trash are kept for 14 days, after which they will be permanently deleted.\n
+    However, if you delete all data or uninstall and reinstall the app, all memos in the trash will be permanently deleted and cannot be recovered.
+    Please back up your memos in ‘Settings &gt; Backup’.
+</string>
 
     <!-- Trash Header -->
     <string name="haru_trash_title">Trash</string>
@@ -418,6 +432,8 @@
     <string name="haru_add_tag">Add Tag</string>
     <string name="haru_delete_tag">Delete Tag</string>
     <string name="haru_tag_format">#%1$s</string>
+    <string name="haru_no_tags">No tags have been added yet!</string>
+    <string name="haru_add_new_tag">Add new tag</string>
 
     <!-- Trash Memo Delete Dialog -->
     <string name="haru_trash_delete_dialog_delete_title">Delete Trash Memo</string>
@@ -521,6 +537,9 @@
 
     <!-- Search -->
     <string name="haru_search_empty_text">No memos found.</string>
+    <string name="haru_search_hint_contents">contents</string>
+    <string name="haru_search_term">Enter search terms.</string>
+
 
     <!-- AI -->
     <string name="haru_menu_ai">AI Question</string>
@@ -529,7 +548,7 @@
     <string name="haru_ai_close">Cancel</string>
     <string name="haru_ai_close_summary">Close</string>
     <string name="haru_ai_next">Next Question</string>
-    <string name="haru_lock_ls_weather_provide">Weather data provided by Open-Meteo (https://open-meteo.com)</string>
+    <string name="haru_ai_summary">summary</string>
 
     <!-- AI-Suggestion -->
     <string name="haru_chip_today_weather">Summarize today’s overall weather in South Korea, including temperature, rainfall, and fine dust levels.</string>

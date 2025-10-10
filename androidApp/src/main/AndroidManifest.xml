@@ -28,7 +28,7 @@
         tools:ignore="ScopedStorage" />
 
     <application
-        android:name=".HaruMemoApplication"
+        android:name=".MemongApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_memong_app_logo_round"
         android:label="@string/haru_memo"

@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.memong.aos.BuildConfig
+import com.memong.aos.R
 import com.memong.aos.data.database.MemoDatabase
 import com.memong.aos.data.entity.MemoEntity
 import com.memong.aos.data.entity.TagEntity
@@ -162,7 +163,7 @@ internal class TagManagementActivity : BaseActivity() {
 
         when (mode) {
             TagManageMode.ADD -> {
-                setHint("새로운 태그 첨부")
+                setHint(getString(R.string.haru_add_new_tag))
                 showCheckbox(false)
                 showDeleteButton(false)
                 setEditText("")
@@ -240,7 +241,7 @@ internal class TagManagementActivity : BaseActivity() {
             }
 
             TagManageMode.DETAIL -> {
-                setHint("새로운 태그 첨부")
+                setHint(getString(R.string.haru_add_new_tag))
                 showCheckbox(false)
                 showDeleteButton(false)
                 setEditText("")

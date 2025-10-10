@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/ripple_transparent_rectangle"
-                android:text="아직 등록된 태그가 없어요!"
+                android:text="@string/haru_no_tags"
                 android:textColor="@color/haru_primary_orange"
                 android:textSize="14sp" />
 

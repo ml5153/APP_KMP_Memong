@@ -166,7 +166,7 @@
         <!-- ← 이미지 선택 -->
         <FrameLayout
             android:id="@+id/lyImageSelected"
-            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dimen_header_icone_space_padding"
             android:layout_centerVertical="true"
             android:layout_marginEnd="12dp"
@@ -219,7 +219,7 @@
         <!-- ← 저장 -->
         <FrameLayout
             android:id="@+id/lySave"
-            android:layout_width="@dimen/dimen_header_icone_space_padding"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dimen_header_icone_space_padding"
             android:layout_centerVertical="true"
             android:layout_marginEnd="12dp"

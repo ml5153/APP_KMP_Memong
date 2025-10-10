@@ -21,7 +21,7 @@
         android:background="@color/white"
         android:lineSpacingExtra="3dp"
         android:padding="16dp"
-        android:text="휴지통 메모는 14일간 보관되며 이 후 영구적으로 삭제됩니다.\n단, 전체 데이터 삭제 또는 앱 삭제 후 재설치 시 휴지통의 모든 메모는 영구적으로 삭제되어 복구가 불가능합니다. ‘설정 > 백업’에서 메모를 백업해 주세요."
+        android:text="@string/haru_trash_memo_notice"
         android:textColor="#FF0000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

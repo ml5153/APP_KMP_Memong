@@ -7,7 +7,7 @@
     <string name="haru_memo">메몽</string>
 
     <!-- LOG-NAME -->
-    <string name="haru_log_moudle_name">HaruMemo</string>
+    <string name="haru_log_moudle_name">Memong</string>
 
     <!-- Common -->
     <string name="haru_common_layout_save">저장하기</string>
@@ -24,6 +24,17 @@
     <string name="haru_header_date_mode_unavailable_when_custom_sort">“사용자 지정 순 정렬“에서는 날짜별모드를 이용할 수 없습니다.</string>
     <string name="haru_header_tag_mode_unavailable_when_custom_sort">“사용자 지정 순 정렬“에서는 태그모드를 이용할 수 없습니다.</string>
 
+    <!-- Memo-Section-->
+    <string name="haru_section_layout_lock_memo">비밀메모</string>
+    <string name="haru_section_layout_important_memo">즐겨찾기</string>
+    <string name="haru_section_section_today">오늘</string>
+    <string name="haru_section_section_yesterday">어제</string>
+    <string name="haru_section_section_last7">이전 7일</string>
+    <string name="haru_section_section_last30">이전 30일</string>
+    <string name="haru_section_section_untagged">태그없는 메모</string>
+
+
+
     <!-- Memo-Select-Mode -->
     <string name="haru_header_selected_mode_count_text">%1$s/%2$s</string>
     <string name="haru_header_selected_mode_copy_memo">_복사본</string>
@@ -39,7 +50,6 @@
     <string name="haru_create_write_memo_mode_save">메모가 저장되었습니다.</string>
     <string name="haru_create_write_memo_mode_no_save">저장할 메모 내용이 없습니다.</string>
     <string name="haru_create_write_memo_mode_button">새 메모 추가</string>
-    There is no memo content to save.
 
     <!-- Memo-Modify-Memo-Mode -->
     <string name="haru_modify_memo_mode_update">메모가 수정되었습니다.</string>
@@ -379,8 +389,8 @@
     <string name="haru_lock_screen_write_title">제목을 입력하세요</string>
     <string name="haru_lock_screen_write_body">내용을 입력하세요</string>
     <string name="haru_lock_screen_memo_save">저장하기</string>
+    <string name="haru_lock_screen_ls_weather_provide">Weather data provided by Open-Meteo (https://open-meteo.com)</string>
     <string name="haru_location_unknown">위치를 불러오지 못했습니다.</string>
-    <string name="haru_lock_ls_weather_provide">Weather data provided by Open-Meteo (https://open-meteo.com)</string>
 
     <!-- 잠금화면 권한 내용 -->
     <string name="haru_notification_permission_title">알림 권한 필요</string>
@@ -404,6 +414,11 @@
     <string name="haru_trash_toast_notice_today">이 메모는 오늘 삭제 예정입니다</string>
     <string name="haru_trash_toast_notice_expired">이 메모는 삭제 대상입니다</string>
     <string name="haru_empty_select_memo">선택된 메모가 없습니다.</string>
+    <string name="haru_trash_memo_notice">
+    휴지통 메모는 14일간 보관되며 이 후 영구적으로 삭제됩니다.\n
+    단, 전체 데이터 삭제 또는 앱 삭제 후 재설치 시 휴지통의 모든 메모는 영구적으로 삭제되어 복구가 불가능합니다.
+    ‘설정 &gt; 백업’에서 메모를 백업해 주세요.
+</string>
 
     <!-- 휴지통 헤더 -->
     <string name="haru_trash_title">휴지통</string>
@@ -427,6 +442,8 @@
     <string name="haru_add_tag">태그 추가</string>
     <string name="haru_delete_tag">태그 삭제</string>
     <string name="haru_tag_format">#%1$s</string>
+    <string name="haru_no_tags">아직 등록된 태그가 없어요!</string>
+    <string name="haru_add_new_tag">새로운 태그 첨부</string>
 
     <!-- 휴지통 메모 삭제 다이얼로그 -->
     <string name="haru_trash_delete_dialog_delete_title">휴지통 메모 삭제</string>
@@ -530,6 +547,8 @@
 
     <!-- 검색 -->
     <string name="haru_search_empty_text">검색된 메모가 없습니다.</string>
+    <string name="haru_search_hint_contents">내용</string>
+    <string name="haru_search_term">검색어를 입력해주세요.</string>
 
     <!-- AI -->
     <string name="haru_menu_ai">AI 질문</string>
@@ -538,6 +557,7 @@
     <string name="haru_ai_close">취소</string>
     <string name="haru_ai_close_summary">닫기</string>
     <string name="haru_ai_next">다른 질문하기</string>
+    <string name="haru_ai_summary">요약</string>
 
     <!-- AI-Suggestion -->
     <string name="haru_chip_today_weather">오늘 대한민국 전체의 날씨를 요약해줘. 기온, 강수, 미세먼지 같은 주요 요소도 함께 알려줘.</string>
@@ -623,9 +643,6 @@
     <string name="haru_chip_today_shopping_title">오늘의 쇼핑 추천</string>
     <string name="haru_chip_today_traffic_title">오늘의 교통 상황</string>
     <string name="haru_chip_today_fine_dust_title">오늘의 미세먼지 정보</string>
-
-
-
 
 
 </resources>

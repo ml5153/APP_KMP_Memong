@@ -42,7 +42,7 @@ import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.google.firebase.ai.type.content
 import com.memong.aos.BuildConfig
-import com.memong.aos.HaruMemoApplication
+import com.memong.aos.MemongApplication
 import com.memong.aos.MemoEventFlow
 import com.memong.aos.R
 import com.memong.aos.data.database.MemoDatabase
@@ -213,7 +213,7 @@ internal class MemoDetailActivity : BaseActivity() {
 
 
     private val generativeModel by lazy {
-        (application as HaruMemoApplication).generativeModel
+        (application as MemongApplication).generativeModel
     }
 
     override fun onDestroy() {
@@ -1254,7 +1254,7 @@ internal class MemoDetailActivity : BaseActivity() {
     /** 요약 다이얼로그 */
     private fun showSummationDialog(summation: String, hasImage: Boolean) {
         MemoCustomAiAnswerDialog(this, DialogMode.SUMMARY).apply {
-            setTitle("요약")
+            setTitle(getString(R.string.haru_ai_summary))
             setMessage(
                 HtmlCompat.fromHtml(summation, HtmlCompat.FROM_HTML_MODE_LEGACY)
             )

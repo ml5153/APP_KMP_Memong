@@ -1,6 +1,7 @@
 package com.memong.aos
 
 import android.app.Application
+import android.content.Context
 import com.avatye.adcash.ADCashSDK
 import com.avatye.haru.log.LogTrack
 import com.google.android.gms.ads.MobileAds
@@ -16,33 +17,40 @@ import com.memong.aos.data.utils.PreferenceUtil
 import com.memong.aos.data.utils.RemoteConfigUtil
 import com.memong.aos.helper.MemoWidgetUpdater
 
-internal class HaruMemoApplication : Application() {
+internal class MemongApplication : Application() {
 
     lateinit var generativeModel: GenerativeModel
         private set
 
+    companion object {
+        private lateinit var instance: MemongApplication
+        fun context(): Context = instance.applicationContext
+    }
+
     override fun onCreate() {
         super.onCreate()
 
+        instance = this
+
         // Preference
-        PreferenceUtil.init(this@HaruMemoApplication)
+        PreferenceUtil.init(this@MemongApplication)
         // Log
         LogTrack.initializeLog(
             moduleName = getString(R.string.haru_log_moudle_name),
             allowLog = true
         )
         // DB
-        MemoDatabase.getInstance(this@HaruMemoApplication)
+        MemoDatabase.getInstance(this@MemongApplication)
         // Widget
-        MemoWidgetUpdater().observeMemoChanges(this@HaruMemoApplication)
+        MemoWidgetUpdater().observeMemoChanges(this@MemongApplication)
         // ThreeTen
-        AndroidThreeTen.init(this@HaruMemoApplication)
+        AndroidThreeTen.init(this@MemongApplication)
 
         // Firebase
-        FirebaseApp.initializeApp(this@HaruMemoApplication)
+        FirebaseApp.initializeApp(this@MemongApplication)
 
         // Firebase RemoteConfig
-        RemoteConfigUtil.initRemoteConfiguration(this@HaruMemoApplication)
+        RemoteConfigUtil.initRemoteConfiguration(this@MemongApplication)
 
         // AdCash
         val builder = ADCashSDK.Builder(
