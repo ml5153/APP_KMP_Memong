@@ -10,7 +10,7 @@
         android:layout_height="32dp"
         android:layout_gravity="start|top"
         android:layout_margin="12dp"
-        android:src="@drawable/ic_memong_splash_logo" />
+        android:src="@drawable/ic_memong_widget_logo" />
 
     <FrameLayout
         android:id="@+id/newMemoContainer"
