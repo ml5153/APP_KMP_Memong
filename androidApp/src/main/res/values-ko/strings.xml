@@ -1,4 +1,631 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 기능 미지원 -->
+    <string name="haru_developing_function">기능 개발 중입니다.</string>
+
+    <!-- APP-NAME -->
     <string name="haru_memo">메몽</string>
+
+    <!-- LOG-NAME -->
+    <string name="haru_log_moudle_name">HaruMemo</string>
+
+    <!-- Common -->
+    <string name="haru_common_layout_save">저장하기</string>
+    <string name="haru_common_layout_save_button">저장</string>
+    <string name="haru_common_layout_image_selected">선택</string>
+    <string name="haru_common_layout_image_selected_delete">선택삭제</string>
+    <string name="haru_common_layout_cancel">취소</string>
+    <string name="haru_common_layout_confirm">확인</string>
+    <string name="haru_common_layout_close">닫기</string>
+
+    <!-- Header -->
+    <string name="haru_header_create_mode_title">새 메모하기</string>
+    <string name="haru_header_modify_mode_title">메모 수정하기</string>
+    <string name="haru_header_date_mode_unavailable_when_custom_sort">“사용자 지정 순 정렬“에서는 날짜별모드를 이용할 수 없습니다.</string>
+    <string name="haru_header_tag_mode_unavailable_when_custom_sort">“사용자 지정 순 정렬“에서는 태그모드를 이용할 수 없습니다.</string>
+
+    <!-- Memo-Select-Mode -->
+    <string name="haru_header_selected_mode_count_text">%1$s/%2$s</string>
+    <string name="haru_header_selected_mode_copy_memo">_복사본</string>
+    <string name="haru_header_selected_mode_copy_memo_success">선택된 메모가 복사되었습니다.</string>
+    <string name="haru_header_selected_mode_copy_memo_failed">복사할 메모가 없습니다.</string>
+    <string name="haru_header_selected_mode_copy_memo_just_one_selected">복사하려면 하나만 선택해 주세요.</string>
+
+    <!-- Memo-Mode-Common -->
+    <string name="haru_mode_title_hint">제목을 입력하세요</string>
+    <string name="haru_mode_body_hint">내용을 입력하세요</string>
+
+    <!-- Memo-Create-Write-Memo-Mode -->
+    <string name="haru_create_write_memo_mode_save">메모가 저장되었습니다.</string>
+    <string name="haru_create_write_memo_mode_no_save">저장할 메모 내용이 없습니다.</string>
+    <string name="haru_create_write_memo_mode_button">새 메모 추가</string>
+    There is no memo content to save.
+
+    <!-- Memo-Modify-Memo-Mode -->
+    <string name="haru_modify_memo_mode_update">메모가 수정되었습니다.</string>
+
+
+    <!-- Memo-Share -->
+    <string name="haru_share_text">공유할 메모를 선택해주세요.</string>
+
+    <!-- Memo-Image-Share -->
+    <string name="haru_image_share">이미지 공유하기</string>
+
+    <!-- Memo-Image-Delete -->
+    <string name="haru_image_delete_success">이미지가 삭제되었습니다.</string>
+    <string name="haru_image_delete_failed">읽기모드에서는 이미지를 삭제할 수 없습니다.</string>
+
+    <!-- Memo-Image-Download -->
+    <string name="haru_image_download">이미지를 저장하였습니다.</string>
+    <string name="haru_image_download_failed">이미지를 저장에 실패하였습니다.</string>
+    <string name="haru_image_download_failed_permission">저장 권한이 필요합니다.</string>
+
+    <!-- Set-OPTIONS -->
+    <string name="haru_set_default">설정</string>
+    <string name="haru_set_memo">메모 설정</string>
+    <string name="haru_set_backup">백업 설정</string>
+    <string name="haru_set_password">비밀번호 설정</string>
+    <string name="haru_set_tag">태그 설정</string>
+    <string name="haru_trash">휴지통</string>
+    <string name="haru_service_info">고객센터</string>
+    <string name="haru_write_review">리뷰 남기기</string>
+    <string name="haru_current_version">버전</string>
+    <string name="haru_setting_current_version">현재버전 %1$s</string>
+    <string name="haru_exam_current_version">현재버전 2.9.5</string>
+    <string name="haru_exam_version_name">1.0.0</string>
+
+    <!-- Set-MEMO_OPTIONS -->
+    <string name="haru_title_quick_memo">빠른 메모 설정</string>
+    <string name="haru_item_title_use_noti_memo">알림창 메모 사용하기</string>
+    <string name="haru_item_desc_use_noti_memo">알림창에서 빠른 메모가 가능하고 \n추가로 포인트홈 기능을 사용할 수 있습니다.</string>
+    <string name="haru_item_title_use_ss_memo">스크린샷 메모</string>
+    <string name="haru_item_desc_use_ss_memo">캡처된 이미지를 바로 메모할 수 있습니다.\n단, 일부 단말기에서 동작하지 않을 수 있습니다.</string>
+    <string name="haru_item_title_use_cb_memo">클립보드 메모</string>
+    <string name="haru_item_desc_use_cb_memo">복사한 내용을 바로 메모할 수 있습니다.</string>
+    <string name="haru_item_title_use_ls_memo">잠금화면 메모 사용</string>
+    <string name="haru_item_desc_use_ls_memo">앱을 실행하지 않고 잠금화면에서\n바로 메모할 수 있습니다.</string>
+    <string name="haru_title_set_list">메모 목록 설정</string>
+    <string name="haru_item_tile_thumbnail">썸네일 크게 보기</string>
+    <string name="haru_item_title_size">한줄 메모 제목 크게 보기</string>
+    <string name="haru_title_set_memo">메모장 설정</string>
+    <string name="haru_item_title_memo_text_size">메모장 글씨 크기</string>
+    <string name="haru_item_turn_off_title_memo_text">제목기능 설정</string>
+    <string name="haru_item_turn_off_desc_memo_text">설정 시 제목 영역이 노출됩니다.</string>
+    <string name="haru_item_title_checked_memo_auto_sort">체크한 항목 자동 정렬</string>
+    <string name="haru_item_desc_checked_memo_auto_sort">체크한 항목을 자동으로 하단으로 옮겨줍니다.</string>
+    <string name="haru_item_title_quick_page">페이지로 열기</string>
+    <string name="haru_item_desc_quick_page">웹페이지, 전화번호, 이메일을 연결합니다.</string>
+    <string name="haru_title_pointhome">포인트홈 설정</string>
+    <string name="haru_item_title_pointhome">포인트홈 On / Off</string>
+    <string name="haru_item_desc_pointhome">포인트홈 노출 여부를 설정하세요.</string>
+    <string name="haru_item_warn_pointhome">포인트홈을 Off 하실 경우 25주간 포인트홈이\n노출되지 않습니다.</string>
+
+    <!-- Set-BACKUP_OPTIONS -->
+    <string name="haru_title_local_backup">저장소로 백업하기</string>
+    <string name="haru_item_title_local_backup">데이터 백업하기</string>
+    <string name="haru_item_locate_backup_file">백업위치: /Download/Memong</string>
+    <string name="haru_item_desc_local_backup">
+    ※ 백업 경로는 /Download/Memong 로 고정됩니다.\n
+    임의로 변경할 경우, 데이터 유실에 대한 책임은 지지 않습니다.
+</string>
+    <string name="haru_item_title_locate_backup_storage">백업 저장소 위치</string>
+    <string name="haru_exam_locate_backup_storage">스마트폰 백업 폴더</string>
+    <string name="haru_item_title_set_photo_backup">사진 백업 설정</string>
+    <string name="haru_item_desc_set_photo_backup">백업 위치로 첨부 사진이 함께 백업됩니다.</string>
+    <string name="haru_item_title_set_auto_backup">자동백업 활성화</string>
+    <string name="haru_item_free_space">스마트폰 여유 공간</string>
+    <string name="haru_exam_free_space">84.7GB / 107.6GB</string>
+    <string name="haru_item_title_current_backup_date">최근 백업 날짜</string>
+    <string name="haru_item_desc_current_backup_date">스마트폰 백업폴더</string>
+    <string name="haru_exam_current_backup_date">2025년 5월 13일 (화) 2:14PM</string>
+    <string name="haru_title_gd_backup">구글 드라이브로 백업</string>
+    <string name="haru_item_title_gd_account">계정 연결</string>
+    <string name="haru_item_desc_gd_account">구글 드라이브 계정 연동이 필요합니다.</string>
+    <string name="haru_item_title_gd_backup">구글 드라이브로 백업하기</string>
+    <string name="haru_item_title_gd_current_backup_date">최근 백업 날짜</string>
+    <string name="haru_exam_gd_current_backup_date">없음</string>
+    <string name="haru_title_manage">백업 데이터를 편리하게 관리하세요</string>
+    <string name="haru_item_title_restore">데이터 불러오기</string>
+    <string name="haru_item_desc_restore">백업된 데이터로 메모장을 교체합니다.</string>
+    <string name="haru_item_title_email">백업 파일 이메일로 보내기</string>
+    <string name="haru_item_desc_email">저장된 메모 내용을 이메일로 보관합니다.</string>
+    <string name="haru_item_title_show_backup_guide">백업 가이드 표시</string>
+    <string name="haru_item_desc_show_backup_guide">저장소 백업 상태를 주기적으로 안내합니다.</string>
+    <string name="haru_item_title_noti_backup">자동 백업 알림 표시</string>
+    <string name="haru_item_desc_noti_backup">자동백업이 진행될 경우, 진행 상태를 알림창에 표시합니다.</string>
+    <string name="haru_backup_storage_info">%.1fGB / %.1fGB</string>
+
+    <!-- Gd-BACKUP_GUIDE -->
+    <string name="haru_backup_guide_use">백업 방법보기</string>
+    <string name="haru_backup_guide_next">다음</string>
+    <string name="haru_backup_guide_start_backup">백업 시작</string>
+
+    <!-- Dialog-GD_BACKUP PERMISSION / DISCONNECT -->
+    <string name="haru_backup_guide_dialog_permission_title">연락처 권한 허용 </string>
+    <string name="haru_backup_guide_dialog_permission_required">(필수)</string>
+    <string name="haru_backup_guide_dialog_permission_message">구글 드라이브 백업 기능을\n사용하시려면 연락처 권한 허용이\n필요합니다.</string>
+    <string name="haru_backup_guide_dialog_permission_go">허용하러 가기</string>
+
+    <string name="haru_backup_dialog_disconnect_title">구글 계정 연동 종료</string>
+    <string name="haru_backup_dialog_disconnect_message">설정된 구글 드라이브 계정연동을\n종료하시겠습니까?</string>
+    <string name="haru_backup_dialog_disconnect_sub">현재까지 백업된 메모 내용은\n구글드라이브에 보관 유지됩니다.</string>
+    <string name="haru_backup_dialog_disconnect_confirm">연동 종료</string>
+
+    <!-- Set-PASSWORD_OPTIONS -->
+    <string name="haru_title_set_password">중요한 메모는 비밀번호를 설정하세요.</string>
+    <string name="haru_item_title_set_password">비밀번호 설정</string>
+    <string name="haru_item_title_change_password">비밀번호 변경</string>
+    <string name="haru_title_use_simplify_lock_memo">비밀메모 편의 기능</string>
+    <string name="haru_item_title_lock_check_simplify">비밀번호 확인 간소화</string>
+    <string name="haru_item_desc_lock_check_simplify">앱 종료 시까지 비밀번호 확인을 한 번만 합니다.\n단, 휴지통 및 비밀 메모 삭제 시에는 해당되지 않습니다.</string>
+    <string name="haru_item_title_hide_lock_memo">비밀메모 숨기기</string>
+    <string name="haru_item_desc_hide_lock_memo">메모 목록에서 비밀메모를 숨깁니다.</string>
+    <string name="haru_title_forget_password">비밀번호를 잊어버리셨나요?</string>
+    <string name="haru_item_title_password_mail">기기 인증으로 비밀번호 재설정</string>
+    <string name="haru_item_desc_password_mail">기기 잠금(지문, PIN, 패턴) 인증 후\n비밀번호를 새로 설정할 수 있습니다.</string>
+    <string name="haru_item_title_current_password_check_date">최근 비밀번호 확인 날짜</string>
+    <string name="haru_exam_current_password_check_date">없음</string>
+    <string name="haru_item_lock_memo_exception1">비밀번호 등록에서 예외가 발생하였습니다.</string>
+    <string name="haru_item_lock_memo_exception2">비밀번호 해제에서 예외가 발생하였습니다.</string>
+
+
+    <!-- Password -->
+    <string name="haru_password_regi">비밀번호 등록</string>
+    <string name="haru_password_change">비밀번호 변경</string>
+    <string name="haru_password_reset">비밀번호 초기화</string>
+    <string name="haru_password_check">비밀번호 확인</string>
+    <string name="haru_password_check_search">비밀번호 확인</string>
+    <string name="haru_password_locked">비밀메모로 변경</string>
+    <string name="haru_password_unlocked">비밀메모 해제</string>
+    <string name="haru_password_delete">비밀메모 삭제</string>
+    <string name="haru_password_input">비밀번호를 입력해주세요</string>
+    <string name="haru_input_password">비밀번호를 입력해주세요</string>
+    <string name="haru_password_input_current">현재 설정된 비밀번호를 입력해주세요</string>
+    <string name="haru_password_input_confirm">한 번 더 입력해주세요</string>
+    <string name="haru_password_not_match">비밀번호가 일치하지 않습니다.</string>
+    <string name="haru_password_set">비밀번호가 설정되었습니다.</string>
+    <string name="haru_password_reset_done">비밀번호가 초기화되었습니다.</string>
+    <string name="haru_password_input_new">변경할 비밀번호를 입력해주세요</string>
+    <string name="haru_password_input_confirm_new">변경할 비밀번호를 다시 입력해주세요</string>
+    <string name="haru_password_changed">비밀번호가 변경되었습니다.</string>
+    <string name="haru_password_not_set">비밀번호가 설정되지 않았습니다.</string>
+
+    <string name="haru_password_locked_toast">비밀메모로 변경되었습니다.</string>
+    <string name="haru_password_unlocked_toast">비밀메모가 해제되었습니다.</string>
+    <string name="haru_toast_secret_memo_cannot_change_background_color">비밀메모에서는 배경색을 바꿀 수 없습니다.</string>
+    <string name="password_1">1</string>
+    <string name="passwrod_2">2</string>
+    <string name="password_3">3</string>
+    <string name="password_4">4</string>
+    <string name="password_5">5</string>
+    <string name="password_6">6</string>
+    <string name="password_7">7</string>
+    <string name="password_8">8</string>
+    <string name="password_9">9</string>
+    <string name="password_0">0</string>
+    <string name="password_delete">삭제</string>
+
+    <!--Dialog-Modify Close-->
+    <string name="haru_dialog_create_write_close_title">새메모쓰기 종료</string>
+    <string name="haru_dialog_create_write_close_message">새메모쓰기를 종료하시겠습니까?\n\n지금까지의 메모 내용은 저장되지 않습니다.</string>
+
+
+    <!--Dialog-Modify Close-->
+    <string name="haru_dialog_modify_close_title">메모 수정하기 종료</string>
+    <string name="haru_dialog_modify_close_message">메모 수정하기를 종료하시겠습니까?\n\n수정하기 전 메모 내용으로 되돌아갑니다.</string>
+
+    <!--Dialog-Permission-Camera-->
+    <string name="haru_dialog_permission_camera_title">권한 설정</string>
+    <string name="haru_dialog_permission_camera_message">카메라를 사용하려면 권한이 필요합니다.</string>
+
+
+    <!--Dialog-Delete-->
+    <string name="haru_dialog_delete_title">메모 삭제</string>
+    <string name="haru_dialog_delete_message">선택한 메모를 삭제하시겠습니까?</string>
+
+    <!--Dialog-PASSWORD_RESET-->
+    <string name="haru_password_dialog_reset_title">비밀번호 초기화</string>
+    <string name="haru_password_dialog_reset_message">비밀번호를 초기화하시겠습니까?</string>
+    <string name="haru_password_dialog_reset_sub_message">비밀번호를 초기화 하실 경우\n설정하신 비밀메모는 일반메모로 자동 전환됩니다.</string>
+    <string name="haru_password_dialog_reset_confirm">초기화</string>
+
+    <!--Dialog-PASSWORD_FORGET-->
+    <string name="haru_password_dialog_forget_title">비밀번호 찾기</string>
+    <string name="haru_password_dialog_forget_message">비밀번호는</string>
+    <string name="haru_password_dialog_forget_sub_message">%1$s</string>
+    <string name="haru_password_dialog_forget_bottom_sub_message">입니다.</string>
+    <string name="haru_password_dialog_forget_confirm">확인</string>
+
+    <!--Dialog-Put-In-Photo-->
+    <string name="haru_put_in_photo_dialog_title">메모에 사진 넣기</string>
+    <string name="haru_put_in_photo_dialog_take_picture">카메라로 촬영</string>
+    <string name="haru_put_in_photo_take_picture_toast">사진을 다시 찍어주세요.</string>
+
+    <string name="haru_put_in_photo_dialog_gallery">갤러리에서 선택</string>
+
+    <!--Dialog-Memo-Sorting-->
+    <string name="haru_sorting_dialog_title">메모 정렬</string>
+    <string name="haru_sorting_dialog_latest_create">작성일 최신 순</string>
+    <string name="haru_sorting_dialog_oldest_create">작성일 오래된 순</string>
+    <string name="haru_sorting_dialog_latest_update">수정일 최신 순</string>
+    <string name="haru_sorting_dialog_oldest_update">수정일 오래된 순</string>
+    <string name="haru_sorting_dialog_custom">사용자 지정 순</string>
+
+
+    <!-- Set-SERVICE_INFO_OPTIONS -->
+    <string name="haru_title_service_info">도움이 필요하신가요?</string>
+    <string name="haru_item_title_noti_update">업데이트 알림받기</string>
+    <string name="haru_item_title_pre_service">서비스 소개</string>
+    <string name="haru_item_title_notice">공지사항</string>
+    <string name="haru_item_title_si_help">도움말</string>
+    <string name="haru_title_feedback">서비스 정보</string>
+    <string name="haru_item_title_rate">서비스 평가하기</string>
+    <string name="haru_item_title_recommend">지인에게 추천하기</string>
+    <string name="haru_item_title_inquiry">서비스 이용 문의</string>
+    <string name="haru_item_title_terms">이용 약관</string>
+
+    <!-- Notice -->
+    <string name="haru_notice">공지사항</string>
+
+    <!-- Terms -->
+    <string name="haru_terms">이용 약관</string>
+
+    <!-- Set-HELP_OPTIONS -->
+    <string name="haru_help">도움말</string>
+    <string name="haru_guide_w">메모 작성 가이드</string>
+    <string name="haru_guide_e">메모 편집 가이드</string>
+    <string name="haru_guide_b">백업 설정 안내</string>
+    <string name="haru_guide_f">자주 찾는 도움말</string>
+    <string name="haru_title_guide">다양한 기능을 확인해보세요.</string>
+    <string name="haru_w_guide">메모 작성 가이드</string>
+    <string name="haru_e_guide">메모 편집 가이드</string>
+    <string name="haru_b_guide">백업 설정 안내</string>
+    <string name="haru_f_guide">자주 찾는 도움말</string>
+    <string name="haru_title_help">무엇이 불편하신지 알려주세요.</string>
+    <string name="haru_item_title_help">문의하기</string>
+    <string name="haru_help_mode_guide_write">guide_w</string>
+    <string name="haru_help_mode_guide_edit">guide_e</string>
+    <string name="haru_help_mode_backup">guide_b</string>
+    <string name="haru_help_mode_faq">guide_f</string>
+
+    <!-- Webview-OPTIONS -->
+    <string name="haru_webview_mode_notice">notice</string>
+    <string name="haru_webview_mode_terms">terms</string>
+    <string name="haru_webview_mode_guide_write">guide_w</string>
+    <string name="haru_webview_mode_guide_edit">guide_e</string>
+    <string name="haru_webview_mode_backup">guide_b</string>
+    <string name="haru_webview_mode_faq">guide_f</string>
+
+    <!-- Dialog-COMMON -->
+    <string name="haru_dialog_common_cancel">취소</string>
+    <string name="haru_dialog_common_close">종료</string>
+    <string name="haru_dialog_common_delete">삭제</string>
+    <string name="haru_dialog_common_system_setting">설정</string>
+
+    <!-- Dialog-Delete -->
+    <string name="haru_delete_dialog_delete_title">메모삭제</string>
+    <string name="haru_delete_dialog_delete_message">선택한 메모를 삭제하시겠습니까?</string>
+    <string name="haru_delete_dialog_delete_description">선택한 메모를 삭제하시겠습니까?</string>
+    <string name="haru_delete_dialog_delete_cancel">취소</string>
+    <string name="haru_delete_dialog_delete_confirm">삭제</string>
+    <string name="haru_lock_memo_delete_move_to_trash">선택하신 비밀메모가 삭제되어 휴지통으로 이동되었습니다.</string>
+    <string name="haru_memo_delete_move_to_trash">선택하신 메모가 삭제되어 휴지통으로 이동되었습니다.</string>
+
+    <!-- Menu-OPTIONS -->
+    <string name="haru_menu_options_sort">메모정렬</string>
+    <string name="haru_menu_options_edit">메모편집</string>
+    <string name="haru_menu_options_edit_available">태그모드 일때는 메모편집기능을 이용하실 수 없습니다.</string>
+    <string name="haru_menu_options_settings">설정</string>
+    <string name="haru_menu_options_trash">휴지통</string>
+
+    <!-- Menu-MEMO_FONT_SIZE -->
+    <string name="haru_menu_font_size_xs">매우작게</string>
+    <string name="haru_menu_font_size_s">작게</string>
+    <string name="haru_menu_font_size_m">보통</string>
+    <string name="haru_menu_font_size_l">크게</string>
+    <string name="haru_menu_font_size_xl">매우크게</string>
+
+    <!-- Menu-DETAIL -->
+    <string name="haru_menu_share">공유하기</string>
+    <string name="haru_menu_secret">비밀메모로 변경</string>
+    <string name="haru_menu_secret_unlock">비밀메모 해제</string>
+    <string name="haru_menu_delete">삭제하기</string>
+    <string name="haru_menu_information">메모정보</string>
+
+    <!-- Dialog-FORGET_PASSWORD -->
+    <string name="haru_dialog_password_send_title">비밀번호 분실</string>
+    <string name="haru_dialog_password_send_message">비밀번호 안내 메일 발송을 위해\n구글드라이브 백업 계정 연동이\n필요합니다</string>
+    <string name="haru_dialog_password_send_sub">지금 계정연동을 하시겠습니까?</string>
+    <string name="haru_dialog_password_send_confirm">계정연동</string>
+
+    <!-- Dialog-MEMO_DETAIL_REGI_MEMO -->
+    <string name="haru_dialog_set_password__title">비밀 메모 설정</string>
+    <string name="haru_dialog_set_password_message">비밀 메모를 위해서는\n비밀번호 설정이 필요합니다.</string>
+    <string name="haru_dialog_set_password_sub">지금 비밀번호를 설정하시겠습니까?</string>
+    <string name="haru_dialog_set_password_bottom_sub">비밀번호를 설정하면 앱 내 공통 비밀번호로 사용하게됩니다.</string>
+    <string name="haru_dialog_set_password_confirm">비밀번호 설정</string>
+
+    <!-- 날씨/시간/기온 -->
+    <string name="haru_location">성남시, 판교동</string>
+    <string name="haru_date">5.19 (월)</string>
+    <string name="haru_time">1:49</string>
+    <string name="haru_am_pm">PM</string>
+    <string name="haru_temperature_main">17°</string>
+    <string name="haru_temperature_sub">10° / 20°</string>
+    <string name="haru_temperature_diff">어제보다 3° 낮아요</string>
+
+    <!-- 미세먼지 -->
+    <string name="haru_pm10">미세</string>
+    <string name="haru_pm25">초미세</string>
+    <string name="haru_pm_good">매우좋음</string>
+    <string name="haru_pm_bad">조금나쁨</string>
+
+    <!-- 설정 아이콘 설명 -->
+    <string name="haru_settings">설정</string>
+
+    <!-- 즐겨찾는 메모 섹션 -->
+    <string name="haru_favorite_memo">즐겨찾는 메모</string>
+    <string name="haru_view_as_calendar">달력으로 보기</string>
+    <string name="haru_view_as_cards">카드형태로 보기</string>
+
+    <!-- 잠금 화면 -->
+    <string name="haru_slide_to_unlock">밀어서 잠금 해제</string>
+    <string name="haru_lock_screen_memo_list">빠른 메모 보기</string>
+    <string name="haru_lock_screen_setting">잠금화면 설정</string>
+    <string name="haru_lock_screen_weather_setting">날씨 설정</string>
+    <string name="haru_lock_screen_check_pm">미세먼지 보기</string>
+    <string name="haru_lock_screen_check_pm_sub">미세먼지 정보를 확인할 수 있습니다.</string>
+    <string name="haru_lock_screen_memo_write">빠른 메모 쓰기</string>
+    <string name="haru_lock_screen_write_title">제목을 입력하세요</string>
+    <string name="haru_lock_screen_write_body">내용을 입력하세요</string>
+    <string name="haru_lock_screen_memo_save">저장하기</string>
+    <string name="haru_location_unknown">위치를 불러오지 못했습니다.</string>
+    <string name="haru_lock_ls_weather_provide">Weather data provided by Open-Meteo (https://open-meteo.com)</string>
+
+    <!-- 잠금화면 권한 내용 -->
+    <string name="haru_notification_permission_title">알림 권한 필요</string>
+    <string name="haru_notification_permission_message">잠금화면 메모를 사용하시려면 알림 권한이 필요합니다.</string>
+    <string name="haru_overlay_permission_title">다른 앱 위에 표시 권한 필요</string>
+    <string name="haru_overlay_permission_message">잠금화면 메모를 사용하시려면 다른 앱 위에 표시 권한이 필요합니다.</string>
+    <string name="haru_location_permission_title">위치 액세스 권한 필요</string>
+    <string name="haru_location_permission_message">잠금화면 메모를 사용하시려면 위치 액세스 권한이 필요합니다.</string>
+    <string name="haru_go_to_settings">설정으로 이동</string>
+
+
+    <!-- 휴지통 관련 -->
+    <string name="haru_dialog_title_set_password">비밀번호 설정</string>
+    <string name="haru_dialog_message_need_password_for_trash">휴지통 진입을 위해서 비밀번호 설정이 필요합니다</string>
+    <string name="haru_dialog_submessage_set_password_now">지금 비밀번호를 설정하시겠습니까?</string>
+    <string name="haru_dialog_bottom_message_common_password_info">비밀번호를 설정하면 앱 내 공통 암호로 사용하게됩니다.</string>
+    <string name="haru_dialog_set_password">비밀번호 설정</string>
+    <string name="haru_trash_toast_memo_restoration">메모가 복원되었습니다.</string>
+    <string name="haru_trash_toast_memo_delete_permanently">메모가 영구삭제되었습니다.</string>
+    <string name="haru_trash_toast_notice_days_left">이 메모는 %1$d일 후 삭제됩니다</string>
+    <string name="haru_trash_toast_notice_today">이 메모는 오늘 삭제 예정입니다</string>
+    <string name="haru_trash_toast_notice_expired">이 메모는 삭제 대상입니다</string>
+    <string name="haru_empty_select_memo">선택된 메모가 없습니다.</string>
+
+    <!-- 휴지통 헤더 -->
+    <string name="haru_trash_title">휴지통</string>
+    <string name="haru_trash_selected_count">%1$d개</string>
+    <string name="haru_trash_empty_text">삭제된 메모가 없습니다.</string>
+
+    <!-- 메모 정보 -->
+    <string name="haru_bottom_sheet_info_title">메모정보</string>
+    <string name="haru_bottom_sheet_info_create_date_title">메모 작성일</string>
+    <string name="haru_bottom_sheet_info_create_date">2025년 5월 13일 (화) 1:57PM</string>
+    <string name="haru_bottom_sheet_info_update_title">메모 수정일</string>
+    <string name="haru_bottom_sheet_info_update">2025년 5월 13일 (화) 2:22PM</string>
+    <string name="haru_bottom_sheet_info_tag_list_title">태그 리스트</string>
+    <string name="haru_bottom_sheet_info_add_tag">+ 태그추가</string>
+
+    <!-- 위젯 -->
+    <string name="haru_widget_name">Memong</string>
+    <string name="haru_widget_empty_text">작성된 메모가 없습니다.</string>
+
+    <!-- 태그 -->
+    <string name="haru_add_tag">태그 추가</string>
+    <string name="haru_delete_tag">태그 삭제</string>
+    <string name="haru_tag_format">#%1$s</string>
+
+    <!-- 휴지통 메모 삭제 다이얼로그 -->
+    <string name="haru_trash_delete_dialog_delete_title">휴지통 메모 삭제</string>
+    <string name="haru_trash_delete_dialog_delete_message">휴지통 메모를 삭제하시겠습니까?</string>
+    <string name="haru_trash_delete_dialog_delete_description">삭제한 메모는 영구 삭제되어\n복구가 불가능합니다.</string>
+    <string name="haru_trash_delete_dialog_delete_confirm">삭제</string>
+    <string name="haru_trash_notice">이 메모는 14일 후 삭제됩니다.</string>
+
+    <!-- 종료 다이얼로그 -->
+    <string name="haru_exit_dialog_title">Memong 종료</string>
+    <string name="haru_exit_dialog_message">앱을 종료하시겠습니까?</string>
+    <string name="haru_dialog_exit_confirm">종료</string>
+    <string name="haru_search_suggested_tags">태그</string>]
+
+    <!-- 백업 / 가져오기 -->
+    <string name="haru_notification_auto__permission_message">자동백업 알림을 받으시려면 알림 권한이 필요합니다.</string>
+    <string name="haru_auto_backup_disconnect_title">자동백업 비활성화</string>
+    <string name="haru_auto_backup_disconnect_message">자동 백업을 비활성화 하시겠습니까?</string>
+    <string name="haru_auto_backup_disconnect_sub_message">자동 백업을 끄면 메모가 변경되어도\n자동으로 백업되지 않습니다.\n\n자동 백업을 비활성화 하신 후,\n수동 백업을 하지 않으시면\n최신 데이터로 복구가 어려울 수 있습니다.</string>
+    <string name="haru_auto_backup_disconnect_bottom_sub_message">신중하게 선택해 주세요.</string>
+    <string name="haru_auto_backup_disconnect_cancle">자동백업 유지</string>
+    <string name="haru_auto_backup_disconnect_confirm">자동백업 비활성화</string>
+    <string name="haru_show_backup_guide_title">백업 가이드</string>
+    <string name="haru_show_backup_guide_message">3일 동안 메모 백업을\n진행하지 않았습니다.</string>
+    <string name="haru_show_backup_guide_sub_message">백업을 진행해주세요!</string>
+    <string name="haru_show_backup_guide_cancel">닫기</string>
+    <string name="haru_show_backup_guide_confirm">백업하러가기</string>
+    <string name="haru_backup_data_empty">백업할 데이터가 없습니다.</string>
+    <string name="haru_backup_fail">백업에 실패했습니다.</string>
+    <string name="haru_backup_fail_advertise_failed">백업을 시작할 수 없어요. 잠시 후 다시 시도해 주세요.</string>
+    <string name="haru_backup_fail_google_account_failed">Google 계정이 연결 되어 있지 않습니다.</string>
+    <string name="haru_backup_success">백업이 완료되었습니다.</string>
+    <string name="haru_dialog_backup_data_override_title">기존의 백업 데이터 덮어쓰기</string>
+    <string name="haru_dialog_backup_data_override_message">현재까지 저장된 메모 내용을 백업하시겠습니까?</string>
+    <string name="haru_dialog_backup_data_override_confirm">백업하기</string>
+    <string name="haru_restore_google_backup_not_account">구글드라이브에 계정을 연결해주세요!</string>
+    <string name="haru_restore_data_select">복구할 데이터 위치 선택</string>
+    <string name="haru_restore_memog_legacy">기존 MemoG 데이터를 불러오고 싶으신가요?</string>
+    <string name="haru_restore_backup_folder_title">백업폴더 복구하기</string>
+    <string name="haru_restore_backup_folder_message">앱에 저장된 메모는 모두 삭제되며\n백업 폴더의 파일로 교체됩니다.</string>
+    <string name="haru_restore_backup_folder_message_2">앱에 저장된 메모는 모두 삭제되며\n구글 드라이브의 파일로 교체됩니다.</string>
+    <string name="haru_restore_backup_folder_sub_message">데이터 복구를 진행하시겠습니까?</string>
+    <string name="haru_restroe_backup_folder_restore">복구하기</string>
+    <string name="haru_vaild_sqlite">복호화된 DB가 유효한 SQLite 형식이 아님</string>
+    <string name="haru_restore_legacy_data">메모G 데이터 복원이 완료되었습니다.</string>
+    <string name="haru_not_using_backup_folder">사용 가능한 백업 파일이 없습니다.</string>
+    <string name="haru_restroe_success">백업 데이터 복원이 완료되었습니다.</string>
+
+    <string name="haru_backup_error_file_not_found">백업 파일을 찾을 수 없습니다</string>
+    <string name="haru_backup_error_permission_denied">저장소 접근 권한이 없습니다</string>
+    <string name="haru_backup_error_zip">압축 파일 생성 중 오류가 발생했습니다</string>
+    <string name="haru_backup_error_io">파일 저장 중 오류가 발생했습니다</string>
+    <string name="haru_backup_error_invalid_path">잘못된 파일 경로 또는 URI입니다</string>
+    <string name="haru_backup_error_null">백업 도중 알 수 없는 데이터 오류가 발생했습니다</string>
+    <string name="haru_backup_error_unknown">알 수 없는 오류가 발생했습니다</string>
+    <string name="haru_dialog_access_all_file_title">파일 접근 권한 필요</string>
+    <string name="haru_dialog_access_all_file_message">백업 데이터 복원을 위해 모든 파일 접근 권한이 필요합니다.\n앱 설정에서 권한을 허용해주세요.</string>
+
+    <string name="haru_backup_error_google_file_not_found">Google 백업 파일을 찾을 수 없습니다</string>
+    <string name="haru_backup_error_google_permission_denied">Google Drive 접근 권한이 없습니다</string>
+    <string name="haru_backup_error_google_zip">백업 압축 중 오류가 발생했습니다 (Google)</string>
+    <string name="haru_backup_error_google_io">Google 백업 파일 처리 중 오류가 발생했습니다</string>
+    <string name="haru_backup_error_google_invalid_path">Google 백업 중 잘못된 경로 또는 URI입니다</string>
+    <string name="haru_backup_error_google_null">Google 백업 도중 알 수 없는 데이터 오류가 발생했습니다</string>
+    <string name="haru_backup_error_google_unknown">Google 백업 중 알 수 없는 오류가 발생했습니다</string>
+
+    <string name="haru_restore_error_file_not_found">복원할 백업 파일을 찾을 수 없습니다</string>
+    <string name="haru_restore_error_permission_denied">저장소 접근 권한이 없습니다</string>
+    <string name="haru_restore_error_zip">압축 해제 중 오류가 발생했습니다</string>
+    <string name="haru_restore_error_io">복원 중 파일 I/O 오류가 발생했습니다</string>
+    <string name="haru_restore_error_invalid_path">잘못된 백업 파일 경로 또는 URI입니다</string>
+    <string name="haru_restore_error_null">복원 도중 알 수 없는 데이터 오류가 발생했습니다</string>
+    <string name="haru_restore_error_unknown">알 수 없는 오류가 발생했습니다</string>
+
+    <string name="haru_restore_error_google_file_not_found">Google Drive에서 백업 파일을 찾을 수 없습니다</string>
+    <string name="haru_restore_error_google_permission_denied">Google Drive 접근 권한이 없습니다</string>
+    <string name="haru_restore_error_google_zip">백업 파일 압축 해제 중 오류가 발생했습니다 (Google)</string>
+    <string name="haru_restore_error_google_io">Google 백업 데이터 처리 중 오류가 발생했습니다</string>
+    <string name="haru_restore_error_google_invalid_path">Google 복원 중 잘못된 경로 또는 URI입니다</string>
+    <string name="haru_restore_error_google_null">Google 복원 도중 알 수 없는 데이터 오류가 발생했습니다</string>
+    <string name="haru_restore_error_google_unknown">Google 복원 중 알 수 없는 오류가 발생했습니다</string>
+
+    <string name="haru_check_network">네트워크 상태를 확인해주세요.</string>
+
+    <!-- 손글씨 -->
+    <string name="haru_drawing_memo_pick_color">메모 색상 선택</string>
+    <string name="haru_eraser_title">손글씨 지우개</string>
+    <string name="haru_eraser_area">영역 지우개</string>
+    <string name="haru_eraser_stroke">획 지우개</string>
+    <string name="haru_eraser_all_memo_delete">모두 지우기</string>
+
+    <!-- 메인 팝업 -->
+    <string name="haru_main_popup_not_show_today">오늘하루 보지않기</string>
+    <string name="haru_main_popup_close">닫기</string>
+
+    <!-- 비밀번호 재설정 -->
+    <string name="haru_auth_title">기기 잠금으로 본인 확인</string>
+    <string name="haru_auth_subtitle">비밀번호 재설정을 위해 인증이 필요합니다</string>
+    <string name="haru_auth_setup_required">기기 잠금(지문/PIN/패턴)이 설정되어 있지 않습니다</string>
+    <string name="haru_auth_failed_try_again">인증에 실패했습니다. 다시 시도해주세요</string>
+
+    <!-- 검색 -->
+    <string name="haru_search_empty_text">검색된 메모가 없습니다.</string>
+
+    <!-- AI -->
+    <string name="haru_menu_ai">AI 질문</string>
+    <string name="haru_menu_ai_summation">AI 요약</string>
+    <string name="ask">질문하기</string>
+    <string name="haru_ai_close">취소</string>
+    <string name="haru_ai_close_summary">닫기</string>
+    <string name="haru_ai_next">다른 질문하기</string>
+
+    <!-- AI-Suggestion -->
+    <string name="haru_chip_today_weather">오늘 대한민국 전체의 날씨를 요약해줘. 기온, 강수, 미세먼지 같은 주요 요소도 함께 알려줘.</string>
+    <string name="haru_chip_today_news">오늘 대한민국의 주요 뉴스를 3가지로 정리해줘. 새로운 뉴스가 적다면 어제 뉴스를 대신 알려줘.</string>
+    <string name="haru_chip_today_lunch">오늘 날씨와 기온을 고려해서 점심 메뉴 3가지를 추천해줘. 답변은 항상 오늘 같이 &#123;str&#125;한 날에는으로 시작해줘.</string>
+    <string name="haru_chip_today_dinner">오늘 하루를 마무리하기 좋은 저녁 메뉴 3가지를 추천해줘. 따뜻한 음식과 가벼운 음식도 포함해줘.</string>
+    <string name="haru_chip_today_stock">오늘 대한민국 주식 시장의 전반적인 흐름과 코스피, 코스닥 같은 주요 지수 변화를 알려줘.</string>
+    <string name="haru_chip_today_exchange_rate">오늘 원화 기준으로 달러, 엔화, 유로 환율을 알려줘. 가능하다면 최근 며칠간의 추세도 설명해줘.</string>
+    <string name="haru_chip_today_sports">오늘 대한민국 주요 스포츠 경기 결과를 알려줘. 만약 국내 경기가 없으면 해외축구나 MLB 같은 주요 경기 결과를 알려줘.</string>
+    <string name="haru_chip_today_issue">오늘 대한민국에서 사람들이 가장 많이 주목하는 사회적 이슈를 정리해줘.</string>
+    <string name="haru_chip_today_schedule">오늘 같은 날씨와 분위기에 어울리는 간단한 일상 일정이나 활동을 추천해줘.</string>
+    <string name="haru_chip_today_movie">오늘 보기 좋은 최신 영화나 화제가 된 인기 영화 3편을 추천해줘.</string>
+    <string name="haru_chip_today_drama">오늘 볼만한 인기 드라마나 최근 방영 중인 드라마를 3편 추천해줘.</string>
+    <string name="haru_chip_today_book">오늘 읽기 좋은 책 3권을 추천해줘. 소설, 자기계발서, 교양서 등 다양하게 포함해줘.</string>
+    <string name="haru_chip_today_music">오늘 분위기에 어울리는 음악 3곡을 추천해줘. 장르도 간단히 알려줘.</string>
+    <string name="haru_chip_today_health_tip">오늘 실천하기 좋은 간단한 건강 관리 팁을 알려줘.</string>
+    <string name="haru_chip_today_diet_tip">오늘 따라 하기 좋은 다이어트 관련 팁을 알려줘.</string>
+    <string name="haru_chip_today_workout">오늘 바로 실천할 수 있는 간단한 운동 루틴을 추천해줘.</string>
+    <string name="haru_chip_today_trip">오늘 날씨에 맞는 국내 여행지 2곳, 해외 여행지 1곳 총 3곳을 추천해줘. 간단한 이유도 설명해줘.</string>
+    <string name="haru_chip_today_recipe">오늘 만들기 좋은 간단하고 맛있는 요리 레시피를 알려줘.</string>
+    <string name="haru_chip_today_tip">오늘 생활에 도움이 되는 실용적인 생활 팁을 알려줘.</string>
+    <string name="haru_chip_today_english">영어 회화 표현을 포함한 예문과 해당하는 한국식 발음까지 포함해서 2가지 알려줘. 너무 자주 쓰이는 예문이 아니여도 돼.</string>
+    <string name="haru_chip_today_japanese">일본어 회화 표현을 포함한 예문과 해당하는 한국식 발음까지 포함해서 2가지 알려줘. 너무 자주 쓰이는 예문이 아니여도 돼.</string>
+    <string name="haru_chip_today_chinese">중국어 회화 표현을 포함한 예문과 해당하는 한국식 발음까지 포함해서 2가지 알려줘. 너무 자주 쓰이는 예문이 아니여도 돼.</string>
+    <string name="haru_chip_today_history">오늘 날짜에 실제로 일어난 중요한 역사적 사건을 알려줘.</string>
+    <string name="haru_chip_today_quote">오늘 하루에 힘이 될 수 있는 짧은 명언을 알려줘. 의미도 간단히 설명해줘.</string>
+    <string name="haru_chip_today_proverb">오늘 기억하면 좋은 속담 하나를 알려줘. 의미도 함께 설명해줘.</string>
+    <string name="haru_chip_today_politics">오늘 대한민국 정치 분야의 주요 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_economy">오늘 대한민국 경제 분야의 주요 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_society">오늘 대한민국 사회 분야에서 중요한 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_international">오늘 전 세계에서 주목할 만한 국제 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_science">오늘 과학 분야의 새로운 소식이나 흥미로운 사실을 알려줘.</string>
+    <string name="haru_chip_today_it">오늘 IT와 기술 분야에서 화제가 된 최신 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_environment">오늘 환경이나 기후 변화와 관련된 주요 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_indicator">오늘 대한민국의 주요 경제 지표(물가, 실업률, 경기지수 등)를 알려줘.</string>
+    <string name="haru_chip_today_real_estate">오늘 대한민국 부동산 관련 주요 뉴스를 알려줘.</string>
+    <string name="haru_chip_today_oil">오늘 국내 유가의 시세와 최근 변화를 알려줘.</string>
+    <string name="haru_chip_today_gold">오늘 금 시세 변화를 알려줘. 최근 며칠간의 추세도 간단히 설명해줘.</string>
+    <string name="haru_chip_today_coin">오늘 주요 가상화폐(비트코인, 이더리움)의 시세와 변화 추세를 알려줘.</string>
+    <string name="haru_chip_today_fashion">오늘 기준으로 최근 1달간 유행하는 패션 트렌드를 간단히 정리해줘.</string>
+    <string name="haru_chip_today_shopping">오늘 쇼핑하기 좋은 품목이나 인기 있는 아이템을 추천해줘.</string>
+    <string name="haru_chip_today_traffic">오늘 현 시간대 대한민국 주요 고속도로 3가지 교통 상황을 알려줘.</string>
+    <string name="haru_chip_today_fine_dust">오늘 대한민국의 미세먼지 농도와 대기질 상태를 알려줘.</string>
+
+    <string name="haru_chip_today_weather_title">오늘의 날씨</string>
+    <string name="haru_chip_today_news_title">오늘의 뉴스</string>
+    <string name="haru_chip_today_lunch_title">오늘 점심 뭐 먹을까?</string>
+    <string name="haru_chip_today_dinner_title">오늘 저녁 뭐 먹을까?</string>
+    <string name="haru_chip_today_stock_title">오늘의 주식 시장은?</string>
+    <string name="haru_chip_today_exchange_rate_title">오늘의 환율은?</string>
+    <string name="haru_chip_today_sports_title">오늘의 스포츠 경기 결과는?</string>
+    <string name="haru_chip_today_issue_title">오늘의 주요 이슈는?</string>
+    <string name="haru_chip_today_schedule_title">오늘의 일정 추천은?</string>
+    <string name="haru_chip_today_movie_title">오늘의 영화 추천</string>
+    <string name="haru_chip_today_drama_title">오늘의 드라마 추천</string>
+    <string name="haru_chip_today_book_title">오늘의 책 추천</string>
+    <string name="haru_chip_today_music_title">오늘의 음악 추천</string>
+    <string name="haru_chip_today_health_tip_title">오늘의 건강 팁</string>
+    <string name="haru_chip_today_diet_tip_title">오늘의 다이어트 팁</string>
+    <string name="haru_chip_today_workout_title">오늘의 운동 루틴</string>
+    <string name="haru_chip_today_trip_title">오늘의 여행지 추천</string>
+    <string name="haru_chip_today_recipe_title">오늘의 레시피 추천</string>
+    <string name="haru_chip_today_tip_title">오늘의 꿀팁</string>
+    <string name="haru_chip_today_english_title">오늘의 영어 회화</string>
+    <string name="haru_chip_today_japanese_title">오늘의 일본어 표현</string>
+    <string name="haru_chip_today_chinese_title">오늘의 중국어 표현</string>
+    <string name="haru_chip_today_history_title">오늘의 역사 사건</string>
+    <string name="haru_chip_today_quote_title">오늘의 명언</string>
+    <string name="haru_chip_today_proverb_title">오늘의 속담</string>
+    <string name="haru_chip_today_politics_title">오늘의 정치 뉴스</string>
+    <string name="haru_chip_today_economy_title">오늘의 경제 뉴스</string>
+    <string name="haru_chip_today_society_title">오늘의 사회 뉴스</string>
+    <string name="haru_chip_today_international_title">오늘의 국제 뉴스</string>
+    <string name="haru_chip_today_science_title">오늘의 과학 뉴스</string>
+    <string name="haru_chip_today_it_title">오늘의 IT 뉴스</string>
+    <string name="haru_chip_today_environment_title">오늘의 환경 뉴스</string>
+    <string name="haru_chip_today_indicator_title">오늘의 경제 지표</string>
+    <string name="haru_chip_today_real_estate_title">오늘의 부동산 뉴스</string>
+    <string name="haru_chip_today_oil_title">오늘의 유가</string>
+    <string name="haru_chip_today_gold_title">오늘의 금값</string>
+    <string name="haru_chip_today_coin_title">오늘의 코인 시세</string>
+    <string name="haru_chip_today_fashion_title">요즘 패션 트렌드</string>
+    <string name="haru_chip_today_shopping_title">오늘의 쇼핑 추천</string>
+    <string name="haru_chip_today_traffic_title">오늘의 교통 상황</string>
+    <string name="haru_chip_today_fine_dust_title">오늘의 미세먼지 정보</string>
+
+
+
+
+
 </resources>

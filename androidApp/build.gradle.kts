@@ -62,8 +62,10 @@ android {
                 buildConfigField("String", "ADCASH_BOTTOM_BANNER_PID", "\"0db53989-fbf6-4b32-b546-e1417d16e718\"")
                 buildConfigField("String", "ADCASH_FINISH_POPUP_PID", "\"4f6a61a3-b60a-4d65-beab-c3d4a73a85f8\"")
                 buildConfigField("String", "ADCASH_FIND_PASSWORD_PID", "\"341911f8-18e4-4e8e-806d-3576d796e712\"")
-                buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-4719210282750059/2090182804\"")
-                buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-4719210282750059/1759010319\"")
+
+                manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-3940256099942544~3347511713"
+                buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-3940256099942544/2247696110\"")
+                buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-3940256099942544/6300978111\"")
             }
 
             getByName("release") {
@@ -84,6 +86,8 @@ android {
                 buildConfigField("String", "ADCASH_BOTTOM_BANNER_PID", "\"0db53989-fbf6-4b32-b546-e1417d16e718\"")
                 buildConfigField("String", "ADCASH_FINISH_POPUP_PID", "\"4f6a61a3-b60a-4d65-beab-c3d4a73a85f8\"")
                 buildConfigField("String", "ADCASH_FIND_PASSWORD_PID", "\"341911f8-18e4-4e8e-806d-3576d796e712\"")
+
+                manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-4719210282750059~3963976602"
                 buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-4719210282750059/2090182804\"")
                 buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-4719210282750059/1759010319\"")
             }

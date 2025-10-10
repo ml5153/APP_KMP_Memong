@@ -9,8 +9,11 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.memong.aos.R
+import com.memong.aos.data.extension.isUserInKorea
 import com.memong.aos.data.utils.Util
 import com.memong.aos.databinding.DialogMemoAiCustomBinding
 import com.memong.aos.ui.adapter.ChipAdapter
@@ -23,22 +26,52 @@ internal class MemoAICustomDialog(context: Context) : Dialog(context) {
 
     private var onChipClick: ((String) -> Unit)? = null
 
-    private val allChipItems = listOf(
-        "오늘의 날씨", "오늘의 뉴스", "오늘 점심 뭐 먹을까?",
-        "오늘 저녁 뭐 먹을까?", "오늘의 주식 시장은?", "오늘의 환율은?",
-        "오늘의 스포츠 경기 결과는?", "오늘의 주요 이슈는?", "오늘의 일정 추천은?",
-        "오늘의 영화 추천", "오늘의 드라마 추천", "오늘의 책 추천",
-        "오늘의 음악 추천", "오늘의 건강 팁", "오늘의 다이어트 팁",
-        "오늘의 운동 루틴", "오늘의 여행지 추천", "오늘의 레시피 추천", "오늘의 꿀팁",
-        "오늘의 영어 회화", "오늘의 일본어 표현", "오늘의 중국어 표현",
-        "오늘의 역사 사건", "오늘의 명언", "오늘의 속담",
-        "오늘의 정치 뉴스", "오늘의 경제 뉴스", "오늘의 사회 뉴스",
-        "오늘의 국제 뉴스", "오늘의 과학 뉴스", "오늘의 IT 뉴스",
-        "오늘의 환경 뉴스", "오늘의 경제 지표", "오늘의 부동산 뉴스",
-        "오늘의 유가", "오늘의 금값", "오늘의 코인 시세",
-        "요즘 패션 트렌드", "오늘의 쇼핑 추천",
-        "오늘의 교통 상황", "오늘의 미세먼지 정보"
-    )
+    private val allChipItems by lazy {
+        listOf(
+            context.getString(R.string.haru_chip_today_weather_title),
+            context.getString(R.string.haru_chip_today_news_title),
+            context.getString(R.string.haru_chip_today_lunch_title),
+            context.getString(R.string.haru_chip_today_dinner_title),
+            context.getString(R.string.haru_chip_today_stock_title),
+            context.getString(R.string.haru_chip_today_exchange_rate_title),
+            context.getString(R.string.haru_chip_today_sports_title),
+            context.getString(R.string.haru_chip_today_issue_title),
+            context.getString(R.string.haru_chip_today_schedule_title),
+            context.getString(R.string.haru_chip_today_movie_title),
+            context.getString(R.string.haru_chip_today_drama_title),
+            context.getString(R.string.haru_chip_today_book_title),
+            context.getString(R.string.haru_chip_today_music_title),
+            context.getString(R.string.haru_chip_today_health_tip_title),
+            context.getString(R.string.haru_chip_today_diet_tip_title),
+            context.getString(R.string.haru_chip_today_workout_title),
+            context.getString(R.string.haru_chip_today_trip_title),
+            context.getString(R.string.haru_chip_today_recipe_title),
+            context.getString(R.string.haru_chip_today_tip_title),
+            context.getString(R.string.haru_chip_today_english_title),
+            context.getString(R.string.haru_chip_today_japanese_title),
+            context.getString(R.string.haru_chip_today_chinese_title),
+            context.getString(R.string.haru_chip_today_history_title),
+            context.getString(R.string.haru_chip_today_quote_title),
+            context.getString(R.string.haru_chip_today_proverb_title),
+            context.getString(R.string.haru_chip_today_politics_title),
+            context.getString(R.string.haru_chip_today_economy_title),
+            context.getString(R.string.haru_chip_today_society_title),
+            context.getString(R.string.haru_chip_today_international_title),
+            context.getString(R.string.haru_chip_today_science_title),
+            context.getString(R.string.haru_chip_today_it_title),
+            context.getString(R.string.haru_chip_today_environment_title),
+            context.getString(R.string.haru_chip_today_indicator_title),
+            context.getString(R.string.haru_chip_today_real_estate_title),
+            context.getString(R.string.haru_chip_today_oil_title),
+            context.getString(R.string.haru_chip_today_gold_title),
+            context.getString(R.string.haru_chip_today_coin_title),
+            context.getString(R.string.haru_chip_today_fashion_title),
+            context.getString(R.string.haru_chip_today_shopping_title),
+            context.getString(R.string.haru_chip_today_traffic_title),
+            context.getString(R.string.haru_chip_today_fine_dust_title)
+        )
+    }
+
 
     companion object {
         const val NAME = "MemoAICustomDialog"
@@ -58,6 +91,8 @@ internal class MemoAICustomDialog(context: Context) : Dialog(context) {
 
         // Chip RecyclerView 세팅
         val chipItems = getTodayChipItems()
+
+        binding.rvChips.isVisible = context.isUserInKorea()
         binding.rvChips.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = ChipAdapter(chipItems) { selected ->

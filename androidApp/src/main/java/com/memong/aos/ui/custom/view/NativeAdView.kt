@@ -43,8 +43,7 @@ class NativeAdView @JvmOverloads constructor(
             }
             .withAdListener(object : AdListener() {
                 override fun onAdFailedToLoad(error: LoadAdError) {
-                    loadListener?.onAdFailed(error)
-                    bannerAdUnitId?.let { loadBanner(activity, it) }
+                    loadBanner(activity)
                 }
 
                 override fun onAdClicked() {
@@ -70,27 +69,42 @@ class NativeAdView @JvmOverloads constructor(
 
         adView.headlineView = binding.adHeadline
         adView.bodyView = binding.adBody
-        adView.callToActionView = binding.adCallToAction
-        adView.iconView = binding.adAppIcon
         adView.mediaView = binding.adMedia
 
         binding.adHeadline.text = ad.headline
         binding.adBody.text = ad.body
-        binding.adCallToAction.text = ad.callToAction
-        binding.adAppIcon.setImageDrawable(ad.icon?.drawable)
 
         adView.setNativeAd(ad)
     }
 
-    private fun loadBanner(activity: Activity, bannerId: String) {
+    private fun loadBanner(activity: Activity) {
         removeAllViews()
         bannerView = AdView(activity).apply {
-            adUnitId = bannerId
-            setAdSize(AdSize.MEDIUM_RECTANGLE)
+            adUnitId = bannerAdUnitId ?: return
+            setAdSize(AdSize.LARGE_BANNER)
+            adListener = object : AdListener() {
+                override fun onAdLoaded() {
+                    loadListener?.onAdLoaded()
+                }
+
+                override fun onAdFailedToLoad(error: LoadAdError) {
+                    loadListener?.onAdFailed(error)
+                }
+
+                override fun onAdClicked() {
+                    loadListener?.onAdClicked()
+                }
+
+                override fun onAdImpression() {
+                    loadListener?.onAdImpression()
+                }
+            }
         }
+
         addView(bannerView)
         bannerView?.loadAd(AdRequest.Builder().build())
     }
+
 
     fun onDestroy() {
         nativeAd?.destroy()

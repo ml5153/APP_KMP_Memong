@@ -18,7 +18,6 @@ import androidx.core.view.updateLayoutParams
 import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.google.android.gms.ads.LoadAdError
-import com.memong.aos.BuildConfig
 import com.memong.aos.data.utils.Util
 import com.memong.aos.databinding.DialogMemoCustomAdBinding
 import com.memong.aos.ui.custom.view.NativeAdView
