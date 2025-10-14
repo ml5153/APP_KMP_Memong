@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "memong-e8e31"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
