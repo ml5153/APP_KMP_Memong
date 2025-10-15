@@ -320,7 +320,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="@string/haru_item_desc_set_photo_backup"
+                            android:text="@string/haru_item_summary_set_photo_backup_en"
                             android:textColor="#888888"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -363,6 +363,14 @@
                             android:text="@string/haru_item_title_set_auto_backup"
                             android:textColor="#1A1A1A"
                             android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/haru_item_summary_set_auto_backup"
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -443,14 +451,6 @@
                             android:text="@string/haru_item_title_current_backup_date"
                             android:textColor="#1A1A1A"
                             android:textSize="15sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="@string/haru_item_desc_current_backup_date"
-                            android:textColor="#888888"
-                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <TextView

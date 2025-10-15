@@ -85,25 +85,25 @@
     <string name="haru_exam_version_name">1.0.0</string>
 
     <!-- Set-MEMO_OPTIONS -->
-    <string name="haru_title_quick_memo">빠른 메모 설정</string>
+    <string name="haru_title_quick_memo">간편 메모</string>
     <string name="haru_item_title_use_noti_memo">알림창 메모 사용하기</string>
     <string name="haru_item_desc_use_noti_memo">알림창에서 빠른 메모가 가능하고 \n추가로 포인트홈 기능을 사용할 수 있습니다.</string>
     <string name="haru_item_title_use_ss_memo">스크린샷 메모</string>
     <string name="haru_item_desc_use_ss_memo">캡처된 이미지를 바로 메모할 수 있습니다.\n단, 일부 단말기에서 동작하지 않을 수 있습니다.</string>
     <string name="haru_item_title_use_cb_memo">클립보드 메모</string>
     <string name="haru_item_desc_use_cb_memo">복사한 내용을 바로 메모할 수 있습니다.</string>
-    <string name="haru_item_title_use_ls_memo">잠금화면 메모 사용</string>
+    <string name="haru_item_title_use_ls_memo">잠금화면 메모</string>
     <string name="haru_item_desc_use_ls_memo">앱을 실행하지 않고 잠금화면에서\n바로 메모할 수 있습니다.</string>
     <string name="haru_title_set_list">메모 목록 설정</string>
     <string name="haru_item_tile_thumbnail">썸네일 크게 보기</string>
     <string name="haru_item_title_size">한줄 메모 제목 크게 보기</string>
-    <string name="haru_title_set_memo">메모장 설정</string>
-    <string name="haru_item_title_memo_text_size">메모장 글씨 크기</string>
-    <string name="haru_item_turn_off_title_memo_text">제목기능 설정</string>
+    <string name="haru_title_set_memo">커스텀 메모</string>
+    <string name="haru_item_title_memo_text_size">글씨 크기</string>
+    <string name="haru_item_turn_off_title_memo_text">제목 표시</string>
     <string name="haru_item_turn_off_desc_memo_text">설정 시 제목 영역이 노출됩니다.</string>
-    <string name="haru_item_title_checked_memo_auto_sort">체크한 항목 자동 정렬</string>
-    <string name="haru_item_desc_checked_memo_auto_sort">체크한 항목을 자동으로 하단으로 옮겨줍니다.</string>
-    <string name="haru_item_title_quick_page">페이지로 열기</string>
+    <string name="haru_item_title_checked_memo_auto_sort">체크 항목 자동 정렬</string>
+    <string name="haru_item_desc_checked_memo_auto_sort">체크한 항목을 목록의 맨 아래로 자동으로 옮겨줍니다.</string>
+    <string name="haru_item_title_quick_page">하이퍼링크로 표시</string>
     <string name="haru_item_desc_quick_page">웹페이지, 전화번호, 이메일을 연결합니다.</string>
     <string name="haru_title_pointhome">포인트홈 설정</string>
     <string name="haru_item_title_pointhome">포인트홈 On / Off</string>
@@ -111,37 +111,38 @@
     <string name="haru_item_warn_pointhome">포인트홈을 Off 하실 경우 25주간 포인트홈이\n노출되지 않습니다.</string>
 
     <!-- Set-BACKUP_OPTIONS -->
-    <string name="haru_title_local_backup">저장소로 백업하기</string>
-    <string name="haru_item_title_local_backup">데이터 백업하기</string>
+    <string name="haru_title_local_backup">디바이스 백업</string>
+    <string name="haru_item_title_local_backup">디바이스에 백업하기</string>
     <string name="haru_item_locate_backup_file">백업위치: /Download/Memong</string>
     <string name="haru_item_desc_local_backup">
     ※ 백업 경로는 /Download/Memong 로 고정됩니다.\n
-    임의로 변경할 경우, 데이터 유실에 대한 책임은 지지 않습니다.
+    임의로 변경할 경우, 데이터 유실이 발생할 수 있습니다.
 </string>
     <string name="haru_item_title_locate_backup_storage">백업 저장소 위치</string>
     <string name="haru_exam_locate_backup_storage">스마트폰 백업 폴더</string>
-    <string name="haru_item_title_set_photo_backup">사진 백업 설정</string>
-    <string name="haru_item_desc_set_photo_backup">백업 위치로 첨부 사진이 함께 백업됩니다.</string>
-    <string name="haru_item_title_set_auto_backup">자동백업 활성화</string>
+    <string name="haru_item_title_set_photo_backup">사진 백업</string>
+    <string name="haru_item_summary_set_photo_backup_en">메모에 첨부된 사진도 같이 저장됩니다</string>
+    <string name="haru_item_title_set_auto_backup">자동 백업</string>
+    <string name="haru_item_summary_set_auto_backup">새 메모를 쓰거나 수정할 때 자동으로 백업됩니다.</string>
     <string name="haru_item_free_space">스마트폰 여유 공간</string>
     <string name="haru_exam_free_space">84.7GB / 107.6GB</string>
     <string name="haru_item_title_current_backup_date">최근 백업 날짜</string>
     <string name="haru_item_desc_current_backup_date">스마트폰 백업폴더</string>
     <string name="haru_exam_current_backup_date">2025년 5월 13일 (화) 2:14PM</string>
-    <string name="haru_title_gd_backup">구글 드라이브로 백업</string>
-    <string name="haru_item_title_gd_account">계정 연결</string>
+    <string name="haru_title_gd_backup">구글 드라이브 백업</string>
+    <string name="haru_item_title_gd_account">구글 계정 연결</string>
     <string name="haru_item_desc_gd_account">구글 드라이브 계정 연동이 필요합니다.</string>
-    <string name="haru_item_title_gd_backup">구글 드라이브로 백업하기</string>
+    <string name="haru_item_title_gd_backup">구글 드라이브에 백업하기</string>
     <string name="haru_item_title_gd_current_backup_date">최근 백업 날짜</string>
     <string name="haru_exam_gd_current_backup_date">없음</string>
-    <string name="haru_title_manage">백업 데이터를 편리하게 관리하세요</string>
-    <string name="haru_item_title_restore">데이터 불러오기</string>
-    <string name="haru_item_desc_restore">백업된 데이터로 메모장을 교체합니다.</string>
+    <string name="haru_title_manage">데이터 복원</string>
+    <string name="haru_item_title_restore">데이터 복원하기</string>
+    <string name="haru_item_desc_restore">백업해둔 데이터를 복원할 수 있습니다.</string>
     <string name="haru_item_title_email">백업 파일 이메일로 보내기</string>
     <string name="haru_item_desc_email">저장된 메모 내용을 이메일로 보관합니다.</string>
-    <string name="haru_item_title_show_backup_guide">백업 가이드 표시</string>
-    <string name="haru_item_desc_show_backup_guide">저장소 백업 상태를 주기적으로 안내합니다.</string>
-    <string name="haru_item_title_noti_backup">자동 백업 알림 표시</string>
+    <string name="haru_item_title_show_backup_guide">백업 리마인더</string>
+    <string name="haru_item_desc_show_backup_guide">디바이스 백업 상태를 주기적으로 안내합니다.</string>
+    <string name="haru_item_title_noti_backup">자동 백업 알림</string>
     <string name="haru_item_desc_noti_backup">자동백업이 진행될 경우, 진행 상태를 알림창에 표시합니다.</string>
     <string name="haru_backup_storage_info">%.1fGB / %.1fGB</string>
 
@@ -285,12 +286,12 @@
     <string name="haru_guide_w">메모 작성 가이드</string>
     <string name="haru_guide_e">메모 편집 가이드</string>
     <string name="haru_guide_b">백업 설정 안내</string>
-    <string name="haru_guide_f">자주 찾는 도움말</string>
+    <string name="haru_guide_f">FAQ</string>
     <string name="haru_title_guide">다양한 기능을 확인해보세요.</string>
     <string name="haru_w_guide">메모 작성 가이드</string>
     <string name="haru_e_guide">메모 편집 가이드</string>
     <string name="haru_b_guide">백업 설정 안내</string>
-    <string name="haru_f_guide">자주 찾는 도움말</string>
+    <string name="haru_f_guide">FAQ</string>
     <string name="haru_title_help">무엇이 불편하신지 알려주세요.</string>
     <string name="haru_item_title_help">문의하기</string>
     <string name="haru_help_mode_guide_write">guide_w</string>
@@ -415,8 +416,7 @@
     <string name="haru_trash_toast_notice_expired">이 메모는 삭제 대상입니다</string>
     <string name="haru_empty_select_memo">선택된 메모가 없습니다.</string>
     <string name="haru_trash_memo_notice">
-    휴지통 메모는 14일간 보관되며 이 후 영구적으로 삭제됩니다.\n
-    단, 전체 데이터 삭제 또는 앱 삭제 후 재설치 시 휴지통의 모든 메모는 영구적으로 삭제되어 복구가 불가능합니다.
+    휴지통 메모는 14일간 보관되며 이 후 영구적으로 삭제됩니다.\n단, 전체 데이터 삭제 또는 앱 삭제 후 재설치 시 휴지통의 모든 메모는 영구적으로 삭제되어 복구가 불가능합니다.
     ‘설정 &gt; 백업’에서 메모를 백업해 주세요.
 </string>
 

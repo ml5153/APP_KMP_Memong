@@ -82,7 +82,7 @@
     <string name="haru_exam_version_name">1.0.0</string>
 
     <!-- Memo Settings -->
-    <string name="haru_title_quick_memo">Quick Memo Settings</string>
+    <string name="haru_title_quick_memo">Quick Memo</string>
     <string name="haru_item_title_use_noti_memo">Enable Notification Memo</string>
     <string name="haru_item_desc_use_noti_memo">Allows quick memos via the notification panel,\nand enables “Point Home”.</string>
     <string name="haru_item_title_use_ss_memo">Screenshot Memo</string>
@@ -94,9 +94,9 @@
     <string name="haru_title_set_list">Memo List Settings</string>
     <string name="haru_item_tile_thumbnail">Large Thumbnails</string>
     <string name="haru_item_title_size">Large One-line Memo Title</string>
-    <string name="haru_title_set_memo">Memo Settings</string>
+    <string name="haru_title_set_memo">Custom Memo</string>
     <string name="haru_item_title_memo_text_size">Memo Text Size</string>
-    <string name="haru_item_turn_off_title_memo_text">Title Function Setting</string>
+    <string name="haru_item_turn_off_title_memo_text">Title Function</string>
     <string name="haru_item_turn_off_desc_memo_text">If disabled, the title area will appear.</string>
     <string name="haru_item_title_checked_memo_auto_sort">Auto-sort Checked Items</string>
     <string name="haru_item_desc_checked_memo_auto_sort">Automatically move checked items to bottom.</string>
@@ -108,17 +108,18 @@
     <string name="haru_item_warn_pointhome">If PointHome is Off, it won’t show for 25 weeks.</string>
 
     <!-- Backup Settings -->
-    <string name="haru_title_local_backup">Backup to Storage</string>
+    <string name="haru_title_local_backup">Device Backup</string>
     <string name="haru_item_title_local_backup">Backup Data</string>
     <string name="haru_item_locate_backup_file">Backup Location: /Download/Memong</string>
     <string name="haru_item_desc_local_backup">
-        ※ Backup path is fixed to /Download/Memong.\nIf changed manually, data loss is not covered.
+        ※ Backup path is fixed to /Download/Memong.\nData loss may occur if changes are made.
     </string>
     <string name="haru_item_title_locate_backup_storage">Backup Storage Location</string>
     <string name="haru_exam_locate_backup_storage">Device Backup Folder</string>
     <string name="haru_item_title_set_photo_backup">Photo Backup Option</string>
-    <string name="haru_item_desc_set_photo_backup">Attached images are backed up along with data.</string>
-    <string name="haru_item_title_set_auto_backup">Enable Auto Backup</string>
+    <string name="haru_item_summary_set_photo_backup_en">Attached photos will be backed up with your memos.</string>
+    <string name="haru_item_title_set_auto_backup">Auto Backup</string>
+    <string name="haru_item_summary_set_auto_backup">Your memos are automatically backed up when you create or edit them.</string>
     <string name="haru_item_free_space">Available Space</string>
     <string name="haru_exam_free_space">84.7 GB / 107.6 GB</string>
     <string name="haru_item_title_current_backup_date">Last Backup Date</string>
