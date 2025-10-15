@@ -61,7 +61,7 @@
                     android:layout_marginTop="8dp"
                     android:text="구글드라이브"
                     android:textColor="@android:color/black"
-                    android:textSize="10sp" />
+                    android:textSize="9sp" />
             </LinearLayout>
 
 
@@ -94,7 +94,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/haru_item_desc_current_backup_date"
                     android:textColor="@android:color/black"
-                    android:textSize="10sp" />
+                    android:textSize="9sp" />
 
             </LinearLayout>
 
