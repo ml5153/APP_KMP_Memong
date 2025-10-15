@@ -95,7 +95,7 @@ internal class EraserToolBottomSheetDialog(
         val ctx = context ?: return
         with(binding) {
             // 기본 색상과 선택 색상 정의
-            val selectedColor = ContextCompat.getColor(ctx, R.color.haru_orange)
+            val selectedColor = ContextCompat.getColor(ctx, R.color.haru_primary_orange)
             val defaultColor = ContextCompat.getColor(ctx, R.color.haru_black)
 
             tvEraseArea.setTextColor(if (selectedMode == EraserType.AREA) selectedColor else defaultColor)
