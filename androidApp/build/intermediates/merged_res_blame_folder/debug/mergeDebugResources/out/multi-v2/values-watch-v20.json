@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-88:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/7f7213faa422d3a4db3a6f1b8770fd54/transformed/play-services-auth-21.3.0/res/values-watch-v20/values.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/7f7213faa422d3a4db3a6f1b8770fd54/transformed/play-services-auth-21.3.0/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f65c9ec185b941170bd771c9027da508/transformed/appcompat-1.7.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/f65c9ec185b941170bd771c9027da508/transformed/appcompat-1.7.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

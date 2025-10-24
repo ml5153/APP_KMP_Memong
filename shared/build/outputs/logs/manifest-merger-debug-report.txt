@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml:2:13-83
-INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml:2:13-83
+ADDED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml:2:13-83
+INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml:2:13-83
 	package
-		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml
+		INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml
 	xmlns:android
-		ADDED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml:2:23-81
+		ADDED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml:2:23-81
 uses-sdk
-INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml reason: use-sdk injection requested
-INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml
-INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml
+INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml reason: use-sdk injection requested
+INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml
+INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml
 	android:targetSdkVersion
-		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml
+		INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml
 	android:minSdkVersion
-		INJECTED from /Users/park-yeongsu/Documents/develop/personal/aos/memong_kmp/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4133665054805246657.xml
+		INJECTED from /Users/yspark/develop/app/APP_KMP_Memong/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15720706539479836093.xml

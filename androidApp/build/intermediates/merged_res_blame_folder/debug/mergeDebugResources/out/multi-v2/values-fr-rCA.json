@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-4:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.avatye.haru.memo.androidApp-mergeDebugResources-88:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/19c0c68aff821ae40540d554f66a41c7/transformed/play-services-base-18.5.0/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "197,299,475,601,706,873,1002,1119,1228,1419,1527,1708,1840,1996,2171,2240,2303",
+                        "endColumns": "101,175,125,104,166,128,116,108,190,107,180,131,155,174,68,62,79",
+                        "endOffsets": "298,474,600,705,872,1001,1118,1227,1418,1526,1707,1839,1995,2170,2239,2302,2382"
+                    },
+                    "to": {
+                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4608,4714,4894,5024,5133,5304,5437,5558,5832,6027,6139,6324,6460,6620,6799,6872,6939",
+                        "endColumns": "105,179,129,108,170,132,120,112,194,111,184,135,159,178,72,66,83",
+                        "endOffsets": "4709,4889,5019,5128,5299,5432,5553,5666,6022,6134,6319,6455,6615,6794,6867,6934,7018"
+                    }
+                },
+                {
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/a185b4b4722059782c667be55054dbb5/transformed/core-1.13.0/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/aafb04283e320e37f0cc3d2a24a2bb41/transformed/browser-1.6.0-alpha02/res/values-fr-rCA/values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,162,264,383",
+                        "endColumns": "106,101,118,104",
+                        "endOffsets": "157,259,378,483"
+                    },
+                    "to": {
+                        "startLines": "67,72,73,74",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7141,7568,7670,7789",
+                        "endColumns": "106,101,118,104",
+                        "endOffsets": "7243,7665,7784,7889"
+                    }
+                },
+                {
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/278c7677c0bc43b396005184aba60fc5/transformed/material-1.12.0/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +74,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/23395b1bd1555856fef9dbe45e456430/transformed/biometric-1.1.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/23395b1bd1555856fef9dbe45e456430/transformed/biometric-1.1.0/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +91,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/aafb04283e320e37f0cc3d2a24a2bb41/transformed/browser-1.6.0-alpha02/res/values-fr-rCA/values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,162,264,383",
-                        "endColumns": "106,101,118,104",
-                        "endOffsets": "157,259,378,483"
-                    },
-                    "to": {
-                        "startLines": "67,72,73,74",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7141,7568,7670,7789",
-                        "endColumns": "106,101,118,104",
-                        "endOffsets": "7243,7665,7784,7889"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f65c9ec185b941170bd771c9027da508/transformed/appcompat-1.7.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/f65c9ec185b941170bd771c9027da508/transformed/appcompat-1.7.0/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -91,41 +108,7 @@
                     }
                 },
                 {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/e355e438036ad25256887d3f253fe0c0/transformed/play-services-ads-23.3.0/res/values-fr-rCA/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "203,245,291,354,421,495,609,672,831,943,1082,1132,1189,1321,1413,1461,1555,1591,1626,1687,1772,1812",
-                        "endColumns": "41,45,62,66,73,113,62,158,111,138,49,56,131,91,47,93,35,34,60,84,39,55",
-                        "endOffsets": "244,290,353,420,494,608,671,830,942,1081,1131,1188,1320,1412,1460,1554,1590,1625,1686,1771,1811,1867"
-                    },
-                    "to": {
-                        "startLines": "145,146,147,148,149,150,151,152,153,154,155,156,157,158,160,161,162,163,164,165,166,172",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "14190,14236,14286,14353,14424,14502,14620,14687,14850,14966,15109,15163,15224,15360,15545,15597,15695,15735,15774,15839,15928,16405",
-                        "endColumns": "45,49,66,70,77,117,66,162,115,142,53,60,135,95,51,97,39,38,64,88,43,59",
-                        "endOffsets": "14231,14281,14348,14419,14497,14615,14682,14845,14961,15104,15158,15219,15355,15451,15592,15690,15730,15769,15834,15923,15967,16460"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/19c0c68aff821ae40540d554f66a41c7/transformed/play-services-base-18.5.0/res/values-fr-rCA/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "197,299,475,601,706,873,1002,1119,1228,1419,1527,1708,1840,1996,2171,2240,2303",
-                        "endColumns": "101,175,125,104,166,128,116,108,190,107,180,131,155,174,68,62,79",
-                        "endOffsets": "298,474,600,705,872,1001,1118,1227,1418,1526,1707,1839,1995,2170,2239,2302,2382"
-                    },
-                    "to": {
-                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4608,4714,4894,5024,5133,5304,5437,5558,5832,6027,6139,6324,6460,6620,6799,6872,6939",
-                        "endColumns": "105,179,129,108,170,132,120,112,194,111,184,135,159,178,72,66,83",
-                        "endOffsets": "4709,4889,5019,5128,5299,5432,5553,5666,6022,6134,6319,6455,6615,6794,6867,6934,7018"
-                    }
-                },
-                {
-                    "source": "/Users/park-yeongsu/Library/Java/JavaVirtualMachines/corretto-11.0.19/Contents/Home/caches/8.10.2/transforms/f70ed735d397fdafbe8ce22f625488c8/transformed/play-services-basement-18.4.0/res/values-fr-rCA/values.xml",
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/f70ed735d397fdafbe8ce22f625488c8/transformed/play-services-basement-18.4.0/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -139,6 +122,23 @@
                         "startOffsets": "5671",
                         "endColumns": "160",
                         "endOffsets": "5827"
+                    }
+                },
+                {
+                    "source": "/Users/yspark/.gradle/caches/8.10.2/transforms/e355e438036ad25256887d3f253fe0c0/transformed/play-services-ads-23.3.0/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "203,245,291,354,421,495,609,672,831,943,1082,1132,1189,1321,1413,1461,1555,1591,1626,1687,1772,1812",
+                        "endColumns": "41,45,62,66,73,113,62,158,111,138,49,56,131,91,47,93,35,34,60,84,39,55",
+                        "endOffsets": "244,290,353,420,494,608,671,830,942,1081,1131,1188,1320,1412,1460,1554,1590,1625,1686,1771,1811,1867"
+                    },
+                    "to": {
+                        "startLines": "145,146,147,148,149,150,151,152,153,154,155,156,157,158,160,161,162,163,164,165,166,172",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "14190,14236,14286,14353,14424,14502,14620,14687,14850,14966,15109,15163,15224,15360,15545,15597,15695,15735,15774,15839,15928,16405",
+                        "endColumns": "45,49,66,70,77,117,66,162,115,142,53,60,135,95,51,97,39,38,64,88,43,59",
+                        "endOffsets": "14231,14281,14348,14419,14497,14615,14682,14845,14961,15104,15158,15219,15355,15451,15592,15690,15730,15769,15834,15923,15967,16460"
                     }
                 }
             ]
