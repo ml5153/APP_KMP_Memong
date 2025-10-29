@@ -1,6 +1,7 @@
 package com.memong.aos.data.utils
 
 import android.content.Context
+import android.util.TypedValue
 import android.widget.Toast
 import org.threeten.bp.Instant
 import org.threeten.bp.LocalDateTime
@@ -15,6 +16,14 @@ internal class Util {
         fun dpToPx(context: Context, dp: Int): Int {
             val density = context.resources.displayMetrics.density
             return (dp * density).toInt()
+        }
+
+        fun spToPx(context: Context, sp: Float): Float {
+            return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_SP,
+                sp,
+                context.resources.displayMetrics
+            )
         }
 
         fun toastShort(context: Context, message: String) {

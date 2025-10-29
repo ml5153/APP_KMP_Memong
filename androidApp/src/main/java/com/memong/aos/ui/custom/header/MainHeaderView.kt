@@ -3,6 +3,7 @@ package com.memong.aos.ui.custom.header
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import com.memong.aos.R
@@ -31,6 +32,11 @@ internal class MainHeaderView @JvmOverloads constructor(
     init {
         setupClickListeners()
     }
+
+    fun getAction1Button(): View = binding.lyAction1
+    fun getAction2Button(): View = binding.lyAction2
+    fun getAction3Button(): View = binding.lyAction3
+    fun getAction4Button(): View = binding.lyAction4
 
     private fun setupClickListeners() {
         binding.lyAction1.setOnClickListener {

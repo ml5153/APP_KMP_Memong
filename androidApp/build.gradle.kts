@@ -200,4 +200,10 @@ dependencies {
     // AD-Mediation
     implementation(libs.ad.mediation.admob)
 
+
+    // tabTargetPrompt
+    implementation(libs.tab.target.prompt)
+
+
+
 }

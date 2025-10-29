@@ -42,8 +42,8 @@ import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.google.firebase.ai.type.content
 import com.memong.aos.BuildConfig
-import com.memong.aos.MemongApplication
 import com.memong.aos.MemoEventFlow
+import com.memong.aos.MemongApplication
 import com.memong.aos.R
 import com.memong.aos.data.database.MemoDatabase
 import com.memong.aos.data.entity.BodyItem
@@ -148,9 +148,6 @@ internal class MemoDetailActivity : BaseActivity() {
         MemoCustomDialog(this@MemoDetailActivity)
     }
 
-    private var isImportant = false
-    private var isBullet = false
-    private var isInsertingBullet = false
     private var isImageSelectionMode = false
 
     private var regiPasswordDialog: MemoCustomDialog? = null
@@ -1532,7 +1529,8 @@ internal class MemoDetailActivity : BaseActivity() {
                             }
 
                             is MemoBlock.ImageUriBlock -> {
-                                imagePathMap[contentIndex] = block.uris.toList()  // 비트맵 저장 X, 그대로 Uri 리스트 사용
+                                imagePathMap[contentIndex] =
+                                    block.uris.toList()  // 비트맵 저장 X, 그대로 Uri 리스트 사용
                                 contentIndex++
                             }
 
@@ -1920,7 +1918,10 @@ internal class MemoDetailActivity : BaseActivity() {
 
                                 LogTrack.i(NAME) { "setCameraLauncher -> { focusedPos: $focusedPos, insertPos: $insertPos, uri: $uri }" }
                                 // 이제는 Bitmap 대신 Uri를 넘겨야 함
-                                viewModel.setImageBlock(position = insertPos, uris = listOf(uri.toString()))
+                                viewModel.setImageBlock(
+                                    position = insertPos,
+                                    uris = listOf(uri.toString())
+                                )
 
                                 // 포커스 이동
                                 binding.rvBodyImage.post {
@@ -2011,7 +2012,10 @@ internal class MemoDetailActivity : BaseActivity() {
                             }
 
                             // Bitmap 대신 Uri String 저장
-                            viewModel.setImageBlock(position = insertPos, uris = listOf(uri.toString()))
+                            viewModel.setImageBlock(
+                                position = insertPos,
+                                uris = listOf(uri.toString())
+                            )
 
                             // 포커스 이동
                             binding.rvBodyImage.post {

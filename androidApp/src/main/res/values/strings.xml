@@ -67,7 +67,21 @@
     <string name="haru_image_download_failed">Failed to save image.</string>
     <string name="haru_image_download_failed_permission">Storage permission is required.</string>
 
-    <!-- Settings / OPTIONS -->
+    <!-- Memo-Tutorial -->
+    <string name="haru_tutorial_main_title_step_1">New Memo</string>
+    <string name="haru_tutorial_main_desc_step_1">Quickly jot down your thoughts before they fade.</string>
+
+    <string name="haru_tutorial_main_title_step_2">Search</string>
+    <string name="haru_tutorial_main_desc_step_2">Find your memos instantly by keyword or tag.</string>
+
+    <string name="haru_tutorial_main_title_step_3">Sort Options</string>
+    <string name="haru_tutorial_main_desc_step_3">View your memos organized by date or tag.</string>
+
+    <string name="haru_tutorial_main_title_step_4">View Mode</string>
+    <string name="haru_tutorial_main_desc_step_4">Switch freely between list and grid layouts.</string>
+
+
+    <!-- Set-OPTIONS -->
     <string name="haru_set_default">Settings</string>
     <string name="haru_set_memo">Memo Settings</string>
     <string name="haru_set_backup">Backup Settings</string>

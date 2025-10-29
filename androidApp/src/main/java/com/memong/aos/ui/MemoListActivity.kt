@@ -23,6 +23,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.createBitmap
 import androidx.core.graphics.toColorInt
 import androidx.core.net.toUri
@@ -38,8 +39,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.avatye.adcash.BannerAdSize
 import com.avatye.haru.log.LogTrack
 import com.memong.aos.BuildConfig
-import com.memong.aos.MemongApplication
 import com.memong.aos.MemoEventFlow
+import com.memong.aos.MemongApplication
 import com.memong.aos.R
 import com.memong.aos.data.database.MemoDatabase
 import com.memong.aos.data.entity.BodyRow
@@ -47,6 +48,7 @@ import com.memong.aos.data.entity.MemoBlock
 import com.memong.aos.data.entity.MemoEntity
 import com.memong.aos.data.entity.MemoEvent
 import com.memong.aos.data.entity.MemoSectionListItem
+import com.memong.aos.data.entity.TutorialStep
 import com.memong.aos.data.enum.DynamicRetroSectionType
 import com.memong.aos.data.enum.DynamicSectionType
 import com.memong.aos.data.enum.FixedSectionType
@@ -57,6 +59,7 @@ import com.memong.aos.data.enum.MainLayoutMode
 import com.memong.aos.data.enum.MainSectionType
 import com.memong.aos.data.enum.MemoMode
 import com.memong.aos.data.enum.MemoSortType
+import com.memong.aos.data.enum.TutorialFocusType
 import com.memong.aos.data.extension.isAlive
 import com.memong.aos.data.extension.start
 import com.memong.aos.data.utils.AnimationUtil
@@ -71,6 +74,7 @@ import com.memong.aos.data.utils.PreferenceUtil.KEY_MEMO_RESTORE
 import com.memong.aos.data.utils.PreferenceUtil.KEY_PASSWORD_SWITCH
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SECTION_IMPORTANT_MEMO_IS_EXPANDED
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SECTION_SECRET_MEMO_IS_EXPANDED
+import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_MAIN
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SIMPLIFY
 import com.memong.aos.data.utils.PreferenceUtil.KEY_USE_LOCKSCREEN_MEMO
 import com.memong.aos.data.utils.PreferenceUtil.getDynamicSectionKey
@@ -108,6 +112,7 @@ import org.threeten.bp.Instant
 import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneId
 import org.threeten.bp.temporal.ChronoUnit
+import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -131,6 +136,8 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
     private lateinit var listAdapter: MemoListAdapter
 
     private var isDynamicSectionInit: Boolean = false
+
+    private var tutorialStep = 0
 
     // Chip → 질문 매핑 정의
     private val chipToQuestionMap by lazy {
@@ -369,7 +376,8 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
     private fun showDateTimeWarningDialogIfNeeded(): Boolean {
         return try {
             val autoTime = Settings.Global.getInt(contentResolver, Settings.Global.AUTO_TIME, 0)
-            val autoTimeZone = Settings.Global.getInt(contentResolver, Settings.Global.AUTO_TIME_ZONE, 0)
+            val autoTimeZone =
+                Settings.Global.getInt(contentResolver, Settings.Global.AUTO_TIME_ZONE, 0)
 
             if (autoTime == 0 || autoTimeZone == 0) {
                 if (dateTimeDialog?.isShowing == true) return true
@@ -443,8 +451,16 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
 
                 1 -> SettingActivity.start(this)
                 2 -> SettingServiceInfoActivity.start(this)
-                3 -> SettingWebViewActivity.start(this, getString(R.string.haru_webview_mode_notice))
-                4 -> SettingWebViewActivity.start(this, getString(R.string.haru_webview_mode_backup))
+                3 -> SettingWebViewActivity.start(
+                    this,
+                    getString(R.string.haru_webview_mode_notice)
+                )
+
+                4 -> SettingWebViewActivity.start(
+                    this,
+                    getString(R.string.haru_webview_mode_backup)
+                )
+
                 5 -> SettingWebViewActivity.start(this, getString(R.string.haru_webview_mode_faq))
             }
             dialog.onDestroy()
@@ -553,9 +569,97 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
     }
 
     private fun setView() {
-        // 새메모하기 버튼
-        AnimationUtil.startPulse(view = binding.newMemoContainer)
+        binding.memoListRootView.post {
+            // 새메모하기 버튼
+            AnimationUtil.startPulse(view = binding.newMemoContainer)
+
+            // 튜토리얼 뷰
+            showTutorialStep()
+        }
     }
+
+
+    private fun showTutorialStep() {
+
+        val isShowingTutorial = PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)
+        LogTrack.i { "$NAME -> showTutorialStep { isShowingTutorialMain: $isShowingTutorial }" }
+        if (isShowingTutorial) {
+            return
+        }
+
+        val steps = listOf(
+            TutorialStep(
+                target = binding.newMemoContainer,
+                title = getString(R.string.haru_tutorial_main_title_step_1),
+                desc = getString(R.string.haru_tutorial_main_desc_step_1) + "               ",
+                focus = TutorialFocusType.MAIN_FOCUS
+            ),
+            TutorialStep(
+                target = binding.headerView.getAction1Button(),
+                title = getString(R.string.haru_tutorial_main_title_step_2),
+                desc = getString(R.string.haru_tutorial_main_desc_step_2),
+                focus = TutorialFocusType.SUB_FOCUS
+            ),
+            TutorialStep(
+                target = binding.headerView.getAction2Button(),
+                title = getString(R.string.haru_tutorial_main_title_step_3),
+                desc = getString(R.string.haru_tutorial_main_desc_step_3),
+                focus = TutorialFocusType.SUB_FOCUS
+            ),
+            TutorialStep(
+                target = binding.headerView.getAction3Button(),
+                title = getString(R.string.haru_tutorial_main_title_step_4),
+                desc = getString(R.string.haru_tutorial_main_desc_step_4),
+                focus = TutorialFocusType.SUB_FOCUS
+            )
+        )
+
+        if (tutorialStep >= steps.size) return
+        steps[tutorialStep].let { step ->
+            MaterialTapTargetPrompt.Builder(this)
+                .setTarget(step.target)
+                .setPrimaryText(step.title)
+                .setSecondaryText(step.desc)
+                .setPrimaryTextSize(Util.spToPx(this, 20f))
+                .setSecondaryTextSize(Util.spToPx(this, 15f))
+                .setPrimaryTextTypeface(
+                    ResourcesCompat.getFont(
+                        this@MemoListActivity,
+                        R.font.lineseed_kr_bold
+                    )
+                )
+                .setSecondaryTextTypeface(
+                    ResourcesCompat.getFont(
+                        this@MemoListActivity,
+                        R.font.lineseed_kr_regular
+                    )
+                )
+                .setBackgroundColour(ContextCompat.getColor(this, R.color.haru_primary_orange))
+                .setPrimaryTextColour(Color.WHITE)
+                .setSecondaryTextColour(Color.WHITE)
+                .setFocalRadius(if (step.focus == TutorialFocusType.MAIN_FOCUS) 120f else 60f)
+//                .setPromptBackground(RectanglePromptBackground())
+                .setAutoDismiss(false) // 배경 클릭해도 닫히지 않음
+                .setAutoFinish(false)  // 포커스 클릭 시 자동 종료 방지
+                .setPromptStateChangeListener { prompt, state ->
+                    when (state) {
+                        MaterialTapTargetPrompt.STATE_FOCAL_PRESSED -> {
+                            LogTrack.i { "$NAME -> showTutorialStep -> MaterialTapTargetPrompt::STATE_FOCAL_PRESSED{ tutorialStep: $tutorialStep }" }
+                            tutorialStep++
+                            if (tutorialStep >= steps.size) {
+                                PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_MAIN, true)
+                                prompt.dismiss()
+                            } else {
+                                prompt.dismiss()
+                                showTutorialStep()
+                            }
+                        }
+                    }
+                }
+                .show()
+        }
+    }
+
 
     private fun initAdapters() {
         // gridAdapter
@@ -825,12 +929,19 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
         binding.rvMemoList.isVisible = false
 
         binding.headerView.apply {
+
             // 검색
             setOnAction1ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction1ClickListener
+                }
                 SearchActivity.start(this@MemoListActivity)
             }
             // Group 토글(Date, Tag)
             setOnAction2ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction2ClickListener
+                }
                 if (memoSortType == MemoSortType.CUSTOM) {
                     when (currentGroupMode) {
                         DATE -> {
@@ -857,26 +968,40 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
             }
             // Layout 토글(Grid, List)
             setOnAction3ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction3ClickListener
+                }
                 toggleLayoutMode()
             }
             // 메뉴
             setOnAction4ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction4ClickListener
+                }
                 openMenuOption()
             }
         }
     }
 
     private fun setListModeView() {
+
         binding.rvMemoGrid.isVisible = false
         binding.rvMemoList.isVisible = true
 
         binding.headerView.apply {
             // 검색
             setOnAction1ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction1ClickListener
+                }
                 SearchActivity.start(this@MemoListActivity)
             }
             // Group 토글(Date, Tag)
             setOnAction2ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction2ClickListener
+                }
+
                 if (memoSortType == MemoSortType.CUSTOM) {
                     when (currentGroupMode) {
                         DATE -> {
@@ -903,10 +1028,16 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
             }
             // Layout 토글(Grid, List)
             setOnAction3ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction3ClickListener
+                }
                 toggleLayoutMode()
             }
             // 메뉴
             setOnAction4ClickListener {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return@setOnAction4ClickListener
+                }
                 openMenuOption()
             }
         }
@@ -952,7 +1083,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                 } else {
                     shareMemos()
                 }
-                EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_SHARE_MEMO)
+                EventUtil.sendEvent(
+                    this@MemoListActivity,
+                    EventUtil.CATEGORY_MAIN,
+                    EventUtil.ACTION_SHARE_MEMO
+                )
             }
 
 
@@ -974,7 +1109,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                     } else {
                         copyMemo()
                     }
-                    EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_COPY_MEMO)
+                    EventUtil.sendEvent(
+                        this@MemoListActivity,
+                        EventUtil.CATEGORY_MAIN,
+                        EventUtil.ACTION_COPY_MEMO
+                    )
                 } else {
                     toastShort(
                         this@MemoListActivity,
@@ -1092,7 +1231,10 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                             }
 
                             TAG -> {
-                                toastShort(this@MemoListActivity, getString(R.string.haru_menu_options_edit_available))
+                                toastShort(
+                                    this@MemoListActivity,
+                                    getString(R.string.haru_menu_options_edit_available)
+                                )
                                 return@setOnItemClickListener
                             }
                         }
@@ -1158,7 +1300,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                     } finally {
                         hideProgressView()
                     }
-                    EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_USE_AI_QNA)
+                    EventUtil.sendEvent(
+                        this@MemoListActivity,
+                        EventUtil.CATEGORY_MAIN,
+                        EventUtil.ACTION_USE_AI_QNA
+                    )
                     showAiAnswerDialog(answer)
                 }
             }
@@ -1176,7 +1322,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         } finally {
                             hideProgressView()
                         }
-                        EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_USE_AI_QNA)
+                        EventUtil.sendEvent(
+                            this@MemoListActivity,
+                            EventUtil.CATEGORY_MAIN,
+                            EventUtil.ACTION_USE_AI_QNA
+                        )
                         showAiAnswerDialog(answer)
                     }
                 }
@@ -1391,7 +1541,12 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
 
     override fun onClick(v: View?) {
         when (v?.id) {
+            // 새 메모하기
             binding.newMemoContainer.id -> {
+                if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)) {
+                    return
+                }
+
                 MemoDetailActivity.start(
                     activity = this@MemoListActivity,
                     mode = MemoMode.CREATE_MEMO
@@ -1472,7 +1627,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         memoSortType = MemoSortType.LATEST_CREATE
                         listAdapter.setSortType(sortType = MemoSortType.LATEST_CREATE)
                         gridAdapter.setSortType(sortType = MemoSortType.LATEST_CREATE)
-                        EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_SORT_CREATE_LATEST)
+                        EventUtil.sendEvent(
+                            this@MemoListActivity,
+                            EventUtil.CATEGORY_MAIN,
+                            EventUtil.ACTION_SORT_CREATE_LATEST
+                        )
                         refreshMemoList()
                         dismiss()
                     }
@@ -1483,7 +1642,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         memoSortType = MemoSortType.OLDEST_CREATE
                         listAdapter.setSortType(sortType = MemoSortType.OLDEST_CREATE)
                         gridAdapter.setSortType(sortType = MemoSortType.OLDEST_CREATE)
-                        EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_SORT_CREATE_OLDEST)
+                        EventUtil.sendEvent(
+                            this@MemoListActivity,
+                            EventUtil.CATEGORY_MAIN,
+                            EventUtil.ACTION_SORT_CREATE_OLDEST
+                        )
                         refreshMemoList()
                         dismiss()
                     }
@@ -1494,7 +1657,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         memoSortType = MemoSortType.LATEST_UPDATE
                         listAdapter.setSortType(sortType = MemoSortType.LATEST_UPDATE)
                         gridAdapter.setSortType(sortType = MemoSortType.LATEST_UPDATE)
-                        EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_SORT_MODIFY_LATEST)
+                        EventUtil.sendEvent(
+                            this@MemoListActivity,
+                            EventUtil.CATEGORY_MAIN,
+                            EventUtil.ACTION_SORT_MODIFY_LATEST
+                        )
                         refreshMemoList()
                         dismiss()
                     }
@@ -1505,7 +1672,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         memoSortType = MemoSortType.OLDEST_UPDATE
                         listAdapter.setSortType(sortType = MemoSortType.OLDEST_UPDATE)
                         gridAdapter.setSortType(sortType = MemoSortType.OLDEST_UPDATE)
-                        EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_SORT_MODIFY_OLDEST)
+                        EventUtil.sendEvent(
+                            this@MemoListActivity,
+                            EventUtil.CATEGORY_MAIN,
+                            EventUtil.ACTION_SORT_MODIFY_OLDEST
+                        )
                         refreshMemoList()
                         dismiss()
                     }
@@ -1516,7 +1687,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         memoSortType = MemoSortType.CUSTOM
                         listAdapter.setSortType(sortType = MemoSortType.CUSTOM)
                         gridAdapter.setSortType(sortType = MemoSortType.CUSTOM)
-                        EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_SORT_CUSTOM)
+                        EventUtil.sendEvent(
+                            this@MemoListActivity,
+                            EventUtil.CATEGORY_MAIN,
+                            EventUtil.ACTION_SORT_CUSTOM
+                        )
                         refreshMemoList()
                         dismiss()
                     }
@@ -1593,7 +1768,11 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                         // 잠금 안 된 메모는 즉시 삭제
                         deleteUnlockedMemo(unlockedItems = unlockedItems)
                     }
-                    EventUtil.sendEvent(this@MemoListActivity, EventUtil.CATEGORY_MAIN, EventUtil.ACTION_DELETE_MEMO)
+                    EventUtil.sendEvent(
+                        this@MemoListActivity,
+                        EventUtil.CATEGORY_MAIN,
+                        EventUtil.ACTION_DELETE_MEMO
+                    )
                     dismiss()
                 }
             )

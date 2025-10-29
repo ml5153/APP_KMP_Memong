@@ -32,6 +32,7 @@ crashLytics = "2.9.9"
 window = "1.4.0"
 adcash = "3.1.3.21_SNAPSHOT"
 admob = "24.6.0"
+tapTargetPrompt = "3.3.2"
 
 
 [libraries]
@@ -78,6 +79,7 @@ adcash-mobwith = { module = "com.avatye.adcash:archive-mobwith", version.ref = "
 adcash-admob = { module = "com.avatye.adcash:archive-admob", version.ref = "adcash" }
 adcash-nam = { module = "com.avatye.adcash:archive-nam", version.ref = "adcash" }
 ad-mediation-admob = { module = "com.google.android.gms:play-services-ads", version.ref = "admob" }
+tab-target-prompt = { module = "uk.co.samuelwall:material-tap-target-prompt", version.ref = "tapTargetPrompt" }
 
 
 [plugins]
