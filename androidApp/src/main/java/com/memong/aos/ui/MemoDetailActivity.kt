@@ -65,6 +65,9 @@ import com.memong.aos.data.utils.EventUtil
 import com.memong.aos.data.utils.FileUtil
 import com.memong.aos.data.utils.PreferenceUtil
 import com.memong.aos.data.utils.PreferenceUtil.KEY_PASSWORD_SWITCH
+import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_DETAIL
+import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_EDIT_IS_SHOWING
+import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO
 import com.memong.aos.data.utils.RowCodecUtil
 import com.memong.aos.data.utils.Util
 import com.memong.aos.data.utils.Util.Companion.toastShort
@@ -797,6 +800,11 @@ internal class MemoDetailActivity : BaseActivity() {
         // Bottom toolbar
         binding.lyBottomToolbarContainer.isVisible = true
 
+        // Tutorial
+        if (binding.bottomMemoEditTutorial.isVisible) {
+            binding.bottomMemoEditTutorial.isVisible = false
+        }
+
         binding.headerDetail.onBackClick = {
             saveMemo(isForceClose = true)
         }
@@ -820,6 +828,11 @@ internal class MemoDetailActivity : BaseActivity() {
     private fun setModifyModeView() {
         // Bottom toolbar
         binding.lyBottomToolbarContainer.isVisible = true
+
+        // Tutorial
+        if (binding.bottomMemoEditTutorial.isVisible) {
+            binding.bottomMemoEditTutorial.isVisible = false
+        }
 
         binding.headerDetail.onBackClick = {
             if (isImageSelectionMode) {
@@ -858,6 +871,13 @@ internal class MemoDetailActivity : BaseActivity() {
 
     @SuppressLint("ClickableViewAccessibility")
     private fun setReadModeView() {
+        // Tutorial
+        val isShowingTutorial = PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_DETAIL, false)
+        if (!isShowingTutorial) {
+            binding.bottomMemoEditTutorial.isVisible = true
+            PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_DETAIL, true)
+        }
+
         val blocks = mutableListOf<MemoBlock>()
         // 날짜
         val displayDate = when (memoSortType) {
@@ -1496,6 +1516,18 @@ internal class MemoDetailActivity : BaseActivity() {
                             EventUtil.ACTION_MEMO_CREATE
                         )
                         MemoEventFlow.emit(MemoEvent.AllMemoUpdated)
+
+//                        if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_SAVE_MEMO, false)) {
+//                            PreferenceUtil.set(KEY_SHOW_TUTORIAL_SAVE_MEMO, true)
+//                            MemoEventFlow.emit(MemoEvent.FirstMemoSaved)
+//                        }
+
+                        val isShowing =
+                            PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_EDIT_IS_SHOWING, false)
+                        if (!isShowing) {
+                            PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO, true)
+                            PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_EDIT_IS_SHOWING, true)
+                        }
                     }
                 )
             }
@@ -1587,6 +1619,17 @@ internal class MemoDetailActivity : BaseActivity() {
                                 EventUtil.ACTION_MEMO_MODIFY
                             )
                             MemoEventFlow.emit(MemoEvent.AllMemoUpdated)
+
+//                            if (!PreferenceUtil.get(KEY_SHOW_TUTORIAL_SAVE_MEMO, false)) {
+//                                MemoEventFlow.emit(MemoEvent.FirstMemoSaved)
+//                            }
+
+                            val isShowing =
+                                PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_EDIT_IS_SHOWING, false)
+                            if (!isShowing) {
+                                PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO, true)
+                                PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_EDIT_IS_SHOWING, true)
+                            }
                         }
                     )
 

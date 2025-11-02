@@ -99,7 +99,7 @@ internal class MemoMenuView @JvmOverloads constructor(
         return when (mode) {
             Mode.OPTIONS -> buildList {
                 add(context.getString(R.string.haru_menu_options_sort))
-                add(context.getString(R.string.haru_menu_options_edit))
+//                add(context.getString(R.string.haru_menu_options_edit))
                 if (RemoteConfigUtil.getUseAi()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         add(context.getString(R.string.haru_menu_ai))

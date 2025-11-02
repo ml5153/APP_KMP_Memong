@@ -80,6 +80,14 @@
     <string name="haru_tutorial_main_title_step_4">View Mode</string>
     <string name="haru_tutorial_main_desc_step_4">Switch freely between list and grid layouts.</string>
 
+    <string name="haru_tutorial_main_title_step_5">Memo Settings</string>
+    <string name="haru_tutorial_main_desc_step_5">Explore helpful tools and options in Memo Settings.</string>
+
+    <string name="haru_tutorial_main_title_edit_1">Manage Memo</string>
+    <string name="haru_tutorial_main_desc_edit_1">Long press a memo to share, copy or delete it.</string>
+
+    <string name="haru_tutorial_main_title_detail_1">Edit Memo</string>
+    <string name="haru_tutorial_main_desc_detail_1">Tap the screen to edit your memo.\n\n🔍 Search within your memos.\n\n☰ Open the menu to explore more options.</string>
 
     <!-- Set-OPTIONS -->
     <string name="haru_set_default">Settings</string>
@@ -329,7 +337,6 @@
 
     <!-- Menu Options -->
     <string name="haru_menu_options_sort">Sort Memos</string>
-    <string name="haru_menu_options_edit">Edit Memo</string>
     <string name="haru_menu_options_edit_available">Cannot use editing in tag mode.</string>
     <string name="haru_menu_options_settings">Settings</string>
     <string name="haru_menu_options_trash">Trash</string>

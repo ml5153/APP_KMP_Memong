@@ -14,6 +14,8 @@ import android.graphics.pdf.PdfDocument
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.provider.Settings
 import android.view.View
 import android.view.ViewGroup
@@ -74,7 +76,9 @@ import com.memong.aos.data.utils.PreferenceUtil.KEY_MEMO_RESTORE
 import com.memong.aos.data.utils.PreferenceUtil.KEY_PASSWORD_SWITCH
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SECTION_IMPORTANT_MEMO_IS_EXPANDED
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SECTION_SECRET_MEMO_IS_EXPANDED
+import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_EDIT_IS_SHOWING
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_MAIN
+import com.memong.aos.data.utils.PreferenceUtil.KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO
 import com.memong.aos.data.utils.PreferenceUtil.KEY_SIMPLIFY
 import com.memong.aos.data.utils.PreferenceUtil.KEY_USE_LOCKSCREEN_MEMO
 import com.memong.aos.data.utils.PreferenceUtil.getDynamicSectionKey
@@ -367,6 +371,38 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                 }
             }
         }
+
+
+        if (PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO, false)) {
+            when (currentLayoutMode) {
+                MainLayoutMode.GRID -> {
+                    binding.rvMemoGrid.postDelayed({
+                        val holder = binding.rvMemoGrid.findViewHolderForAdapterPosition(1)
+                        val target = holder?.itemView ?: run {
+                            LogTrack.e(NAME) { "observeEventFlow -> holder?.itemView is null" }
+                            return@postDelayed
+                        }
+                        showTutorialEdit(target)
+                        PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO, false)
+                    }, 500)
+                }
+
+                MainLayoutMode.LIST -> {
+                    binding.rvMemoList.postDelayed({
+                        val holder = binding.rvMemoList.findViewHolderForAdapterPosition(1)
+                        val target = holder?.itemView ?: run {
+                            LogTrack.e(NAME) { "observeEventFlow -> holder?.itemView is null" }
+                            return@postDelayed
+                        }
+                        showTutorialEdit(target)
+                        PreferenceUtil.set(KEY_SHOW_TUTORIAL_MEMO_SAVED_MEMO, false)
+                    }, 500)
+                }
+
+                else -> {}
+            }
+
+        }
     }
 
     /**
@@ -528,6 +564,38 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
             MemoEventFlow.events.collect { event ->
                 LogTrack.i(NAME) { "observeEventFlow -> event: ${event.toString()}" }
                 when (event) {
+                    is MemoEvent.FirstMemoSaved -> {
+//                        binding.bottomHalfCircleTutorial.isVisible = true
+
+                        LogTrack.i(NAME) { "observeEventFlow -> currentLayoutMode: $currentLayoutMode" }
+
+//                        when(currentLayoutMode) {
+//                            MainLayoutMode.GRID -> {
+//                                binding.rvMemoGrid.postDelayed({
+//                                    val holder = binding.rvMemoGrid .findViewHolderForAdapterPosition(0)
+//                                    val target = holder?.itemView ?: run {
+//                                        LogTrack.e(NAME){"observeEventFlow -> holder?.itemView is null"}
+//                                        return@postDelayed
+//                                    }
+//                                    showTutorialEdit(target)
+//                                }, 500)
+//                            }
+//                            MainLayoutMode.LIST -> {
+//                                binding.rvMemoList.postDelayed({
+//                                    val holder = binding.rvMemoList .findViewHolderForAdapterPosition(0)
+//                                    val target = holder?.itemView ?: run {
+//                                        LogTrack.e(NAME){"observeEventFlow -> holder?.itemView is null"}
+//                                        return@postDelayed
+//                                    }
+//                                    showTutorialEdit(target)
+//                                }, 500)
+//                            }
+//
+//                            else ->{}
+//                        }
+
+                    }
+
                     is MemoEvent.AllMemoUpdated -> {
                         CoroutineScope(Dispatchers.IO).launch {
                             withContext(Dispatchers.Main) {
@@ -580,7 +648,6 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
 
 
     private fun showTutorialStep() {
-
         val isShowingTutorial = PreferenceUtil.get(KEY_SHOW_TUTORIAL_MEMO_MAIN, false)
         LogTrack.i { "$NAME -> showTutorialStep { isShowingTutorialMain: $isShowingTutorial }" }
         if (isShowingTutorial) {
@@ -611,6 +678,12 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                 title = getString(R.string.haru_tutorial_main_title_step_4),
                 desc = getString(R.string.haru_tutorial_main_desc_step_4),
                 focus = TutorialFocusType.SUB_FOCUS
+            ),
+            TutorialStep(
+                target = binding.headerView.getAction4Button(),
+                title = getString(R.string.haru_tutorial_main_title_step_5),
+                desc = getString(R.string.haru_tutorial_main_desc_step_5),
+                focus = TutorialFocusType.SUB_FOCUS
             )
         )
 
@@ -637,7 +710,12 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                 .setBackgroundColour(ContextCompat.getColor(this, R.color.haru_primary_orange))
                 .setPrimaryTextColour(Color.WHITE)
                 .setSecondaryTextColour(Color.WHITE)
-                .setFocalRadius(if (step.focus == TutorialFocusType.MAIN_FOCUS) 120f else 60f)
+                .setFocalRadius(
+                    if (step.focus == TutorialFocusType.MAIN_FOCUS) Util.spToPx(
+                        this,
+                        40f
+                    ) else Util.spToPx(this, 20f)
+                )
 //                .setPromptBackground(RectanglePromptBackground())
                 .setAutoDismiss(false) // 배경 클릭해도 닫히지 않음
                 .setAutoFinish(false)  // 포커스 클릭 시 자동 종료 방지
@@ -658,6 +736,64 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                 }
                 .show()
         }
+    }
+
+
+    private fun showTutorialEdit(targetView: View?) {
+        LogTrack.i { "$NAME -> showTutorialEdit" }
+
+        if (targetView == null) return
+
+        val steps = TutorialStep(
+            target = targetView,
+            title = getString(R.string.haru_tutorial_main_title_edit_1),
+            desc = getString(R.string.haru_tutorial_main_desc_edit_1) + "               ",
+            focus = TutorialFocusType.MAIN_FOCUS
+        )
+
+        MaterialTapTargetPrompt.Builder(this)
+            .setTarget(steps.target)
+            .setPrimaryText(steps.title)
+            .setSecondaryText(steps.desc)
+            .setPrimaryTextSize(Util.spToPx(this, 20f))
+            .setSecondaryTextSize(Util.spToPx(this, 15f))
+            .setPrimaryTextTypeface(
+                ResourcesCompat.getFont(
+                    this@MemoListActivity,
+                    R.font.lineseed_kr_bold
+                )
+            )
+            .setSecondaryTextTypeface(
+                ResourcesCompat.getFont(
+                    this@MemoListActivity,
+                    R.font.lineseed_kr_regular
+                )
+            )
+            .setBackgroundColour(ContextCompat.getColor(this, R.color.haru_primary_orange))
+            .setPrimaryTextColour(Color.WHITE)
+            .setSecondaryTextColour(Color.WHITE)
+            .setFocalRadius(Util.spToPx(this, 170f))
+            .setFocalColour(Color.TRANSPARENT)
+//            .setFocalPadding(-10f)
+//            .setPromptBackground(RectanglePromptBackground())
+            .setAutoDismiss(false) // 배경 클릭해도 닫히지 않음
+            .setAutoFinish(false)  // 포커스 클릭 시 자동 종료 방지
+            .setPromptStateChangeListener { prompt, state ->
+                when (state) {
+                    MaterialTapTargetPrompt.STATE_FOCAL_PRESSED -> {
+                        LogTrack.i { "$NAME -> showTutorialEdit -> MaterialTapTargetPrompt::STATE_FOCAL_PRESSED" }
+                        prompt.dismiss()
+                    }
+
+                    MaterialTapTargetPrompt.STATE_NON_FOCAL_PRESSED -> {
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            prompt.dismiss()
+                        }, 1500)
+                    }
+                }
+            }
+            .show()
+
     }
 
 
@@ -1220,25 +1356,25 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
                     getString(R.string.haru_menu_options_sort) -> showSortingDialog()
 
                     // 메모편집
-                    getString(R.string.haru_menu_options_edit) -> {
-                        when (currentGroupMode) {
-                            DATE -> {
-                                if (currentLayoutMode == MainLayoutMode.GRID) {
-                                    gridAdapter.enterSelectMode()
-                                } else if (currentLayoutMode == MainLayoutMode.LIST) {
-                                    listAdapter.enterSelectMode()
-                                }
-                            }
-
-                            TAG -> {
-                                toastShort(
-                                    this@MemoListActivity,
-                                    getString(R.string.haru_menu_options_edit_available)
-                                )
-                                return@setOnItemClickListener
-                            }
-                        }
-                    }
+//                    getString(R.string.haru_menu_options_edit) -> {
+//                        when (currentGroupMode) {
+//                            DATE -> {
+//                                if (currentLayoutMode == MainLayoutMode.GRID) {
+//                                    gridAdapter.enterSelectMode()
+//                                } else if (currentLayoutMode == MainLayoutMode.LIST) {
+//                                    listAdapter.enterSelectMode()
+//                                }
+//                            }
+//
+//                            TAG -> {
+//                                toastShort(
+//                                    this@MemoListActivity,
+//                                    getString(R.string.haru_menu_options_edit_available)
+//                                )
+//                                return@setOnItemClickListener
+//                            }
+//                        }
+//                    }
 
                     // 설정
                     getString(R.string.haru_menu_options_settings) -> {
