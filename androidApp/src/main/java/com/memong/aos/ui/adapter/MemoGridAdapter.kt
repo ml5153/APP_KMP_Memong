@@ -17,6 +17,8 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
@@ -87,6 +89,8 @@ internal class MemoGridAdapter(
     // ★ spanCount 관리 (기본 3; GridLayoutManager에 붙으면 자동 갱신)
     private var spanCount: Int = 3
 
+    private var calendarView: View? = null
+
     companion object {
         private const val NAME = "MemoGridAdapter"
 
@@ -121,6 +125,10 @@ internal class MemoGridAdapter(
 
     fun setOnMemoUpdatedListener(callback: () -> Unit) {
         this.onMemoUpdated = callback
+    }
+
+    fun setCalendarView(calendarView: View) {
+        this.calendarView = calendarView
     }
 
     // ★ GridLayoutManager spanCount 자동 감지
@@ -402,7 +410,8 @@ internal class MemoGridAdapter(
         }
     }
 
-    inner class MemoViewHolder(val binding: ItemMemoGridBinding) : RecyclerView.ViewHolder(binding.gridRootView) {
+    inner class MemoViewHolder(val binding: ItemMemoGridBinding) :
+        RecyclerView.ViewHolder(binding.gridRootView) {
 
         private fun getSavedGroupMode(): MainGroupMode {
             val saved = PreferenceUtil.get(KEY_MEMO_GROUP_MODE, MainGroupMode.DATE.name)
@@ -431,7 +440,8 @@ internal class MemoGridAdapter(
                     gridImgBody.isVisible = false
                 } else {
                     gridLayoutBF.setBackgroundResource(R.drawable.ripple_rectangle)
-                    gridLayoutBF.backgroundTintList = ColorStateList.valueOf(Color.parseColor(item.bgColor))
+                    gridLayoutBF.backgroundTintList =
+                        ColorStateList.valueOf(Color.parseColor(item.bgColor))
                     gridImgLock.isVisible = false
                     gridImgBody.isVisible = hasImages
                 }
@@ -452,9 +462,11 @@ internal class MemoGridAdapter(
                     val tv = gridTvBody
                     val layout = tv.layout ?: return@post
                     if (tv.lineCount > maxLinesForBody) {
-                        val end = layout.getLineEnd(maxLinesForBody - 1).coerceAtMost(tv.text.length)
+                        val end =
+                            layout.getLineEnd(maxLinesForBody - 1).coerceAtMost(tv.text.length)
                         val src = tv.text
-                        val cut: CharSequence = if (src is Spanned) src.subSequence(0, end) else src.substring(0, end)
+                        val cut: CharSequence =
+                            if (src is Spanned) src.subSequence(0, end) else src.substring(0, end)
                         val trimmed = cut.trimEnd { it == '\n' || it == ' ' }
                         val out = SpannableStringBuilder(trimmed).apply { append('\u2026') } // …
                         tv.setText(out, TextView.BufferType.SPANNABLE)
@@ -471,7 +483,8 @@ internal class MemoGridAdapter(
 
                 // image
                 if (hasImages) {
-                    val firstUri = item.imagePath.values.firstOrNull { it.isNotEmpty() }?.firstOrNull()
+                    val firstUri =
+                        item.imagePath.values.firstOrNull { it.isNotEmpty() }?.firstOrNull()
                     firstUri?.let { uriStr ->
                         Glide.with(gridImgBody).load(uriStr).into(gridImgBody)
                     }
@@ -541,14 +554,18 @@ internal class MemoGridAdapter(
                 lyItemMemoGrid.setOnClickListener {
                     val memoId = item._id
                     if (isSelected) {
-                        if (selectedMemoIds.contains(memoId)) selectedMemoIds.remove(memoId) else selectedMemoIds.add(memoId)
+                        if (selectedMemoIds.contains(memoId)) selectedMemoIds.remove(memoId) else selectedMemoIds.add(
+                            memoId
+                        )
                         notifyItemChanged(bindingAdapterPosition)
                         listener?.onSelectedItem(
                             selectCount = selectedMemoIds.size,
                             itemCount = getDeduplicationMemoItemCount()
                         )
                     } else {
-                        if (item.isLocked) requestPasswordCheck?.invoke(item) else memoClick?.invoke(item)
+                        if (item.isLocked) requestPasswordCheck?.invoke(item) else memoClick?.invoke(
+                            item
+                        )
                     }
                 }
 
@@ -561,7 +578,23 @@ internal class MemoGridAdapter(
                     val stillAllow = !isFromSearchActivity && savedGroupMode == MainGroupMode.DATE
                     if (!stillAllow) {
                         toastShort(activity, "날짜별로 정리된 메모(\uD83D\uDDD3\uFE0F)에서만 관리가 가능합니다.")
-                        return@setOnLongClickListener false
+
+                        try {
+                            calendarView?.let { view ->
+                                view.clearAnimation()
+                                if (view.isAttachedToWindow) {
+                                    val anim = AlphaAnimation(0.3f, 1.0f).apply {
+                                        duration = 400
+                                        repeatCount = 3
+                                        repeatMode = Animation.REVERSE
+                                    }
+                                    view.startAnimation(anim)
+                                }
+                            }
+                        } catch (e: Exception) {
+                            LogTrack.e(NAME) { "Animation safely skipped: ${e.message}" }
+                        }
+                        return@setOnLongClickListener true
                     }
 
                     val currentPos = bindingAdapterPosition
@@ -631,7 +664,11 @@ internal class MemoGridAdapter(
                 val textEnd = ssb.length
 
                 // 제목 볼드(설정값 on일 때), 텍스트가 있을 때만
-                if (PreferenceUtil.get(PreferenceUtil.KEY_TURN_OFF_TITLE, true) && pure.isNotBlank()) {
+                if (PreferenceUtil.get(
+                        PreferenceUtil.KEY_TURN_OFF_TITLE,
+                        true
+                    ) && pure.isNotBlank()
+                ) {
                     ssb.setSpan(
                         StyleSpan(Typeface.BOLD),
                         textStart, textEnd,
@@ -729,7 +766,9 @@ internal class MemoGridAdapter(
     }
 
     fun getFirstAndLastMemoIndexInSection(sectionIndex: Int): Pair<Int, Int>? {
-        val sectionType = (flatItems.getOrNull(sectionIndex) as? MemoSectionListItem.SectionHeader)?.sectionType ?: return null
+        val sectionType =
+            (flatItems.getOrNull(sectionIndex) as? MemoSectionListItem.SectionHeader)?.sectionType
+                ?: return null
 
         val start = flatItems.indexOfFirst {
             it is MemoSectionListItem.MemoItem && getSectionIndexForPosition(flatItems.indexOf(it)) == sectionIndex
@@ -772,7 +811,12 @@ internal class MemoGridAdapter(
                 FixedSectionType.IMPORTANT -> if (it.needExpandable) it.copy(isExpanded = isImportantExpanded) else it
                 else -> {
                     if (it.needExpandable) {
-                        it.copy(isExpanded = PreferenceUtil.get(getDynamicSectionKey(it.sectionType.key), it.isExpanded))
+                        it.copy(
+                            isExpanded = PreferenceUtil.get(
+                                getDynamicSectionKey(it.sectionType.key),
+                                it.isExpanded
+                            )
+                        )
                     } else {
                         it
                     }

@@ -15,7 +15,10 @@ import android.text.style.StrikethroughSpan
 import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.MotionEvent
+import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
@@ -81,6 +84,8 @@ internal class MemoListAdapter(
 
     private var onMemoUpdated: (() -> Unit)? = null
 
+    private var calendarView: View? = null
+
     val isSecretExpanded: Boolean
         get() {
             return PreferenceUtil.get(KEY_SECTION_SECRET_MEMO_IS_EXPANDED, false)
@@ -111,6 +116,11 @@ internal class MemoListAdapter(
     fun setOnMemoUpdatedListener(callback: () -> Unit) {
         this.onMemoUpdated = callback
     }
+
+    fun setCalendarView(calendarView: View) {
+        this.calendarView = calendarView
+    }
+
 
     fun updateItems(headers: List<MemoSectionListItem.SectionHeader>) {
         sectionHeaderItems.clear()
@@ -353,7 +363,8 @@ internal class MemoListAdapter(
     }
 
 
-    inner class MemoViewHolder(val binding: ItemMemoListBinding) : RecyclerView.ViewHolder(binding.listRootView) {
+    inner class MemoViewHolder(val binding: ItemMemoListBinding) :
+        RecyclerView.ViewHolder(binding.listRootView) {
 
         private fun getSavedGroupMode(): MainGroupMode {
             val saved = PreferenceUtil.get(KEY_MEMO_GROUP_MODE, MainGroupMode.DATE.name)
@@ -382,7 +393,8 @@ internal class MemoListAdapter(
                     listImgBody.isVisible = false
                 } else {
                     listLayoutContent.setBackgroundResource(R.drawable.ripple_rectangle)
-                    listLayoutContent.backgroundTintList = ColorStateList.valueOf(Color.parseColor(item.bgColor))
+                    listLayoutContent.backgroundTintList =
+                        ColorStateList.valueOf(Color.parseColor(item.bgColor))
                     listImgLock.isVisible = false
                     listTvBody.isVisible = true
                     listImgBody.isVisible = hasImages
@@ -404,7 +416,8 @@ internal class MemoListAdapter(
                     val tv = listTvBody
                     val layout = tv.layout ?: return@post
                     if (tv.lineCount > maxLinesForBody) {
-                        val end = layout.getLineEnd(maxLinesForBody - 1).coerceAtMost(tv.text.length)
+                        val end =
+                            layout.getLineEnd(maxLinesForBody - 1).coerceAtMost(tv.text.length)
                         val src = tv.text
                         val cut: CharSequence = if (src is Spanned) {
                             src.subSequence(0, end)
@@ -413,7 +426,8 @@ internal class MemoListAdapter(
                         }
                         // 끝 개행/스페이스 정리 후 … 추가
                         val trimmed = cut.trimEnd { it == '\n' || it == ' ' }
-                        val out = SpannableStringBuilder(trimmed).apply { append('\u2026') } // ellipsis
+                        val out =
+                            SpannableStringBuilder(trimmed).apply { append('\u2026') } // ellipsis
                         tv.setText(out, TextView.BufferType.SPANNABLE)
                     }
                 }
@@ -428,7 +442,10 @@ internal class MemoListAdapter(
 
                 val layoutParams = LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
-                    if (listImgBody.isVisible) Util.dpToPx(root.context, 31) else LinearLayout.LayoutParams.WRAP_CONTENT
+                    if (listImgBody.isVisible) Util.dpToPx(
+                        root.context,
+                        31
+                    ) else LinearLayout.LayoutParams.WRAP_CONTENT
                 )
                 listLayoutBody.layoutParams = layoutParams
 
@@ -528,7 +545,23 @@ internal class MemoListAdapter(
                     val stillAllow = !isFromSearchActivity && savedGroupMode == MainGroupMode.DATE
                     if (!stillAllow) {
                         toastShort(activity, "날짜별로 정리된 메모(\uD83D\uDDD3\uFE0F)에서만 관리가 가능합니다.")
-                        return@setOnLongClickListener false
+
+                        try {
+                            calendarView?.let { view ->
+                                view.clearAnimation()
+                                if (view.isAttachedToWindow) {
+                                    val anim = AlphaAnimation(0.3f, 1.0f).apply {
+                                        duration = 400
+                                        repeatCount = 3
+                                        repeatMode = Animation.REVERSE
+                                    }
+                                    view.startAnimation(anim)
+                                }
+                            }
+                        } catch (e: Exception) {
+                            LogTrack.e(NAME) { "Animation safely skipped: ${e.message}" }
+                        }
+                        return@setOnLongClickListener true
                     }
 
                     val currentPos = bindingAdapterPosition
@@ -599,7 +632,11 @@ internal class MemoListAdapter(
                 val textEnd = ssb.length
 
                 // 제목 볼드(설정값 on일 때), 텍스트가 있을 때만
-                if (PreferenceUtil.get(PreferenceUtil.KEY_TURN_OFF_TITLE, true) && pure.isNotBlank()) {
+                if (PreferenceUtil.get(
+                        PreferenceUtil.KEY_TURN_OFF_TITLE,
+                        true
+                    ) && pure.isNotBlank()
+                ) {
                     ssb.setSpan(
                         StyleSpan(Typeface.BOLD),
                         textStart, textEnd,
@@ -712,7 +749,12 @@ internal class MemoListAdapter(
                 FixedSectionType.IMPORTANT -> if (it.needExpandable) it.copy(isExpanded = isImportantExpanded) else it
                 else -> {
                     if (it.needExpandable) {
-                        it.copy(isExpanded = PreferenceUtil.get(getDynamicSectionKey(it.sectionType.key), it.isExpanded))
+                        it.copy(
+                            isExpanded = PreferenceUtil.get(
+                                getDynamicSectionKey(it.sectionType.key),
+                                it.isExpanded
+                            )
+                        )
                     } else {
                         it
                     }
@@ -791,11 +833,21 @@ internal class MemoListAdapter(
             val updatedSections = sectionHeaderItems.map { header ->
                 when (header.sectionType) {
                     FixedSectionType.SECRET -> if (header.needExpandable) {
-                        header.copy(isExpanded = PreferenceUtil.get(KEY_SECTION_SECRET_MEMO_IS_EXPANDED, false))
+                        header.copy(
+                            isExpanded = PreferenceUtil.get(
+                                KEY_SECTION_SECRET_MEMO_IS_EXPANDED,
+                                false
+                            )
+                        )
                     } else header
 
                     FixedSectionType.IMPORTANT -> if (header.needExpandable) {
-                        header.copy(isExpanded = PreferenceUtil.get(KEY_SECTION_IMPORTANT_MEMO_IS_EXPANDED, false))
+                        header.copy(
+                            isExpanded = PreferenceUtil.get(
+                                KEY_SECTION_IMPORTANT_MEMO_IS_EXPANDED,
+                                false
+                            )
+                        )
                     } else header
 
                     else -> header // 동적 섹션은 기존 상태 유지
@@ -851,8 +903,10 @@ internal class MemoListAdapter(
 
             if (from == RecyclerView.NO_POSITION || to == RecyclerView.NO_POSITION) return false
 
-            val fromItem = adapter.flatItems.getOrNull(from) as? MemoSectionListItem.MemoItem ?: return false
-            val toItem = adapter.flatItems.getOrNull(to) as? MemoSectionListItem.MemoItem ?: return false
+            val fromItem =
+                adapter.flatItems.getOrNull(from) as? MemoSectionListItem.MemoItem ?: return false
+            val toItem =
+                adapter.flatItems.getOrNull(to) as? MemoSectionListItem.MemoItem ?: return false
 
             // 잠금/중요 메모 제외
             if (fromItem.memo.isLocked || fromItem.memo.isImportant) return false

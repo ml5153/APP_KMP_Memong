@@ -804,6 +804,7 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
         ).apply {
             setSortType(sortType = memoSortType)
             setItemSelectedListener(this@MemoListActivity)
+            setCalendarView(calendarView = binding.headerView.getAction2Button())
             setOnMemoClickListener(callback = { item ->
                 EventUtil.sendEvent(
                     this@MemoListActivity,
@@ -846,6 +847,7 @@ internal class MemoListActivity : BaseActivity(), View.OnClickListener, ItemSele
         ).apply {
             setSortType(sortType = memoSortType)
             setItemSelectedListener(this@MemoListActivity)
+            setCalendarView(calendarView = binding.headerView.getAction2Button())
             setOnMemoClickListener(callback = { item ->
                 EventUtil.sendEvent(
                     this@MemoListActivity,
