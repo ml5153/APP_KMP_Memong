@@ -47,6 +47,7 @@ import com.memong.aos.data.utils.PreferenceUtil.getDynamicSectionKey
 import com.memong.aos.data.utils.RowCodecUtil.HARU_MEMO_CHECKED
 import com.memong.aos.data.utils.RowCodecUtil.HARU_MEMO_UNCHECKED
 import com.memong.aos.data.utils.Util
+import com.memong.aos.data.utils.Util.Companion.toastShort
 import com.memong.aos.data.utils.VibrationUtil
 import com.memong.aos.databinding.ItemMemoEmptyBinding
 import com.memong.aos.databinding.ItemMemoGridBinding
@@ -558,7 +559,10 @@ internal class MemoGridAdapter(
                 lyItemMemoGrid.setOnLongClickListener {
                     // 실행 시점에 다시 확인(모드가 바뀌었을 수 있음)
                     val stillAllow = !isFromSearchActivity && savedGroupMode == MainGroupMode.DATE
-                    if (!stillAllow) return@setOnLongClickListener false
+                    if (!stillAllow) {
+                        toastShort(activity, "날짜별로 정리된 메모(\uD83D\uDDD3\uFE0F)에서만 관리가 가능합니다.")
+                        return@setOnLongClickListener false
+                    }
 
                     val currentPos = bindingAdapterPosition
                     if (currentPos == RecyclerView.NO_POSITION) return@setOnLongClickListener false
