@@ -1,3 +1,9 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
+import kotlin.apply
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
@@ -115,6 +121,32 @@ android {
             manifestPlaceholders["ADMOB_APP_ID"] = "ca-app-pub-4719210282750059~3963976602"
             buildConfigField("String", "ADMOB_NATIVE_UNIT_ID", "\"ca-app-pub-4719210282750059/2090182804\"")
             buildConfigField("String", "ADMOB_BANNER_UNIT_ID", "\"ca-app-pub-4719210282750059/1759010319\"")
+        }
+    }
+
+    applicationVariants.all {
+        val kstTimeZone = TimeZone.getTimeZone("Asia/Seoul")
+
+        val dateFormat = SimpleDateFormat("yyyyMMdd_HHmmss").apply {
+            timeZone = kstTimeZone
+        }
+        val formattedDate = dateFormat.format(Date())
+
+        val flavorName = flavorName?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() } ?: ""
+        val buildTypeName = buildType.name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        val vName = versionName
+        val vCode = versionCode
+
+        val newFileName = "memong" +
+                (if (flavorName.isNotEmpty()) "_$flavorName" else "") +
+                "_${buildTypeName}" +
+                "_${vName}" +
+                "-${vCode}" +
+                "_${formattedDate}" +
+                ".apk"
+
+        outputs.all {
+            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName = newFileName
         }
     }
 }
