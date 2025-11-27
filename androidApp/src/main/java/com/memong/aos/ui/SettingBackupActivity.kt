@@ -11,6 +11,7 @@ import android.content.pm.PackageManager
 import android.database.sqlite.SQLiteDatabase
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
@@ -140,6 +141,27 @@ internal class SettingBackupActivity : BaseActivity() {
                 showDisconnectConfirmDialog()
             }
         }
+
+    private val backupFileLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            result.data?.data?.let { uri ->
+                // 획득한 URI에 대한 읽기 권한을 유지합니다. (선택 사항이나 권장)
+                try {
+                    contentResolver.takePersistableUriPermission(
+                        uri,
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION
+                    )
+                } catch (e: SecurityException) {
+                    LogTrack.e("RestoreBackup", { "Failed to take persistable URI permission: $e" })
+                }
+
+                // 획득한 URI로 복원 함수를 호출합니다.
+                restoreBackupFromUri(uri)
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -337,11 +359,6 @@ internal class SettingBackupActivity : BaseActivity() {
         }
 
         b.itemRestore.setOnClickListener {
-            // Android 11+이고 외부 저장소 권한이 없을 경우
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
-                showStorageAccessPermissionDialog()
-                return@setOnClickListener
-            }
             showRestoreSourceDialog(this)
         }
     }
@@ -735,7 +752,10 @@ internal class SettingBackupActivity : BaseActivity() {
                                     lifecycleScope.launch { performBackup() }
                                 },
                                 onAdFailure = {
-                                    toastShort(this@SettingBackupActivity, getString(R.string.haru_backup_fail_advertise_failed))
+                                    toastShort(
+                                        this@SettingBackupActivity,
+                                        getString(R.string.haru_backup_fail_advertise_failed)
+                                    )
                                 }
                             )
 
@@ -826,43 +846,6 @@ internal class SettingBackupActivity : BaseActivity() {
                         }
                     }
                     startActivity(intent)
-                    onDestroy()
-                }
-            )
-            show()
-        }
-    }
-
-    private fun showStorageAccessPermissionDialog() {
-        if (isFinishing) return
-        MemoCustomDialog(this).apply {
-            setTitle(getString(R.string.haru_dialog_access_all_file_title))
-            setMessage(getString(R.string.haru_dialog_access_all_file_message))
-            setButton(
-                cancelText = getString(R.string.haru_dialog_common_cancel),
-                confirmText = getString(R.string.haru_go_to_settings),
-                onCancel = {
-                    onDestroy()
-                },
-                onConfirm = {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                        try {
-                            val intent =
-                                Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION).apply {
-                                    data = "package:$packageName".toUri()
-                                }
-                            startActivity(intent)
-                        } catch (e: Exception) {
-                            val intent = Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
-                            startActivity(intent)
-                        }
-                    } else {
-                        // Android 10 이하: 앱 세부정보 화면으로 이동 (직접 권한 허용 안내)
-                        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                            data = "package:$packageName".toUri()
-                        }
-                        startActivity(intent)
-                    }
                     onDestroy()
                 }
             )
@@ -969,7 +952,10 @@ internal class SettingBackupActivity : BaseActivity() {
                     ).setApplicationName("Memong").build()
                 } else {
                     withContext(Dispatchers.Main) {
-                        toastShort(this@SettingBackupActivity, getString(R.string.haru_backup_fail_google_account_failed))
+                        toastShort(
+                            this@SettingBackupActivity,
+                            getString(R.string.haru_backup_fail_google_account_failed)
+                        )
                         hideProgressView()
                     }
                     return@launch
@@ -1234,10 +1220,13 @@ internal class SettingBackupActivity : BaseActivity() {
                     requestAd(
                         onAdSuccess = {
                             // 로컬 복구
-                            restoreBackupByReplacingDb()
+                            openBackupFilePicker()
                         },
                         onAdFailure = {
-                            toastShort(this@SettingBackupActivity, getString(R.string.haru_backup_fail_advertise_failed))
+                            toastShort(
+                                this@SettingBackupActivity,
+                                getString(R.string.haru_backup_fail_advertise_failed)
+                            )
                         }
                     )
 
@@ -1245,6 +1234,19 @@ internal class SettingBackupActivity : BaseActivity() {
             )
         }
         dialog.show()
+    }
+
+    private fun openBackupFilePicker() {
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            // ZIP 파일(*.zip) 또는 일반 DB 파일(*.db)을 선택할 수 있도록 MIME 타입 설정
+            type = "*/*"
+            putExtra(
+                Intent.EXTRA_MIME_TYPES,
+                arrayOf("application/zip", "application/octet-stream")
+            )
+        }
+        backupFileLauncher.launch(intent)
     }
 
     private fun showGoogleRestoreConfirmationDialog() {
@@ -1264,7 +1266,10 @@ internal class SettingBackupActivity : BaseActivity() {
                             restoreGoogle()
                         },
                         onAdFailure = {
-                            toastShort(this@SettingBackupActivity, getString(R.string.haru_backup_fail_advertise_failed))
+                            toastShort(
+                                this@SettingBackupActivity,
+                                getString(R.string.haru_backup_fail_advertise_failed)
+                            )
                         }
                     )
                 }
@@ -1274,246 +1279,140 @@ internal class SettingBackupActivity : BaseActivity() {
     }
 
     @SuppressLint("HardwareIds")
-    private fun restoreBackupByReplacingDb() {
+    private fun restoreBackupFromUri(uri: Uri) {
         lifecycleScope.launch {
-            val backupDir = File(
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-                "Memong"
-            )
-            val allowPhotoBackup = PreferenceUtil.get(PreferenceUtil.KEY_PHOTO_BACKUP, true)
-            var legacyRestored = false
-
             withContext(Dispatchers.IO) {
-                LogTrack.d("RestoreBackup") { "Backup base dir: ${backupDir.absolutePath}, exists=${backupDir.exists()}" }
-                withContext(Dispatchers.Main) {
-                    showProgressView()
-                }
 
-                backupDir.listFiles()?.forEach {
-                    LogTrack.d("RestoreBackup") {
-                        "Found in Memong: ${it.name}, isFile=${it.isFile}, isDirectory=${it.isDirectory}, length=${it.length()}"
-                    }
-                }
+                withContext(Dispatchers.Main) { showProgressView() }
 
-                val legacyDbFile = backupDir.listFiles()
-                    ?.filter { file ->
-                        file.isFile &&
-                                (file.name == "notepad.db" || file.name.matches(Regex("^\\d+.*notepad\\.db$")))
-                    }
-                    ?.maxByOrNull { it.lastModified() }
+                var backupRestored = false // 복원 성공 여부 플래그
 
-                val legacyImageDir = File(backupDir, "MemoG photo")
+                try {
+                    // 1. URI에서 파일을 앱의 임시 저장소로 복사
+                    val tempFile = File(cacheDir, "temp_backup_file").apply { delete() }
+                    contentResolver.openInputStream(uri)?.use { input ->
+                        FileOutputStream(tempFile).use { output ->
+                            input.copyTo(output)
+                        }
+                    } ?: throw IOException("Failed to open backup file stream.")
 
-                if (legacyDbFile == null || !legacyDbFile.exists()) {
-                    LogTrack.d("RestoreBackup") {
-                        "No legacy DB found in Memong (available files: ${
-                            backupDir.listFiles()?.joinToString { it.name } ?: "none"
-                        })"
-                    }
-                } else if (legacyDbFile.exists() && legacyDbFile.canRead()) {
+                    LogTrack.d("RestoreBackup") { "Backup file copied to temp: ${tempFile.absolutePath}" }
+
+                    // 2. 파일의 내용을 확인하여 레거시 DB 또는 ZIP 파일로 처리
+
+                    // 2-1. 레거시 DB 형식 복원 시도 (SQLite 헤더 + 암호화 확인 로직)
+                    val decryptedFile =
+                        File(filesDir, "temp_legacy_decrypted.db").apply { delete() }
+                    var isLegacyEncryptedDb = false
+
                     try {
-                        LogTrack.d("RestoreBackup") {
-                            "Legacy DB selected: ${legacyDbFile.name}, path=${legacyDbFile.absolutePath}, canRead=${legacyDbFile.canRead()}"
-                        }
-                        LogTrack.d("RestoreBackup") {
-                            "Legacy DB path: ${legacyDbFile.absolutePath}, exists=${legacyDbFile.exists()}, canRead=${legacyDbFile.canRead()}"
-                        }
-                        LogTrack.d("RestoreBackup") {
-                            "Legacy image dir: ${legacyImageDir.absolutePath}, exists=${legacyImageDir.exists()}, files=${
-                                legacyImageDir.list()?.joinToString()
-                            }"
-                        }
-
-                        // 복호화 + SQLite 헤더 확인
-                        val decryptedFile = File(filesDir, "temp_legacy_decrypted.db")
-                        FileInputStream(legacyDbFile).use { input ->
+                        // 복호화 시도
+                        FileInputStream(tempFile).use { input ->
                             FileOutputStream(decryptedFile).use { output ->
+                                // ⭐️ BackupEncrypt 클래스를 사용하여 복호화 시도
                                 BackupEncrypt.decrypt(input, output)
                             }
                         }
 
-                        val headerBytes = RandomAccessFile(decryptedFile, "r").use {
+                        // 복호화된 파일의 SQLite 헤더 확인
+                        RandomAccessFile(decryptedFile, "r").use {
                             val header = ByteArray(16)
                             it.read(header)
-                            header
+                            isLegacyEncryptedDb = String(header) == "SQLite format 3\u0000"
                         }
-                        val isValidSQLite = String(headerBytes) == "SQLite format 3\u0000"
                         LogTrack.d("RestoreBackup") {
-                            "Decryption complete: ${decryptedFile.path}, isValidSQLite=$isValidSQLite"
+                            "Decryption attempt complete: isValidSQLite=$isLegacyEncryptedDb"
                         }
+                    } catch (e: Exception) {
+                        // 복호화 실패 또는 파일 형식이 올바르지 않으면 레거시 DB가 아님
+                        LogTrack.d("RestoreBackup") { "Decryption or header check failed: $e" }
+                        decryptedFile.delete() // 실패 시 임시 파일 삭제
+                        isLegacyEncryptedDb = false
+                    }
 
-                        if (!isValidSQLite) throw IOException(getString(R.string.haru_vaild_sqlite))
-
-                        // 기존 DB 비우기
-                        MemoDatabase.closeInstance()
-                        LogTrack.d("RestoreBackup") { "Room instance closed" }
-
-                        val db = MemoDatabase.getInstance(applicationContext)
-                        val memoDao = db.memoDao()
-                        val tagDao = db.tagDao()
-                        val taggingDao = db.taggingDao()
-                        memoDao.deleteAll()
-                        tagDao.deleteAll()
-                        taggingDao.deleteAll()
-                        LogTrack.d("RestoreBackup") { "Cleared existing Room data" }
-
-                        // 복원 시작
-                        val legacyDb = SQLiteDatabase.openDatabase(
-                            decryptedFile.absolutePath,
-                            null,
-                            SQLiteDatabase.OPEN_READONLY
-                        )
-                        val androidId =
-                            Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
-
-                        val importer = MemoLegacyImporter(
-                            legacyDb = legacyDb,
-                            memoDao = memoDao,
-                            userId = androidId ?: "default"
-                        )
-
-                        importer.importAllMemos { imageName ->
-                            if (!allowPhotoBackup && (!legacyImageDir.exists() || !legacyImageDir.isDirectory)) {
-                                return@importAllMemos null
+                    if (isLegacyEncryptedDb) {
+                        // ⭐️ 레거시 DB 복원 로직 실행
+                        try {
+                            if (!decryptedFile.exists() || !decryptedFile.canRead()) {
+                                throw IOException("Decrypted DB file is not accessible.")
                             }
 
-                            val imageFile = File(legacyImageDir, imageName)
-                            if (imageFile.exists()) {
-                                val destFile = File(filesDir.resolve("images"), imageName)
-                                imageFile.copyTo(destFile, overwrite = true)
-                                val contentUri = FileProvider.getUriForFile(
-                                    this@SettingBackupActivity,
-                                    "${packageName}.fileprovider",
-                                    destFile
+                            // 기존 DB 비우기
+                            MemoDatabase.closeInstance()
+                            LogTrack.d("RestoreBackup") { "Room instance closed" }
+
+                            val db = MemoDatabase.getInstance(applicationContext)
+                            val memoDao = db.memoDao()
+                            val tagDao = db.tagDao()
+                            val taggingDao = db.taggingDao()
+                            memoDao.deleteAll()
+                            tagDao.deleteAll()
+                            taggingDao.deleteAll()
+                            LogTrack.d("RestoreBackup") { "Cleared existing Room data" }
+
+                            // 복원 시작
+                            val legacyDb = SQLiteDatabase.openDatabase(
+                                decryptedFile.absolutePath,
+                                null,
+                                SQLiteDatabase.OPEN_READONLY
+                            )
+                            val androidId =
+                                Settings.Secure.getString(
+                                    contentResolver,
+                                    Settings.Secure.ANDROID_ID
                                 )
-                                LogTrack.d("RestoreBackup") {
-                                    "Legacy image copied: $imageName, uri=$contentUri"
+
+                            val importer = MemoLegacyImporter(
+                                legacyDb = legacyDb,
+                                memoDao = memoDao,
+                                userId = androidId ?: "default"
+                            )
+
+                            // 외부 저장소 이미지 접근 불가능. 이미지를 복사하지 않고 스킵합니다.
+                            importer.importAllMemos { imageName ->
+                                LogTrack.w("RestoreBackup") {
+                                    "Legacy image import skipped for $imageName (SAF/Internal only)"
                                 }
-                                contentUri.toString()
-                            } else {
-                                LogTrack.d("RestoreBackup") { "Legacy image not found: $imageName" }
                                 null
                             }
-                        }
 
-                        legacyDb.close()
-                        LogTrack.d("RestoreBackup") { "Legacy DB import complete" }
-                        legacyRestored = true
+                            legacyDb.close()
+                            LogTrack.d("RestoreBackup") { "Legacy DB import complete" }
+                            backupRestored = true
 
-                        // imagePath URI remapping
-                        val memosWithImages =
-                            memoDao.getAllNoConditionMemos().filter { it.imagePath.isNotEmpty() }
-                        for (memo in memosWithImages) {
-                            val newPathMap = mutableMapOf<Int, List<String>>()
-                            memo.imagePath.forEach { (key, list) ->
-                                val newUris = list.mapNotNull { path ->
-                                    val fileName =
-                                        path.toUri().lastPathSegment ?: return@mapNotNull null
-                                    val file = File(filesDir.resolve("images"), fileName)
-                                    if (file.exists()) {
-                                        FileProvider.getUriForFile(
-                                            this@SettingBackupActivity,
-                                            "${packageName}.fileprovider",
-                                            file
-                                        ).toString()
-                                    } else null
-                                }
-                                if (newUris.isNotEmpty()) newPathMap[key] = newUris
-                            }
-                            if (newPathMap.isNotEmpty()) {
-                                memoDao.updateImagePath(memo.uuid, newPathMap)
-                            }
-                        }
-
-                        if (!allowPhotoBackup && !legacyImageDir.exists()) {
+                            // DB만 복원했으므로, 이미지 경로가 남아있다면 모두 비워줍니다.
                             val allMemos = memoDao.getAllNoConditionMemos()
                             for (memo in allMemos) {
                                 if (memo.imagePath.isNotEmpty()) {
                                     memoDao.updateImagePath(memo.uuid, emptyMap())
                                     LogTrack.d("RestoreBackup") {
-                                        "Cleared imagePath for memo=${memo.uuid} due to no image folder & photo backup off"
+                                        "Cleared imagePath for memo=${memo.uuid} due to legacy restore without image support"
                                     }
                                 }
                             }
+
+                        } finally {
+                            decryptedFile.delete().also {
+                                LogTrack.d("RestoreBackup") { "Decrypted DB deleted=$it" }
+                            }
                         }
 
-                        legacyDbFile.delete().also {
-                            LogTrack.d("RestoreBackup") { "Original DB deleted=$it" }
-                        }
-                        decryptedFile.delete().also {
-                            LogTrack.d("RestoreBackup") { "Decrypted DB deleted=$it" }
-                        }
-
-                        if (legacyRestored && legacyImageDir.exists()) {
-                            val imagesDeleted = legacyImageDir.deleteRecursively()
-                            LogTrack.d("RestoreBackup") { "Legacy image folder deleted: $imagesDeleted" }
-                        }
-
-                        withContext(Dispatchers.Main) {
-                            hideProgressView()
-                            EventUtil.sendEvent(
-                                this@SettingBackupActivity,
-                                EventUtil.CATEGORY_SET_BACKUP,
-                                EventUtil.ACTION_USE_LEGACY_RESTORE
-                            )
-                            toastShort(
-                                this@SettingBackupActivity,
-                                getString(R.string.haru_restore_legacy_data)
-                            )
-                            MemoListActivity.startRestore(
-                                activity = this@SettingBackupActivity,
-                                close = true
-                            )
-                            refreshMemoWidgets(this@SettingBackupActivity)
-                        }
-
-                        return@withContext
-
-                    } catch (e: Exception) {
-                        val reason = when (e) {
-                            is FileNotFoundException -> getString(R.string.haru_restore_error_file_not_found)
-                            is SecurityException -> getString(R.string.haru_restore_error_permission_denied)
-                            is ZipException -> getString(R.string.haru_restore_error_zip)
-                            is IOException -> getString(R.string.haru_restore_error_io)
-                            is IllegalArgumentException -> getString(R.string.haru_restore_error_invalid_path)
-                            is NullPointerException -> getString(R.string.haru_restore_error_null)
-                            else -> e.localizedMessage
-                                ?: getString(R.string.haru_restore_error_unknown)
-                        }
-
-                        LogTrack.e("RestoreBackup") { "복원 중 오류 -> $e" }
-
-                        withContext(Dispatchers.Main) {
-                            hideProgressView()
-                            toastShort(this@SettingBackupActivity, "복원 오류: $reason")
-                        }
-                        return@withContext
-                    }
-                }
-
-                // ZIP 백업 복원 fallback
-                if (!legacyRestored) {
-                    val backupFile = findClosestBackupFile() ?: run {
-                        withContext(Dispatchers.Main) {
-                            hideProgressView()
-                            toastShort(
-                                this@SettingBackupActivity,
-                                getString(R.string.haru_not_using_backup_folder)
-                            )
-                        }
-                        LogTrack.d("RestoreBackup") { "No backup file found" }
-                        return@withContext
                     }
 
-                    LogTrack.d("RestoreBackup") { "Selected backup file: ${backupFile.name}" }
+                    // 2-2. ZIP 백업 복원 (레거시 DB가 아니거나, 복원이 성공하지 않은 경우)
+                    if (!backupRestored) {
+                        LogTrack.d("RestoreBackup") { "Attempting ZIP backup restore." }
 
-                    try {
+                        val allowPhotoBackup =
+                            PreferenceUtil.get(PreferenceUtil.KEY_PHOTO_BACKUP, true)
+
                         val unzipDir = File(cacheDir, "restore_temp").apply {
                             deleteRecursively()
                             mkdirs()
                         }
 
-                        ZipInputStream(FileInputStream(backupFile)).use { zip ->
+                        // ZIP 압축 해제 (tempFile 사용)
+                        ZipInputStream(FileInputStream(tempFile)).use { zip ->
                             var entry = zip.nextEntry
                             while (entry != null) {
                                 val outFile = File(unzipDir, entry.name)
@@ -1531,6 +1430,7 @@ internal class SettingBackupActivity : BaseActivity() {
                         MemoDatabase.closeInstance()
                         LogTrack.d("RestoreBackup") { "Room instance closed" }
 
+                        // DB 파일 복사
                         val dbDir = getDatabasePath("memopad.db").parentFile!!
                         File(unzipDir, "memopad.db").copyTo(
                             File(dbDir, "memopad.db"),
@@ -1544,6 +1444,7 @@ internal class SettingBackupActivity : BaseActivity() {
                         val imagesDirInZip = unzipDir.resolve("images")
                         val hasImages = imagesDirInZip.exists() && imagesDirInZip.isDirectory
 
+                        // 이미지 복사 로직: ZIP 내부의 이미지를 앱 내부 저장소(filesDir)로 복사
                         if (allowPhotoBackup || (!allowPhotoBackup && hasImages)) {
                             imagesDirInZip.listFiles()?.forEach { file ->
                                 val dest = File(filesDir.resolve("images"), file.name)
@@ -1554,8 +1455,9 @@ internal class SettingBackupActivity : BaseActivity() {
 
                         val db = MemoDatabase.getInstance(applicationContext)
                         val memoDao = db.memoDao()
-
                         val memos = memoDao.getAllNoConditionMemos()
+
+                        // 이미지 URI 재매핑 (파일 이름 기반으로 내부 저장소 URI로 변환)
                         if (allowPhotoBackup || (!allowPhotoBackup && hasImages)) {
                             val memosWithImages = memos.filter { it.imagePath.isNotEmpty() }
                             for (memo in memosWithImages) {
@@ -1583,7 +1485,7 @@ internal class SettingBackupActivity : BaseActivity() {
                                 if (newPathMap.isNotEmpty()) {
                                     memoDao.updateImagePath(memo.uuid, newPathMap)
                                     LogTrack.d("RestoreBackup") {
-                                        "Updated imagePath for memo=${memo.uuid}, newPathMap=$newPathMap"
+                                        "Updated imagePath for memo=${memo.uuid}"
                                     }
                                 }
                             }
@@ -1599,6 +1501,7 @@ internal class SettingBackupActivity : BaseActivity() {
                             }
                         }
 
+                        // 잠금 상태 초기화 (옵션)
                         val lockEnabled =
                             PreferenceUtil.get(PreferenceUtil.KEY_PASSWORD_SWITCH, false)
                         if (!lockEnabled) {
@@ -1608,16 +1511,29 @@ internal class SettingBackupActivity : BaseActivity() {
                             }
                         }
 
+                        unzipDir.deleteRecursively() // 임시 압축 해제 폴더 정리
+                        backupRestored = true
+
+                    }
+
+                    // 3. 임시 파일 정리 및 최종 결과 처리
+                    tempFile.delete()
+                        .also { LogTrack.d("RestoreBackup") { "Temp file deleted=$it" } }
+
+                    if (backupRestored) {
                         withContext(Dispatchers.Main) {
                             hideProgressView()
+                            val action =
+                                if (isLegacyEncryptedDb) EventUtil.ACTION_USE_LEGACY_RESTORE else EventUtil.ACTION_USE_LOCAL_RESTORE
+
+                            toastShort(
+                                this@SettingBackupActivity,
+                                getString(if (isLegacyEncryptedDb) R.string.haru_restore_legacy_data else R.string.haru_restroe_success)
+                            )
                             EventUtil.sendEvent(
                                 this@SettingBackupActivity,
                                 EventUtil.CATEGORY_SET_BACKUP,
-                                EventUtil.ACTION_USE_LOCAL_RESTORE
-                            )
-                            toastShort(
-                                this@SettingBackupActivity,
-                                getString(R.string.haru_restroe_success)
+                                action
                             )
                             MemoListActivity.startRestore(
                                 activity = this@SettingBackupActivity,
@@ -1625,64 +1541,32 @@ internal class SettingBackupActivity : BaseActivity() {
                             )
                             refreshMemoWidgets(this@SettingBackupActivity)
                         }
+                    } else {
+                        // ZIP 파일 시도 후에도 복원이 실패한 경우
+                        throw IOException(getString(R.string.haru_restore_error_io))
+                    }
 
-                    } catch (e: Exception) {
-                        val reason = when (e) {
-                            is FileNotFoundException -> getString(R.string.haru_restore_error_file_not_found)
-                            is SecurityException -> getString(R.string.haru_restore_error_permission_denied)
-                            is ZipException -> getString(R.string.haru_restore_error_zip)
-                            is IOException -> getString(R.string.haru_restore_error_io)
-                            is IllegalArgumentException -> getString(R.string.haru_restore_error_invalid_path)
-                            is NullPointerException -> getString(R.string.haru_restore_error_null)
-                            else -> e.localizedMessage
-                                ?: getString(R.string.haru_restore_error_unknown)
-                        }
+                } catch (e: Exception) {
+                    val reason = when (e) {
+                        is FileNotFoundException -> getString(R.string.haru_restore_error_file_not_found)
+                        is SecurityException -> getString(R.string.haru_restore_error_permission_denied)
+                        is ZipException -> getString(R.string.haru_restore_error_zip)
+                        is IOException -> getString(R.string.haru_restore_error_io)
+                        is IllegalArgumentException -> getString(R.string.haru_restore_error_invalid_path)
+                        is NullPointerException -> getString(R.string.haru_restore_error_null)
+                        else -> e.localizedMessage
+                            ?: getString(R.string.haru_restore_error_unknown)
+                    }
 
-                        LogTrack.e("RestoreBackup") { "복원 중 오류 -> $e" }
+                    LogTrack.e("RestoreBackup") { "복원 중 오류 -> $e" }
 
-                        withContext(Dispatchers.Main) {
-                            hideProgressView()
-                            toastShort(this@SettingBackupActivity, "복원 오류: $reason")
-                        }
+                    withContext(Dispatchers.Main) {
+                        hideProgressView()
+                        toastShort(this@SettingBackupActivity, "복원 오류: $reason")
                     }
                 }
             }
         }
-    }
-
-    private fun findClosestBackupFile(): File? {
-        val backupDir = File(
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-            "Memong"
-        )
-        if (!backupDir.exists() || !backupDir.isDirectory) {
-            LogTrack.d(
-                "RestoreBackup"
-            ) { "Backup folder does not exist: ${backupDir.absolutePath}" }
-            return null
-        }
-
-        val now = System.currentTimeMillis()
-        val backupFiles = backupDir.listFiles()
-            ?.filter { it.name.endsWith("memong.zip") }
-            ?.mapNotNull { file ->
-                val timestamp = file.name.substringBeforeLast("_").let {
-                    try {
-                        SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).parse(it)?.time
-                    } catch (_: Exception) {
-                        null
-                    }
-                }
-                timestamp?.let { ts -> ts to file }
-            }
-            ?.sortedBy { abs(it.first - now) }
-            ?: return null
-
-        val selected = backupFiles.firstOrNull()?.second
-        LogTrack.d(
-            "RestoreBackup"
-        ) { "Found ${backupFiles.size} backup file(s), selected: ${selected?.name}" }
-        return selected
     }
 
     private fun restoreGoogle() {
