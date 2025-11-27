@@ -1,7 +1,9 @@
 package com.memong.aos.ui
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.avatye.adcash.BannerAdSize
@@ -14,6 +16,7 @@ import com.memong.aos.data.extension.start
 import com.memong.aos.data.utils.Util.Companion.toastShort
 import com.memong.aos.databinding.ActivitySetBinding
 import com.memong.aos.ui.custom.header.SettingHeaderView
+import androidx.core.net.toUri
 
 internal class SettingActivity : BaseActivity() {
 
@@ -66,8 +69,23 @@ internal class SettingActivity : BaseActivity() {
 //        b.itemSetTag.setOnClickListener { SettingTagActivity.start(this) }
         b.itemSetServiceInfo.setOnClickListener { SettingServiceInfoActivity.start(this) }
         b.itemReview.setOnClickListener {
-            toastShort(this@SettingActivity, getString(R.string.haru_developing_function))
+            try {
+                // 플레이스토어 앱 실행
+                val intent = Intent(Intent.ACTION_VIEW).apply {
+                    data = "market://details?id=com.memong.aos".toUri()
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }
+                startActivity(intent)
+            } catch (e: ActivityNotFoundException) {
+                // 플레이스토어 앱이 없으면 웹 브라우저로
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    "https://play.google.com/store/apps/details?id=com.memong.aos".toUri()
+                )
+                startActivity(intent)
+            }
         }
+
 
         // bottom Banner
         requestBannerAd(
