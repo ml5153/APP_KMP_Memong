@@ -31,6 +31,8 @@
 
 ## 모듈 구조
 
+전체 아키텍처와 FlowChart는 [ARCHITECTURE.md](./ARCHITECTURE.md)에 별도로 정리되어 있습니다.
+
 ```text
 .
 ├── androidApp/              # Android 앱 본체
